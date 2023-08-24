@@ -8,6 +8,10 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { RegisterComponent } from './modules/pages/register/register.component';
+import { ButtonComponent } from './shared/components/button/button.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { ProductosComponent } from './components/productos/productos.component';
     InicioComponent,
     NavbarComponent,
     RegistroComponent,
-    ProductosComponent
+    ProductosComponent,
+    RegisterComponent,
+    ButtonComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
