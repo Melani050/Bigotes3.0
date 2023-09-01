@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { CardsComponent } from './components/cards/cards.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 @NgModule({
@@ -11,7 +15,14 @@ import { CardsComponent } from './components/cards/cards.component';
     CardsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CardsComponent,
+    MatButtonModule,
+    MatCardModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class InicioModule { }
