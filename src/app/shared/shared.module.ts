@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from "../app-routing.module";
 
 //MATERIAL
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from "@angular/material/button";
 
 
 
@@ -23,10 +26,16 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     AppRoutingModule,
     CommonModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports:[
     NavbarComponent,
     FooterComponent,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule
 
 
   ]

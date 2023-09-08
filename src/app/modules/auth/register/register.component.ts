@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { Usuario } from "src/app/models/usuario";
+
+
 
 @Component({
   selector: 'app-register',
@@ -8,6 +11,9 @@ import { Usuario } from "src/app/models/usuario";
 })
 export class RegisterComponent {
   hide= true;// imput de contraseña.
+  constructor(){
+
+  }
   usuarios:Usuario={
     nombre:'',
     email:'',
