@@ -11,6 +11,7 @@ import { LoginComponent } from './modules/auth/login/login.component';
 import { RegisterComponent } from './modules/auth/register/register.component';
 import { InicioComponent } from './modules/inicio/inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardsComponent } from './modules/inicio/components/cards/cards.component';
 
 
 @NgModule({
@@ -24,9 +25,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CardsComponent
 
   ],
+  exports: [
+   CardsComponent
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
