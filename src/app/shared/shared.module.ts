@@ -11,7 +11,7 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-  // el approuting necesita las rutas
+  // necesita las rutas
     AppRoutingModule
   ],
   exports: [

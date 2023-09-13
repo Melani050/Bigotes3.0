@@ -6,7 +6,6 @@ import { CardsComponent } from './components/cards/cards.component';
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'cards', component: CardsComponent}
-
 ];
 
 @NgModule({
