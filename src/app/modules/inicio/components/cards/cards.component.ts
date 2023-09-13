@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// NUEVA INTERFAZ
+import { Mascota } from 'src/app/models/mascotas';
+
 
 @Component({
   selector: 'app-cards',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class CardsComponent {
 
-}
+  constructor(){}
+
+  ngOnInit(): void{
+  }
+
+} 
