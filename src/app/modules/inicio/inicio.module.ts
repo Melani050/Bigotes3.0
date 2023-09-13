@@ -6,23 +6,22 @@ import { CardsComponent } from './components/cards/cards.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { InicioRoutingModule } from './inicio-routing.module';
-import { AuthRoutingModule } from '../auth/auth-routing.module';
 
 @NgModule({
   declarations: [
     InicioComponent,
+    CardsComponent,
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatCardModule,
-    CardsComponent,
     InicioRoutingModule,
-    AuthRoutingModule
   ],
   exports: [
     MatButtonModule,
     MatCardModule,
+    // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent
   ]
 })

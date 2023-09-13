@@ -12,6 +12,7 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
   // necesita las rutas
+  //el único que importa el approuting es el shared por el navbar
     AppRoutingModule
   ],
   exports: [
