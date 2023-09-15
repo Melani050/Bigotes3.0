@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InicioComponent } from './inicio/inicio.component';
-import { CardsComponent } from './components/cards/cards.component';
 
+import { InicioRoutingModule } from './inicio-routing.module';
 
 
 @NgModule({
-  declarations: [
-    InicioComponent,
-    CardsComponent
-  ],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    InicioRoutingModule
   ]
 })
 export class InicioModule { }
