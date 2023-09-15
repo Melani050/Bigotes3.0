@@ -1,6 +1,6 @@
 export interface Usuario {
   nombre:string,
   email:string,
-  contraseña:string,
+  contrasena:string,
   confirmar:string
 }

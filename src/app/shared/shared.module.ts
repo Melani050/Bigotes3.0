@@ -7,6 +7,7 @@ import { AppRoutingModule } from "../app-routing.module";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 
 
 
@@ -28,14 +29,16 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   exports:[
     NavbarComponent,
     FooterComponent,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
 
 
   ]

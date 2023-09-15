@@ -3,8 +3,39 @@
   padding:10px;
   text-align: center;
   justify-content: center;
+
 }
 .boton{
   width: 120px;
+  background-color: rgba(208, 158, 0, 1);
+  color: rgba(119, 92, 4, 1);
+  padding: 10px 20px;
+  border: none;
+  border-radius:3px;
+  cursor: pointer;
+  text-align: center;
+
 
 }
+.formulario{
+max-width: 360px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid rgba(119, 92, 4, 1);
+background-color:rgba(255, 201, 29, 0.79);
+border-radius: 5px;
+}
+.label{
+  display: block;
+  margin-bottom: 3px;
+  font-weight:bold;
+  color:black;
+
+}
+.letras{
+  color: rgba(119, 92, 4, 1);
+  text-align: center;
+
+}
+
+
