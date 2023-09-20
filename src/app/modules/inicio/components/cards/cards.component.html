@@ -1,6 +1,6 @@
+<h1 class="titulo">Mascotas en adopción</h1>
 <div class="container">
   <div class="row">
-    <h1>Mascotas</h1>
     <div class="col">
       <div *ngFor="let i of info" class="contenido">
         <mat-card class="example-card">
@@ -14,15 +14,18 @@
             <mat-card-content>
                 <!-- DESCRIPCIÓN -->
               <p>
-                Nombre: {{i.nombre}} <br>
                 Sexo: {{i.sexo}} <br>
                 Tamaño: {{i.tamanio}} <br>
                 Raza: {{i.raza}}
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
+              <button mat-button>
+                <span class="material-symbols-outlined">expand_circle_down</span>Más información
+              </button>
+              <button mat-button>
+                <span class="material-symbols-outlined">contacts</span>Contacto
+              </button>
             </mat-card-actions>
           </mat-card>
     </div>
