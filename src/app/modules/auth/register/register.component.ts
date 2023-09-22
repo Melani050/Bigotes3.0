@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Usuario } from "src/app/models/usuario";
 import { Router } from "@angular/router";
 import { AuthService } from '../sevices/auth.service';
+import { FirestoreService } from 'src/app/shared/services/firestore.service';
 
 
 
@@ -15,6 +16,7 @@ export class RegisterComponent {
   hide= true;// imput de contraseña.
   constructor(
     public servicioAuth:AuthService,
+    public servicioFirestore:FirestoreService,
     public router: Router
 
   ){

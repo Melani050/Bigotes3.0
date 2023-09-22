@@ -29,7 +29,8 @@ border-radius: 5px;
   display: block;
   margin-bottom: 3px;
   font-weight:bold;
-  color:black;
+  color:rgb(0, 0, 0);
+  margin-left: 8px;
 
 }
 .letras{
@@ -37,5 +38,11 @@ border-radius: 5px;
   text-align: center;
 
 }
+.input:focus{
+  background-color: rgb(168, 168, 168);
+}
 
 
+#prueba{
+  background-color: antiquewhite;
+}
