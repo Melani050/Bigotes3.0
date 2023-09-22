@@ -23,6 +23,7 @@ export class RegisterComponent {
 
   }
   usuarios:Usuario={
+    uid:'',
     nombre:'',
     email:'',
     contrasena:'',
@@ -42,9 +43,28 @@ export class RegisterComponent {
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.contrasena)
     .then(res =>{
       alert("¡Ha agregado un nuevo usuario con exito!")
+      this.router.navigate(["/inicio"])
 
     })
+    .catch(error =>
+      alert("Hubo un error creando al usuario /n" + error));
+
+    const uid= await this.servicioAuth.getUid();
+    this.usuarios.uid=uid;
+    this.guardaUser();
 
   }
-
+  async guardaUser(){
+    this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+    .then(res=>{
+      console.log(this.usuarios);
+    })
+    .catch(error =>{
+      console.log('Error =>', error);
+    })
+  }
+  async ngOnInit(){
+    const uid =await this.servicioAuth.getUid();
+    console.log(uid);
+  }
 }

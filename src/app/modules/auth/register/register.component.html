@@ -1,29 +1,32 @@
 <div class="container" class="formulario">
   <div class="row">
-    <h1 class="letras">Registro</h1>
+    <p class="letras">Registro</p>
 
-    <mat-form-field appearance="fill" class="label">
-      <mat-label>Nombre</mat-label>
+    <p class="letras2" >Nombre</p>
+    <mat-form-field  class="cajitas"appearance="fill" class="label"   >
+
       <input
         [(ngModel)]="usuarios.nombre"
         placeholder="Nombre"
         matInput
         required
+
       />
       <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
-
+    <p class="letras2">E-mail</p>
     <mat-form-field class="label">
-      <mat-label>E-mail</mat-label>
-      <input matInput placeholder="ejemplo@gmail.com" required />
+      <input matInput [(ngModel)]= "usuarios.email"placeholder="ejemplo@gmail.com" required />
       <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
 
+    <p class="letras2">Contraseña</p>
     <mat-form-field class="label">
-      <mat-label>Ingresa la contraseña: </mat-label>
+
       <input
-        matInput
-        placeholder="Ingresa la contraseña"
+        matInput [(ngModel)]= "usuarios.contrasena"
+        placeholder="Ingresar la contraseña"
+
         [type]="hide ? 'password' : 'text'"
       />
       <button
@@ -37,10 +40,11 @@
       </button>
     </mat-form-field>
 
+
+    <p class="letras2">Confirmar la contraseña </p>
     <mat-form-field class="label">
-      <mat-label>Ingresa la contraseña: </mat-label>
       <input
-        matInput
+        matInput [(ngModel)]= "usuarios.confirmar"
         placeholder="Reingresar la contraseña"
         [type]="hide ? 'password' : 'text'"
       />
@@ -58,10 +62,11 @@
     <button
       class="boton"
       mat-raised-button
-      color="primary"
-      (click)="registrarse()"
+
+      (click)=" registrarse()"
     >
       Crear cuenta
     </button>
+    <p class="letras2">¿Ya tenes una cuenta? Inicia sesion</p>
   </div>
 </div>
