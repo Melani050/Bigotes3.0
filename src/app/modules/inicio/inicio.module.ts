@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { CardsComponent } from './components/cards/cards.component';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { InicioRoutingModule } from './inicio-routing.module';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { InicioRoutingModule } from './inicio-routing.module';
     MatButtonModule,
     MatCardModule,
     InicioRoutingModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
