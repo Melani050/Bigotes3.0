@@ -5,26 +5,41 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+import { SharedModule } from "./shared/shared.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+//FIREBASE
+//Nos conectamos con la base de datos que trae los modulos necesarios
+import { environment } from "src/app/environments/enviroment";
+import { AngularFireModule } from "@angular/fire/compat";
+//FIRESTORE
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";//AUTENTIFICACION
+import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { LoginComponent } from './modules/auth/login/login.component';
-import { RegisterComponent } from './modules/auth/register/register.component';
-import { InicioComponent } from './modules/inicio/inicio.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    LoginComponent,
-    RegisterComponent,
-    InicioComponent,
+
+
+
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireStorageModule
 
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

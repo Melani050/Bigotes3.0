@@ -1,1 +1,72 @@
-<p>register works!</p>
+<div class="container" class="formulario">
+  <div class="row">
+    <p class="letras">Registro</p>
+
+    <p class="letras2" >Nombre</p>
+    <mat-form-field  class="cajitas"appearance="fill" class="label"   >
+
+      <input
+        [(ngModel)]="usuarios.nombre"
+        placeholder="Nombre"
+        matInput
+        required
+
+      />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <p class="letras2">E-mail</p>
+    <mat-form-field class="label">
+      <input matInput [(ngModel)]= "usuarios.email"placeholder="ejemplo@gmail.com" required />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <p class="letras2">Contraseña</p>
+    <mat-form-field class="label">
+
+      <input
+        matInput [(ngModel)]= "usuarios.contrasena"
+        placeholder="Ingresar la contraseña"
+
+        [type]="hide ? 'password' : 'text'"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+    <p class="letras2">Confirmar la contraseña </p>
+    <mat-form-field class="label">
+      <input
+        matInput [(ngModel)]= "usuarios.confirmar"
+        placeholder="Reingresar la contraseña"
+        [type]="hide ? 'password' : 'text'"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button
+      class="boton"
+      mat-raised-button
+
+      (click)=" registrarse()"
+    >
+      Crear cuenta
+    </button>
+    <p class="letras2">¿Ya tenes una cuenta? Inicia sesion</p>
+  </div>
+</div>
