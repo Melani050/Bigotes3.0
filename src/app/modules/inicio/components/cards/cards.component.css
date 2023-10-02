@@ -9,16 +9,23 @@
 }
 .container-fluid{
     background-color: #FFC91D;
+    margin-top: 2%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
 }
 .contenido{
     width: 380px;
     display: inline-block;
     margin: 35px;
+    padding-right: 0%;
 }
 .example-card{
     border-radius: 15px;
+}
+div.col{
+    padding: 0%;
+    margin-left: 1%;
 }
 p{
     margin: 10px;
