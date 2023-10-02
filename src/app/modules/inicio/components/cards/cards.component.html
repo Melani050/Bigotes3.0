@@ -1,6 +1,6 @@
 <h1 class="titulo">Mascotas en adopción</h1>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col">
       <div *ngFor="let i of info" class="contenido">
@@ -13,14 +13,12 @@
             </mat-card-header>           
             <mat-card-content>
                 <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
+              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon></p>
+              <p>Tamaño: {{i.tamanio}}</p>
+              <p>Raza: {{i.raza}}</p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
                 <mat-icon>info</mat-icon> Más información
               </button>
               <button mat-button>
@@ -28,173 +26,34 @@
               </button>
             </mat-card-actions>
         </mat-card>
-    </div>
+        <div class="modal fade" id="masInformacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Más información</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Personalidad: {{i.personalidad }}</p>
+                <p>Edad aproximada: {{i.edad}}</p>
+                <p>Peso: {{i.peso}}</p>
+                <p>Castrado: {{i.castrado}}</p>
+                <p>Desparacitado: {{i.desparacitado}}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="btn_eliminar" type="button" class="btn" style="background-color: #FFC91D; color: white;">Adoptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
 
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button>
-                <mat-icon>email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button>
-                <mat-icon>email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button>
-                <mat-icon>email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button>
-                <mat-icon>email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>
-                Sexo: {{i.sexo}} <br>
-                Tamaño: {{i.tamanio}} <br>
-                Raza: {{i.raza}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button>
-                <mat-icon>email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    </div>
-  </div>
- 
 
-  <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>¿ Está seguro de realizar esta acción ?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button id="btn_eliminar" type="button" class="btn btn-danger">Eliminar</button>
-        </div>
+
+
       </div>
     </div>
   </div>
-
-
 </div>
 

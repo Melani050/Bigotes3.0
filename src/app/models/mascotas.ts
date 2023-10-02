@@ -6,4 +6,9 @@ export interface Mascota {
     raza: string;
     imagen: string;
     alt: string;
+    personalidad: string;
+    edad: string;
+    peso: string;
+    castrado: string;
+    desparacitado: string;
 }

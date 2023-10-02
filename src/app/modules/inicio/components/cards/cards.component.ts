@@ -9,6 +9,7 @@ import { Mascota } from 'src/app/models/mascotas';
   styleUrls: ['./cards.component.css'],
 })
 export class CardsComponent {
+[x: string]: any;
   // PROPIEDAD PÚBLICA (TIPO ARRAY)
   public info: Mascota[];
 
@@ -22,7 +23,12 @@ export class CardsComponent {
         tamanio: 'Mediano',
         raza: 'Siames',
         imagen: 'https://www.purina.es/sites/default/files/styles/ttt_image_510/public/2021-01/Siamese%201.jpg?itok=dS6uQvHe',
-        alt: 'Gato siames'
+        alt: 'Gato siames',
+        personalidad: 'Curioso',
+        edad: '3 meses',
+        peso: '500 gr',
+        castrado: 'No',
+        desparacitado: 'Si'
       }
     ]
   }
