@@ -7,10 +7,16 @@
     border-radius: 10px;
     background-color: #FFC91D;
 }
+.container{
+    background-color: #FFC91D;
+    display: flex;
+    padding: 10px;
+    justify-content: left;
+}
 .contenido{
-    width: 335px;
-    display: inline-flex;
-    justify-content: center;
+    width: 450px;
+    display: inline-block;
+    margin: 35px;
 }
 .example-card{
     border-radius: 15px;
