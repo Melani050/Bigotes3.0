@@ -9,7 +9,6 @@ import { Mascota } from 'src/app/models/mascotas';
   styleUrls: ['./cards.component.css'],
 })
 export class CardsComponent {
-[x: string]: any;
   // PROPIEDAD PÚBLICA (TIPO ARRAY)
   public info: Mascota[];
 
@@ -37,10 +36,10 @@ export class CardsComponent {
         tamanio: 'Grande',
         raza: 'Border collie',
         imagen: 'https://t2.uc.ltmcdn.com/es/posts/9/2/0/cuales_son_los_cuidados_de_un_border_collie_52029_orig.jpg',
-        alt: 'Gato siames',
-        personalidad: 'Curioso',
-        edad: '3 meses',
-        peso: '500 gr',
+        alt: 'Perro border collie',
+        personalidad: 'Hiperactivo',
+        edad: '9 meses',
+        peso: '6 kg',
         castrado: 'No',
         desparacitado: 'Si'
       },
@@ -51,12 +50,12 @@ export class CardsComponent {
         tamanio: 'Mediano',
         raza: 'Pitbull',
         imagen: 'https://t1.ea.ltmcdn.com/es/posts/0/4/1/2_las_mandibulas_del_pitbull_se_bloquean_al_morder_21140_1_600.jpg',
-        alt: 'Gato siames',
-        personalidad: 'Curioso',
-        edad: '3 meses',
-        peso: '500 gr',
+        alt: 'Perro pitbull',
+        personalidad: 'Distraido',
+        edad: '7 meses',
+        peso: '5 kg',
         castrado: 'No',
-        desparacitado: 'Si'
+        desparacitado: 'No'
       }
     ]
   }
