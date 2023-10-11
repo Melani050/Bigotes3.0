@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { AppRoutingModule } from '../app-routing.module';
-=======
 
 import { AppRoutingModule } from "../app-routing.module";
 
@@ -23,7 +18,6 @@ import { FooterComponent } from './components/footer/footer.component';
 
 
 
->>>>>>> 022fd585f4818e68b0033e6b0924d2333d6d0282
 
 @NgModule({
   declarations: [
@@ -31,22 +25,6 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-<<<<<<< HEAD
-    CommonModule,
-  // necesita las rutas
-  //el único que importa el approuting es el shared por el navbar
-    AppRoutingModule
-  ],
-  exports: [
-    NavbarComponent,
-    FooterComponent
-  ]
-})
-export class SharedModule { }
-
-
-
-=======
     AppRoutingModule,
     CommonModule,
     MatButtonModule,
@@ -66,4 +44,3 @@ export class SharedModule { }
   ]
 })
 export class SharedModule { }
->>>>>>> 022fd585f4818e68b0033e6b0924d2333d6d0282
