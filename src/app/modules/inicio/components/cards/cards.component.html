@@ -1,1 +1,129 @@
-<p>cards works!</p>
+<h1 class="titulo">Mascotas en adopción</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let i of info" class="contenido">
+        <mat-card class="example-card">
+            <!-- IMAGEN -->
+            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
+            <mat-card-header> 
+              <!-- TÍTULO -->
+              <mat-card-title>{{i.nombre}}</mat-card-title>
+            </mat-card-header>           
+            <mat-card-content>
+                <!-- DESCRIPCIÓN -->
+              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon> <mat-icon style="padding-top: 3px;">female</mat-icon></p>
+              <p>Tamaño: {{i.tamanio}}</p>
+              <p>Raza: {{i.raza}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
+                <mat-icon>info</mat-icon> Más información
+              </button>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
+                <mat-icon >email</mat-icon> Contacto
+              </button>
+            </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngFor="let i of info" class="contenido">
+        <mat-card class="example-card">
+            <!-- IMAGEN -->
+            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
+            <mat-card-header> 
+              <!-- TÍTULO -->
+              <mat-card-title>{{i.nombre}}</mat-card-title>
+            </mat-card-header>           
+            <mat-card-content>
+                <!-- DESCRIPCIÓN -->
+              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon> <mat-icon style="padding-top: 3px;">female</mat-icon></p>
+              <p>Tamaño: {{i.tamanio}}</p>
+              <p>Raza: {{i.raza}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
+                <mat-icon>info</mat-icon> Más información
+              </button>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
+                <mat-icon >email</mat-icon> Contacto
+              </button>
+            </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngFor="let i of info" class="contenido">
+        <mat-card class="example-card">
+            <!-- IMAGEN -->
+            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
+            <mat-card-header> 
+              <!-- TÍTULO -->
+              <mat-card-title>{{i.nombre}}</mat-card-title>
+            </mat-card-header>           
+            <mat-card-content>
+                <!-- DESCRIPCIÓN -->
+              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon> <mat-icon style="padding-top: 3px;">female</mat-icon></p>
+              <p>Tamaño: {{i.tamanio}}</p>
+              <p>Raza: {{i.raza}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
+                <mat-icon>info</mat-icon> Más información
+              </button>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
+                <mat-icon >email</mat-icon> Contacto
+              </button>
+            </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<div *ngFor="let i of info" >
+  <!-- MODAL INFORMACIÓN -->
+  <div class="modal fade"  id="masInformacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Más información</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Personalidad: {{i.personalidad }}</p>
+          <p>Edad aproximada: {{i.edad}}</p>
+          <p>Peso: {{i.peso}}</p>
+          <p>Castrado: {{i.castrado}}</p>
+          <p>Desparacitado: {{i.desparacitado}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button id="btn_eliminar" type="button" class="btn" style="background-color: #FFC91D; color: white;" data-bs-dismiss="modal">Adoptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTACTO -->
+  <div class="modal fade" id="contactarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Contacto para adoptar a {{i.nombre}}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Persona de contacto: </p>
+          <p>E-mail: </p>
+        </div>
+        <div class="modal-footer">
+          <button id="btn_eliminar" type="button" class="btn" style="background-color: #FFC91D; color: white;" data-bs-dismiss="modal">Formulario de adopción</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
