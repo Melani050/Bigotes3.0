@@ -16,17 +16,13 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";//AUTENTIFICAC
 import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 
 
-
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -39,7 +35,8 @@ import { AngularFireStorageModule } from "@angular/fire/compat/storage";
     AngularFireStorageModule
 
   ],
-
+  exports: [
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
