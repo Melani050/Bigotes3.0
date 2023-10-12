@@ -44,7 +44,6 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatCardModule,
 
-
   ]
 })
 export class SharedModule { }

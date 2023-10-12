@@ -1,24 +1,25 @@
 footer{
-    background-color: #555;
-    color: #bbb;
+    margin-top: 10%;
+    background-color: #FFC91D;
+    color: #fff;
     line-height: 1.5;
 }
-.subFT{
+.btns{
     height: 100px;
-    color: #bbb;
+    color: #fff;
 }
-.subFT button{
-    background-color: #555;
-    color: #bbb;
+.btns button{
+    background-color: #e4b519;
+    color: #fff;
     font-size: 18px;
     width: auto;
 }
-.subFT a{
+.btns a{
     color: #bbb;
     font-size: 30px;
 }
 .ft-legal {
     height: 100px;
-    background-color: #333;
+    background-color: #e4b519;
     color: #bbb;
 }
