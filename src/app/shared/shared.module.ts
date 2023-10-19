@@ -43,6 +43,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatDividerModule,
+    FlexLayoutModule
 
   ]
 })

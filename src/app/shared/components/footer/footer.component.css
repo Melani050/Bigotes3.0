@@ -4,9 +4,17 @@ footer{
     color: #fff;
     line-height: 1.5;
 }
+a{
+    color: #917311;
+}
+.container-fluid{
+    padding: 0%;
+}
 .btns{
     height: 100px;
-    color: #fff;
+    color: #917311;
+    align-items: start;
+    text-align: left;
 }
 .btns button{
     background-color: #e4b519;
@@ -14,12 +22,8 @@ footer{
     font-size: 18px;
     width: auto;
 }
-.btns a{
-    color: #bbb;
-    font-size: 30px;
-}
 .ft-legal {
-    height: 100px;
+    height: 35px;
     background-color: #e4b519;
     color: #bbb;
 }
