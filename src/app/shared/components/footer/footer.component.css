@@ -4,12 +4,17 @@ footer{
     color: #fff;
     line-height: 1.5;
 }
-a{
-    color: #917311;
+mat-divider{
+    height:50px;
+    background-color: #917311;
 }
 .container-fluid{
     padding: 0%;
 }
+a{
+    color: #917311;
+}
+
 .btns{
     height: 100px;
     color: #917311;
