@@ -32,3 +32,6 @@ a{
     background-color: #e4b519;
     color: #bbb;
 }
+mat-grid-tile {
+    background: lightblue;
+  }

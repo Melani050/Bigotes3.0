@@ -12,6 +12,8 @@ import { MatCardModule } from "@angular/material/card";
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 //COMPONENTES
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -34,7 +36,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    
+    
   ],
   exports:[
     NavbarComponent,
@@ -42,8 +46,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
-
+    MatCardModule,
+    MatGridListModule
   ]
 })
 export class SharedModule { }
