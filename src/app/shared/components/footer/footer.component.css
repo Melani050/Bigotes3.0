@@ -19,14 +19,12 @@ a{
     height: 100px;
     color: #917311;
     align-items: start;
+    height: auto;
+}
+.info p{
     text-align: left;
 }
-.info button{
-    background-color: #e4b519;
-    color: #fff;
-    font-size: 18px;
-    width: auto;
-}
+
 .ft-legal {
     height: 35px;
     background-color: #e4b519;
@@ -34,4 +32,9 @@ a{
 }
 mat-grid-tile {
     background: lightblue;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
   }

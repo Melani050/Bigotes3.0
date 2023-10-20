@@ -37,7 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatCardModule,
     MatDividerModule,
     FlexLayoutModule,
-    
+    MatGridListModule
     
   ],
   exports:[
@@ -47,7 +47,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule
+   
   ]
 })
 export class SharedModule { }
