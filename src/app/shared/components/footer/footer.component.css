@@ -20,6 +20,7 @@ a{
     color: #917311;
     align-items: start;
     height: auto;
+    margin: 5%;
 }
 .info p{
     text-align: left;
@@ -37,4 +38,13 @@ mat-grid-tile {
 .example-card {
     max-width: 400px;
     margin-bottom: 8px;
-  }
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+}
+
+.fondo mat-expansion-panel{
+    background-color: #ffca1d9b;
+    color: #917311;
+}

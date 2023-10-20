@@ -2,7 +2,7 @@
     <div class="container-fluid" fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center center">
       
       <div class="container text-center">
-        <div class="row info">
+        <div class="row info fondo">
           <div class="col">
             <mat-card class="example-card">
               <mat-card-header>
@@ -31,19 +31,34 @@
               </mat-card-content>
             </mat-card>
           </div>
-          <div class="col">
-            <mat-card class="example-card">
-              <mat-card-header>
-                <mat-card-title-group>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Small</mat-card-subtitle>
-                  <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                </mat-card-title-group>
-              </mat-card-header>
-              <mat-card-content>
-                {{longText}}
-              </mat-card-content>
-            </mat-card>
+          <div class="col ">
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Veterinarias
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    vdsvdvdsvs
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>This is the primary content of the panel.</p>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    PetShops
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
           </div>
         </div>
       </div>
