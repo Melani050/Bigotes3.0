@@ -20,11 +20,8 @@ a{
     align-items: start;
     height: auto;
     margin: 5%;
-}
-.info p{
     text-align: left;
 }
-
 .ft-legal {
     height: 35px;
     background-color: #e4b519;
