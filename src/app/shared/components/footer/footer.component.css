@@ -1,44 +1,21 @@
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap:wrap ;
+}
+ul{
+    list-style: none;
+}
 footer{
     margin-top: 10%;
     background-color: #FFC91D;
     color: #fff;
-    line-height: 1.5;
+    padding: 70px 0;
 }
-.container-fluid{
-    padding: 0%;
-}
-mat-divider{
-    height:50px;
-    background-color: #917311;
-}
-a{
-    color: #917311;
-}
-.info{
-    height: 100px;
-    color: #917311;
-    align-items: start;
-    height: auto;
-    margin: 5%;
-    text-align: left;
-}
-.ft-legal {
-    height: 35px;
-    background-color: #e4b519;
-    color: #bbb;
-    margin: 0%;
-}
-mat-grid-tile {
-    background: lightblue;
-}
-.example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
-}
-.mat-mdc-form-field + .mat-mdc-form-field {
-    margin-left: 8px;
-}
-.fondo mat-expansion-panel{
-    background-color: #ffca1d9b;
-    color: #917311;
+.footer-col{
+    width: 25%;
+    padding: 0 15px ;
 }
