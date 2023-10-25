@@ -18,7 +18,7 @@ footer{
     margin-top: 10%;
     background-color: #FFC91D;
     color: #fff;
-    padding: 70px 0;
+    padding: 70px 0 0;
 }
 .footer-col{
     width: 25%;
@@ -78,6 +78,19 @@ footer{
     background-color: #FFC91D;
 }
 
+.ft-legal {
+    height: 35px;
+    background-color: #e4b519;
+    color: #917311;
+    margin-top: 5%;
+    padding: 0;
+}
+.ft-legal a{
+    color: #917311;
+}
+.ft-legal a:hover{
+    color: #bf9409;
+}
 
 /* RESPOSIVO */
 @media(max-width: 767px){
