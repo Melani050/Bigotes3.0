@@ -9,7 +9,7 @@
 }
 .row{
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap:wrap;
 }
 ul{
     list-style: none;
@@ -24,6 +24,9 @@ footer{
     width: 25%;
     padding: 0 15px ;
 }
+
+
+/*   TITULO   */
 .footer-col h4{
     font-size: 18px;
     color: #917311;
@@ -42,6 +45,8 @@ footer{
     box-sizing: border-box;
     width: 50px;
 }
+
+/*   LISTA   */
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
 }
@@ -59,8 +64,9 @@ footer{
     color: #fff;
     padding-left: 10px;
 }
-.footer-col .social-links a{
-    
+
+/*   CONTACTO/ REDES   */
+.social-links a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -73,11 +79,36 @@ footer{
     color: #FFC91D;
     transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
+.social-links a:hover{
     color: #917311;
     background-color: #FFC91D;
 }
+/*   titulo   */
+.social-col h4{
+    font-size: 18px;
+    color: #917311;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position:relative;
+}
+.social-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #917311;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+    align-items: end;
+}
+.social-col{
+    align-self: self-end;
+}
 
+
+/*   APARTADO COPYRIGHT   */
 .ft-legal {
     height: 35px;
     background-color: #e4b519;
@@ -87,9 +118,25 @@ footer{
 }
 .ft-legal a{
     color: #917311;
+    text-decoration: none;
 }
 .ft-legal a:hover{
     color: #bf9409;
+}
+
+/*  LOGO  */
+.col{
+    display: flex;
+    padding: 0;
+}
+.col h2{
+    font-weight: 700;
+}
+.col img{
+    margin-right:  15px;
+    width: 120px;
+    height: 120px;
+    
 }
 
 /* RESPOSIVO */
