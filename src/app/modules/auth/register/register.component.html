@@ -3,7 +3,7 @@
     <p class="letras">Registro</p>
 
     <p class="letras2" >Nombre</p>
-    <mat-form-field  class="cajitas"appearance="fill" class="label"   >
+    <mat-form-field  appearance="fill" class="label"   >
 
       <input
         [(ngModel)]="usuarios.nombre"
@@ -58,15 +58,19 @@
         <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
       </button>
     </mat-form-field>
+<br>
+<br>
+ <div class="center">
+  <button
+  class="boton"
+  mat-raised-button
 
-    <button
-      class="boton"
-      mat-raised-button
+  (click)=" registrarse()"
+>
+  Crear cuenta
+</button>
+ </div >
 
-      (click)=" registrarse()"
-    >
-      Crear cuenta
-    </button>
-    <p class="letras2">¿Ya tenes una cuenta? Inicia sesion</p>
+    <p class="letras3">¿Ya tenes una cuenta? Inicia sesion</p>
   </div>
 </div>
