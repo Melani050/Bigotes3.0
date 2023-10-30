@@ -2,7 +2,6 @@ footer{
     margin-top: 10%;
     background-color: #FFC91D;
     color: #fff;
-    line-height: 1.5;
 }
 .container-fluid{
     padding: 0%;
@@ -19,7 +18,8 @@ a{
     color: #917311;
     align-items: start;
     height: auto;
-    margin: 5%;
+    margin: 2%;
+    padding: 2%;
 }
 .info p{
     text-align: left;
@@ -43,5 +43,4 @@ mat-grid-tile {
 }
 .fondo mat-expansion-panel{
     background-color: #ffca1d9b;
-    color: #917311;
 }
