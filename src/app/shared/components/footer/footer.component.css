@@ -83,30 +83,6 @@ footer{
     color: #917311;
     background-color: #FFC91D;
 }
-/*   titulo   */
-.social-col h4{
-    font-size: 18px;
-    color: #917311;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position:relative;
-}
-.social-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #917311;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-    align-items: end;
-}
-.social-col{
-    align-self: self-end;
-}
-
 
 /*   APARTADO COPYRIGHT   */
 .ft-legal {
@@ -128,13 +104,16 @@ footer{
 .col{
     display: flex;
     padding: 0;
+    margin-right: 2px;
 }
-.col h2{
-    font-weight: 700;
+.col h1{
+    font-weight: 800;
+    position: relative;
+    padding-top: 30px;
 }
 .col img{
     margin-right:  15px;
-    width: 120px;
+    width: 105px;
     height: 120px;
     
 }
