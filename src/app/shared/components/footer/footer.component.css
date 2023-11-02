@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .container{
-    max-width: 1170px;
     margin: auto;
 }
 .row{
@@ -95,9 +94,6 @@ footer{
 .ft-legal a{
     color: #917311;
     text-decoration: none;
-}
-.ft-legal a:hover{
-    color: #bf9409;
 }
 
 /*  LOGO  */
