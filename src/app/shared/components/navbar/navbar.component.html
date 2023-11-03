@@ -1,32 +1,56 @@
 <p>
-  <mat-toolbar class="color">
+    <mat-toolbar class="navbar">
+      <nav class="navbar-list">
+        <button mat-button >
+          Adopta
+        </button>
 
-    <button mat-button >
-      Adopta
-    </button>
+        <button mat-button >
+          Donaciones
+        </button>
 
-    <button mat-button >
-      Donaciones
-    </button>
+        <button mat-button >
+          Salud
+        </button>
+        <button mat-button class="letras" >BIGOTES</button>
+        <a href="#">
+          <img src="fotos\patita.png" alt="logo">
+        </a>
 
-    <button mat-button >
-      Salud
-    </button>
+          <button mat-button >
+            Nosotros
+          </button>
 
-      <span class="letras">BIGOTES</span>
-      <span class="example-spacer">
-      </span>
+          <button mat-button routerLink="/register" >
+            Registrarse
+          </button>
 
-      <button mat-button >
-        Nosotros
-      </button>
+          <button class="boton" mat-raised-button>
+            Login
+          </button>
+      </nav>
 
-      <button mat-button routerLink="/register" >
-        Registrarse
-      </button>
+      </mat-toolbar>
 
-      <button mat-button >
-        Login
-      </button>
-  </mat-toolbar>
+  <body class="body">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>¡Encontra tu mascota ideal!</mat-card-title>
+        <mat-card-subtitle>¿Que tipo de mascota buscas?</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="bold">Gato</mat-button-toggle>
+        <mat-button-toggle value="italic">Perro</mat-button-toggle>
+
+      </mat-button-toggle-group>
+      <button mat-raised-button> Agregar Ubicacion</button>
+      <button mat-raised-button>Buscar Mascota</button>
+
+
+
+    </mat-card>
+  </body>
+
 </p>

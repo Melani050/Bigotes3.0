@@ -8,6 +8,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 
@@ -30,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonToggleModule
   ],
   exports:[
     NavbarComponent,
@@ -38,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonToggleModule
 
 
   ]
