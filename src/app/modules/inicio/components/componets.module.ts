@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ApartadosComponent } from './apartados/apartados.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ApartadosComponent
+  ],
   imports: [
     CommonModule
   ]
