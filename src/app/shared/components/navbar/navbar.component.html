@@ -1,56 +1,59 @@
+<!--
 <p>
-    <mat-toolbar class="navbar">
-      <nav class="navbar-list">
-        <button mat-button >
-          Adopta
-        </button>
-
-        <button mat-button >
-          Donaciones
-        </button>
-
-        <button mat-button >
-          Salud
-        </button>
-        <button mat-button class="letras" >BIGOTES</button>
-        <a href="#">
-          <img src="fotos\patita.png" alt="logo">
-        </a>
-
-          <button mat-button >
-            Nosotros
-          </button>
-
-          <button mat-button routerLink="/register" >
-            Registrarse
-          </button>
-
-          <button class="boton" mat-raised-button>
-            Login
-          </button>
-      </nav>
-
-      </mat-toolbar>
-
-  <body class="body">
-    <mat-card class="card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>¡Encontra tu mascota ideal!</mat-card-title>
-        <mat-card-subtitle>¿Que tipo de mascota buscas?</mat-card-subtitle>
-      </mat-card-header>
-
-      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle value="bold">Gato</mat-button-toggle>
-        <mat-button-toggle value="italic">Perro</mat-button-toggle>
-
-      </mat-button-toggle-group>
-      <button mat-raised-button> Agregar Ubicacion</button>
-      <button mat-raised-button>Buscar Mascota</button>
-
-
-
-    </mat-card>
-  </body>
-
+  <mat-toolbar class="navbar">
+    <nav class="navbar-list">
+      <button mat-button >
+        Adopta
+      </button>
+      <button mat-button >
+        Donaciones
+      </button>
+      <button mat-button >
+        Salud
+      </button>
+      <button mat-button class="letras" >BIGOTES</button>
+      <a href="#">
+        <img src="fotos\patita.png" alt="logo">
+      </a>
+      <button mat-button >
+        Nosotros
+      </button>
+      <button mat-button routerLink="/register" >
+         Registrarse
+      </button>
+      <button class="boton" mat-raised-button>
+        Login
+      </button>
+    </nav>
+  </mat-toolbar>
 </p>
+-->
+<mat-toolbar color="primary">
+  <button mat-icon-button routerLink="/inicio" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Pets</span>
+
+  <!-- ENRUTAMOS PÁGINAS -->
+  <button mat-button routerLink="/inicio">Inicio</button>
+  <button mat-button routerLink="/nosotros">Nosotros</button>
+  <!-- MENU despegable para Productos -->
+  <button mat-button [matMenuTriggerFor]="menu">Productos</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/productos">Todos</button>
+    <button mat-menu-item routerLink="/collares">Collares</button>
+    <button mat-menu-item routerLink="/juguetes">Juguetes</button>
+    <button mat-menu-item routerLink="/indumentaria">Indumentaria</button>
+  </mat-menu>
+  <button mat-button routerLink="/admin">Administrador</button>
+
+  <span class="example-spacer"></span>
+
+  <!-- Menu despegable para usuarios (registro y login)-->
+  <!-- Va a contener los formularios de acceso -->
+  <button mat-button [matMenuTriggerFor]="user"><mat-icon>person</mat-icon></button>
+  <mat-menu #user="matMenu">
+    <button mat-menu-item routerLink="/login">Iniciar Sesión <mat-icon>person</mat-icon></button>
+    <button mat-menu-item routerLink="/register">Registrarse <mat-icon>person_add</mat-icon></button>
+  </mat-menu>
+</mat-toolbar>
