@@ -8,9 +8,9 @@ import { ApartadosComponent } from './components/apartados/apartados.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import {NgFor} from '@angular/common';
-import {MatGridListModule} from '@angular/material/grid-list';
 
+
+import { MatTreeModule} from '@angular/material/tree';
 
 
 import { InicioRoutingModule } from './inicio-routing.module';
@@ -29,12 +29,11 @@ import { MatGridList } from '@angular/material/grid-list';
     MatCardModule,
     InicioRoutingModule,
     MatIconModule,
-    MatGridListModule
+    MatTreeModule, 
   ],
   exports: [
     MatButtonModule,
     MatCardModule,
-    MatGridListModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
     ApartadosComponent
