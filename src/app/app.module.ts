@@ -19,10 +19,16 @@ import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TableComponent } from './components/table/table.component';
+import { UsuarioComponent } from './modules/usuario/pages/usuario/usuario.component';
+import { CrudComponent } from './modules/usuario/services/crud/crud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TableComponent,
+    UsuarioComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,
