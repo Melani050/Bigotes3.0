@@ -11,23 +11,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let col of coleccionProductos">
+      <tr>
         <th scope="row">1</th>
         <td>
-          <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+          <img src="..." alt="..." width="100px">
         </td>
-        <td>{{col.nombre}}</td>
-        <td>{{col.descripcion}}</td>
-        <td>{{col.precio}}</td>
-        <td>{{col.categoria}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <!-- ACCIONES -->
         <td>
             <!-- Botón Editar -->
-            <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(col)">
+            <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#" >
               <mat-icon>edit</mat-icon>
             </button>
             <!-- Botón Eliminar -->
-            <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(col)">
+            <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
               <mat-icon>delete</mat-icon>
             </button>
         </td>
