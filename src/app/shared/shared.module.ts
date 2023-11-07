@@ -4,12 +4,10 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from "../app-routing.module";
 
 //MATERIAL
-import {MatIconModule} from "@angular/material/icon";
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from "@angular/material/button";
-import { MatCardModule } from "@angular/material/card";
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 
 //COMPONENTES
@@ -22,17 +20,18 @@ import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
+    // DECLARAMOS COMPONENTES
     NavbarComponent,
     FooterComponent
   ],
   imports: [
     AppRoutingModule,
     CommonModule,
+    // MATERIAL
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule,
-    MatButtonToggleModule
+    MatMenuModule
   ],
   exports:[
     NavbarComponent,
@@ -40,9 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule,
-    MatButtonToggleModule
-
+    MatMenuModule
 
   ]
 })
