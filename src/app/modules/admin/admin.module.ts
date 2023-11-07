@@ -11,6 +11,8 @@ import { AdminComponent } from './pages/admin/admin.component';
 // COMPONENTE 
 import { TableComponent } from './components/table/table.component';
 
+// MATERIAL 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { TableComponent } from './components/table/table.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MatIconModule
   ],
   exports: [
-    TableComponent
+    TableComponent,
+    MatIconModule
   ]
 })
 export class AdminModule { }
