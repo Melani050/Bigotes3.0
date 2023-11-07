@@ -1,1 +1,36 @@
-<p>table works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let col of coleccionProductos">
+        <th scope="row">1</th>
+        <td>
+          <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+        </td>
+        <td>{{col.nombre}}</td>
+        <td>{{col.descripcion}}</td>
+        <td>{{col.precio}}</td>
+        <td>{{col.categoria}}</td>
+        <!-- ACCIONES -->
+        <td>
+            <!-- Botón Editar -->
+            <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(col)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <!-- Botón Eliminar -->
+            <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(col)">
+              <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+      </tr>
+    </tbody>
+</table>
