@@ -10,5 +10,5 @@ export interface Mascota {
     edad: string;
     peso: string;
     castrado: string;
-    desparacitado: string;
+    desparasitado: string;
 }
