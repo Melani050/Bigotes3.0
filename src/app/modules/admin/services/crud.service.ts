@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Mascota } from 'src/app/models/mascotas';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators'; // mapea valores
-import { async } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +21,21 @@ export class CrudService {
   // CRUD
 
   crearMascota(mascota: Mascota){
-    // 
-    return new Promise(async(resolve, reject))
+    // retorna una nueva promesa, cerea un nuevo id para una mascota
+    return new Promise(async(resolve, reject)=>{
+      try{
+        // Esta generando un nuevo id en la BD, que se guarda el la constante.
+        const idMascota = this.database.createId();
+        mascota.idMascota = idMascota;
 
+        const resultado = await this.mascotasCollection.doc(idMascota).set(mascota)
 
+        resolve(resultado);
+
+      }catch(error){
+        reject(error);
+      }
+    })
   }
   obtenerMasco(){}
   modificarMascota(){}
@@ -32,3 +43,4 @@ export class CrudService {
 
 
 }
+
