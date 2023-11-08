@@ -14,6 +14,9 @@ import { TableComponent } from './components/table/table.component';
 // MATERIAL 
 import { MatIconModule } from '@angular/material/icon';
 
+// ANGULAR
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AdminComponent,
@@ -22,11 +25,15 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     TableComponent,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
