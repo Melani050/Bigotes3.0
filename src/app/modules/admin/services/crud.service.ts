@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Mascota } from 'src/app/models/mascotas';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators'; // mapea valores
+import { async } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,13 @@ export class CrudService {
   }
 
   // CRUD
-  crearMascota(){}
+
+  crearMascota(mascota: Mascota){
+    // 
+    return new Promise(async(resolve, reject))
+
+
+  }
   obtenerMasco(){}
   modificarMascota(){}
   eliminarMascota(){}
