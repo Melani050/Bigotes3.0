@@ -1,36 +1,134 @@
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Descripcion</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Categoría</th>
-        <th scope="col">Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>
-          <img src="..." alt="..." width="100px">
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <!-- ACCIONES -->
-        <td>
-            <!-- Botón Editar -->
-            <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#" >
-              <mat-icon>edit</mat-icon>
-            </button>
-            <!-- Botón Eliminar -->
-            <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
-              <mat-icon>delete</mat-icon>
-            </button>
-        </td>
-      </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Tamaño</th>
+      <th scope="col">Raza</th>
+      <th scope="col">Personalidad</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Peso</th>
+      <th scope="col">Castrado</th>
+      <th scope="col">Desparasitado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let col of coleccionMascotas">
+      <th scope="row">1</th>
+      <td>
+        <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+      </td>
+      <td>{{col.nombre}}</td>
+      <td>{{col.sexo}}</td>
+      <td>{{col.tamanio}}</td>
+      <td>{{col.raza}}</td>
+      <td>{{col.personalidad}}</td>
+      <td>{{col.edad}}</td>
+      <td>{{col.peso}}</td>
+      <td>{{col.castrado}}</td>
+      <td>{{col.desparasitado}}</td>
+      <!-- ACCIONES -->
+      <td>
+          <!-- Botón Editar -->
+          <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editarProducto">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <!-- Botón Eliminar -->
+          <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto">
+            <mat-icon>delete</mat-icon>
+          </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
+
+<!-- BOTÓN PARA AGREGAR PRODUCTOS -->
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarProducto">
+  Agregar un nuevo producto
+</button>
+
+<!-- MODAL PARA AGREGAR PRODUCTO -->
+<div class="modal fade" id="agregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo producto:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div [formGroup]="mascota" class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Ingrese nombre del producto:</label>
+          <input class="form-control" type="text" formControlName="nombre" placeholder="Ej: Producto color rosa">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese una imagen:</label>
+          <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el vínculo a una imagen">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese texto alternativo de la imagen</label>
+          <input class="form-control" type="text" formControlName="alt" placeholder="Ingrese un texto alternativo">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese el sexo del animal:</label>
+          <input class="form-control" type="text" formControlName="sexo" placeholder="Ingrese el sexo del animal">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese el tamaño:</label>
+          <input class="form-control" type="text" formControlName="tamaño" placeholder="Ingrese el tamaño">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese la raza:</label>
+          <input class="form-control" type="text" formControlName="raza" placeholder="Ingrese la raza">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese la personalidad:</label>
+          <input class="form-control" type="text" formControlName="personalidad" placeholder="Ingrese la personalidad">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese la edad:</label>
+          <input class="form-control" type="text" formControlName="edad" placeholder="Ingrese la edad">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese el peso:</label>
+          <input class="form-control" type="text" formControlName="peso" placeholder="Ingrese el peso">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese si fue castrado:</label>
+          <input class="form-control" type="text" formControlName="castrado" placeholder="Ingrese si fue castrado">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese si fue desparasitado:</label>
+          <input class="form-control" type="text" formControlName="desparasitado" placeholder="Ingrese si fue desparasitado">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Seleccione una categoría:</label>
+          <select class="form-control" formControlName="categoria" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="collares">Collares</option>
+            <option value="juguetes">Juguetes</option>
+            <option value="indumentaria">Indumentaria</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ACCIONES DEL MODAL -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
