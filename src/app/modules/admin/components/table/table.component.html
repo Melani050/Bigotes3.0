@@ -60,7 +60,7 @@
       <div [formGroup]="mascota" class="modal-body">
         <div class="mb-3">
           <label class="form-label">Ingrese nombre del producto:</label>
-          <input class="form-control" type="text" formControlName="nombre" placeholder="Ej: Producto color rosa">
+          <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre de la mascota">
         </div>
 
         <div class="mb-3">
@@ -90,8 +90,17 @@
 
         <div class="mb-3">
           <label class="form-label">Ingrese la personalidad:</label>
-          <input class="form-control" type="text" formControlName="personalidad" placeholder="Ingrese la personalidad">
-        </div>
+          <select class="form-control" formControlName="personalidad" class="form-select">
+            <option selected>Ingrese la personalidad</option>
+            <option value="jugueton">Jugueton</option>
+            <option value="curioso">Curioso</option>
+            <option value="sociable">Sociable</option>
+            <option value="independiente">Independiente</option>
+            <option value="timido">Timido</option>
+            <option value="pasivo-agresivo">Pasivo-agresivo</option>
+            <option value="agresivo">Agresivo</option>
+          </select>
+        </div> 
 
         <div class="mb-3">
           <label class="form-label">Ingrese la edad:</label>
@@ -104,24 +113,24 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Ingrese si fue castrado:</label>
-          <input class="form-control" type="text" formControlName="castrado" placeholder="Ingrese si fue castrado">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Ingrese si fue desparasitado:</label>
-          <input class="form-control" type="text" formControlName="desparasitado" placeholder="Ingrese si fue desparasitado">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Seleccione una categoría:</label>
-          <select class="form-control" formControlName="categoria" class="form-select">
+          <label class="form-label">Fue castrado:</label>
+          <select class="form-control" formControlName="castrado" class="form-select">
             <option selected>Elija una opción</option>
-            <option value="collares">Collares</option>
-            <option value="juguetes">Juguetes</option>
-            <option value="indumentaria">Indumentaria</option>
+            <option value="si">Si</option>
+            <option value="no">No</option>
           </select>
         </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fue desparasitado:</label>
+          <select class="form-control" formControlName="desparasitado" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="si">Si</option>
+            <option value="no">No</option>
+          </select>
+        </div>  
+
+        
       </div>
 
       <!-- ACCIONES DEL MODAL -->
