@@ -13,6 +13,8 @@ export class TableComponent {
 
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacios
 
+  modalVisibleMascota: boolean = false;
+
   // formulario vinculado al archivo HTML
   mascota = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -27,5 +29,21 @@ export class TableComponent {
     castrado: new FormControl('', Validators.required),
     desparasitado: new FormControl('', Validators.required),
   })
+
+  // patentamos servicio de forma local - llamamos al servicio CRUD
+  constructor(public servicioCrud: CrudService){}
+
+  ngOnInit(): void{
+    /* llamamos función obtenerMascota y le enviamos los nuevos valores
+    del formulario producto (se guardan en la colección) */
+    this.servicioCrud.obtenerMascota().subscribe(mascota => {
+      this.coleccionMascotas = this.mascota;
+    })
+  } 
+
+  async agregarMascota(){ // método para validar esos valores del producto agregado
+  }
+
+
 
 }

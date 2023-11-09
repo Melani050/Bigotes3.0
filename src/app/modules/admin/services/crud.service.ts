@@ -37,7 +37,7 @@ export class CrudService {
       }
     })
   }
-  obtenerMasco(){}
+  obtenerMascota(){}
   modificarMascota(){}
   eliminarMascota(){}
 
