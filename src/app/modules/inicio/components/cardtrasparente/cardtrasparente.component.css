@@ -9,11 +9,18 @@ align-items: center;
 flex-shrink: 0;
 margin: auto;
 margin-bottom: 20px;
+margin-top: 20px;
 
 border-radius: 20px;
 background-color: rgba(255, 255, 255, 0.7);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .botones{
-  fill: rgba(255, 201, 29, 0.79);
+  background-color: rgba(255, 201, 29, 0.79);
+}
+.boton2{
+  background-color: rgba(255, 201, 29, 0.79);
+  padding: 0px 30px;
+  margin-bottom: auto
+
 }
