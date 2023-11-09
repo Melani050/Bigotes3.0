@@ -18,11 +18,11 @@ export class TableComponent {
   // formulario vinculado al archivo HTML
   mascota = new FormGroup({
     nombre: new FormControl('', Validators.required),
+    imagen: new FormControl('', Validators.required),
+    alt: new FormControl('', Validators.required),
     sexo: new FormControl('', Validators.required),
     tamanio: new FormControl('', Validators.required),
     raza: new FormControl('', Validators.required),
-    imagen: new FormControl('', Validators.required),
-    alt: new FormControl('', Validators.required),
     personalidad: new FormControl('', Validators.required),
     edad: new FormControl('', Validators.required),
     peso: new FormControl('', Validators.required),
@@ -35,11 +35,41 @@ export class TableComponent {
 
   ngOnInit(): void{
     /* llamamos función obtenerMascota y le enviamos los nuevos valores
-    del formulario producto (se guardan en la colección) */
+    del formulario mascota (se guardan en la colección) */
     this.servicioCrud.obtenerMascota().subscribe(mascota => {
       this.coleccionMascotas = mascota;
     })
   } 
+
+  async agregarMascota(){
+    if (this.mascota.valid){
+      let nuevaMascota: Mascota = {
+        idMascota: '', // único que guardamos vacío; lo creamos en el CRUD
+        nombre: this.mascota.value.nombre!,
+        imagen: this.mascota.value.imagen!,
+        alt: this.mascota.value.alt!,
+        sexo: this.mascota.value.sexo!,
+        tamanio: this.mascota.value.tamanio!,
+        raza: this.mascota.value.raza!,
+        personalidad: this.mascota.value.personalidad!,
+        edad: this.mascota.value.edad!,
+        peso: this.mascota.value.peso!,
+        castrado: this.mascota.value.castrado!,
+        desparasitado: this.mascota.value.desparasitado!,
+        
+      };
+
+      // ENVIAMOS NUESTRA NUEVA MASCOTA
+      // llamamos al servicioCrud; función crearProducto; seteamos nuevoProducto
+      await this.servicioCrud.crearMascota(nuevaMascota)
+      .then(mascota => {
+        alert("Ha agregado una nueva mascota con éxito");
+      })
+      .catch(error => {
+        alert("Hubo un error al cargar la nueva mascota"+error);
+      })
+    }
+  }
 
 
 

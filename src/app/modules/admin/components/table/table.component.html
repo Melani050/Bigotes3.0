@@ -58,60 +58,50 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div [formGroup]="mascota" class="modal-body">
-        <div class="row">
-          <div class="col">
+        
+          
             <div class="mb-3">
               <label class="form-label">Ingrese nombre de la mascota:</label>
               <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre de la mascota">
             </div>
-          </div>
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Ingrese una imagen:</label>
               <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el vínculo a una imagen">
             </div>
-          </div>
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Ingrese texto alternativo de la imagen</label>
               <input class="form-control" type="text" formControlName="alt" placeholder="Ingrese un texto alternativo">
             </div>
-          </div>
-          <div class="col">
             <div class="mb-3">
-              <label class="form-label">Ingrese el sexo del animal:</label>
-              <input class="form-control" type="text" formControlName="sexo" placeholder="Ingrese el sexo del animal">
+              <label class="form-label">Ingrese el sexo</label>
+              <select class="form-control" formControlName="sexo" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="macho">Macho</option>
+                <option value="hembra">Hembra</option>
+              </select>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Ingrese el peso:</label>
               <input class="form-control" type="text" formControlName="peso" placeholder="Ingrese el peso">
             </div>
-          </div>
-          <div class="col">
+
             <div class="mb-3">
               <label class="form-label">Ingrese el tamaño:</label>
-              <input class="form-control" type="text" formControlName="tamaño" placeholder="Ingrese el tamaño">
-            </div>
-          </div>
-          <div class="col">
+              <select class="form-control" formControlName="castrado" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="pequeño">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grnade">Grande</option>
+                <option value="gigante">Gigante</option>
+              </select>
             <div class="mb-3">
               <label class="form-label">Ingrese la raza:</label>
               <input class="form-control" type="text" formControlName="raza" placeholder="Ingrese la raza">
             </div>
-          </div>
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Ingrese la edad:</label>
               <input class="form-control" type="text" formControlName="edad" placeholder="Ingrese la edad">
             </div>
-          </div>
-        </div>    
-        <div class="row">   
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Ingrese la personalidad:</label>
               <select class="form-control" formControlName="personalidad" class="form-select">
@@ -125,8 +115,6 @@
                 <option value="agresivo">Agresivo</option>
               </select>
             </div> 
-          </div>
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Fue castrado:</label>
               <select class="form-control" formControlName="castrado" class="form-select">
@@ -135,8 +123,6 @@
                 <option value="no">No</option>
               </select>
             </div>
-          </div>
-          <div class="col">
             <div class="mb-3">
               <label class="form-label">Fue desparasitado:</label>
               <select class="form-control" formControlName="desparasitado" class="form-select">
@@ -144,15 +130,14 @@
                 <option value="si">Si</option>
                 <option value="no">No</option>
               </select>
-            </div>  
-          </div>
+            </div> 
         </div>
       </div>
       <div class="row">
         <div class="col">
           <!-- ACCIONES DEL MODAL -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </div>
