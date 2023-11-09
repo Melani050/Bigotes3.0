@@ -45,14 +45,14 @@
 </table>
 
 <!-- BOTÓN PARA AGREGAR PRODUCTOS -->
-<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarProducto">
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
   Agregar un nuevo producto
 </button>
 
 <!-- MODAL PARA AGREGAR PRODUCTO -->
-<div class="modal fade " id="agregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="agregarMascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg tamanio">
-    <div class="modal-content tamanio">
+    <div class="modal-content ">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo producto:</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -133,15 +133,11 @@
             </div> 
         </div>
       </div>
-      <div class="row">
-        <div class="col">
           <!-- ACCIONES DEL MODAL -->
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
-        </div>
-      </div>
       </div>
   </div>
 </div>
