@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  margin: auto;
+  max-width: 1380px;
+  
+}
+.fondo{
+  background-color:#ffc91d;
+  height: 11%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border-radius: 0 0 20px 20px ;
+
+}
+
+/* LOGO */
+.letras{
+  margin: 0 auto;
+}
+.letras a{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0 40px;
+
+}
+.letras img{
+  width: 70px;
+  height: 70px;
+  margin-left: 5px;
+}
+
+
+.espacio{
+  margin: 0 5%;
+  color: #fff;
+}
+.espacio button{
+  font-size: 18px;
+  font-weight: 500;
+}
