@@ -37,7 +37,12 @@ export class CrudService {
       }
     })
   }
-  obtenerMascota(){}
+  obtenerMascota(){
+      // snapshoot -> captura los cambios
+      // pipe -> tubería por dónde viajan esos nuevos datos
+      // map -> mapea los datos los recorre, los lee
+    return this.mascotasCollection.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
+  }
   modificarMascota(){}
   eliminarMascota(){}
 

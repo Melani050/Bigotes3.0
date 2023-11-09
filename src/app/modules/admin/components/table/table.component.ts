@@ -37,12 +37,10 @@ export class TableComponent {
     /* llamamos función obtenerMascota y le enviamos los nuevos valores
     del formulario producto (se guardan en la colección) */
     this.servicioCrud.obtenerMascota().subscribe(mascota => {
-      this.coleccionMascotas = this.mascota;
+      this.coleccionMascotas = mascota;
     })
   } 
 
-  async agregarMascota(){ // método para validar esos valores del producto agregado
-  }
 
 
 
