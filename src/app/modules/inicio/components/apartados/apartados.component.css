@@ -20,9 +20,14 @@
   padding-top: 50px;
 }
 
+.titulo2{
+  margin-top: 50px;
+  padding-top: 50px;
+  margin: 0;
+}
+
 /*  ACORDION  */
 .espacio{
-  padding-top: 30px;
   margin: 20px;
 }
 

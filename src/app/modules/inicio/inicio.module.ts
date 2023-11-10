@@ -10,11 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 
-import { MatTreeModule} from '@angular/material/tree';
-
-
 import { InicioRoutingModule } from './inicio-routing.module';
-import { MatGridList } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -29,7 +25,6 @@ import { MatGridList } from '@angular/material/grid-list';
     MatCardModule,
     InicioRoutingModule,
     MatIconModule,
-    MatTreeModule, 
   ],
   exports: [
     MatButtonModule,
