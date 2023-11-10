@@ -23,7 +23,7 @@ import { AngularFireStorageModule } from "@angular/fire/compat/storage";
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    
+    //CONFIGURACION DE modulos FIREBASE
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule

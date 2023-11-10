@@ -43,18 +43,20 @@ async iniciar() {
    } )
   }
 
+  
  //llamamos funcion para CERRAR SESION
 
-  async salir(){
-    const res = await this.servicioAuth.cerrarSesion()
-    .then((res: any) =>{
-      alert("Ha cerrado sesion con exito");
-      console.log(res);
+  //async salir(){
+    //const res = await this.servicioAuth.cerrarSesion()
+    //.then((res: any) =>{
+      //alert("Ha cerrado sesion con exito");
+      //console.log(res);
 
-      this.router.navigate(['/inicio'])
+      //this.router.navigate(['/inicio'])
       
-    })
-  }
+    //})
+  //}
+
 
 }
 

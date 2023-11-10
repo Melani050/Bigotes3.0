@@ -25,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     AppRoutingModule,
     CommonModule,
+    //MATERIAL
     MatIconModule,
     MatToolbarModule,
     MatButtonModule
