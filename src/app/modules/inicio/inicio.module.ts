@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { InicioRoutingModule } from './inicio-routing.module';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { BuscadorComponent } from './components/cardtrasparente/buscador/buscador.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { BuscadorComponent } from './components/cardtrasparente/buscador/buscado
     InicioComponent,
     CardsComponent,
     CardtrasparenteComponent,
-    BuscadorComponent
+    BuscadorComponent,
+
   ],
   imports: [
     CommonModule,
