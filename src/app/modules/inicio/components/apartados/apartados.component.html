@@ -5,34 +5,66 @@
     <div class="col-sm-8">
       <h2>Espacio adecuado para perros</h2>
 
-      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
-        
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-            {{node.name}}
-        </mat-tree-node>
-
-        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
-            <div class="mat-tree-node">
-              <button mat-icon-button matTreeNodeToggle
-                      [attr.aria-label]="'Toggle ' + node.name">
-                <mat-icon class="mat-icon-rtl-mirror">
-                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                </mat-icon>
-              </button>
-              {{node.name}}
-            </div>
-            
-            <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
-                role="group">
-              <ng-container matTreeNodeOutlet></ng-container>
-          </div>
-        </mat-nested-tree-node>
-      </mat-tree>
+      <ul class="list-group  espacio">
+        <li class="list-group-item">La<strong> responsabilidad</strong> siempre debe guiarnos en la elección del perro perfecto para nuestro hogar y estilo de vida</li>
+        <li class="list-group-item">Es aconsejable tener perros de tamaño medianos o grandes <strong> con mucha energía</strong> en espacios más amplios.
+        </li>
+        <li class="list-group-item">Un lugar que <strong>no brinde las condiciones adecuadas</strong>  para el crecimiento del animal puede <strong> generar problemas físicos y psicológicos</strong>.
+        </li>
+      </ul>
       
+      <img style="margin-top: 60px;" src="https://img.freepik.com/fotos-premium/bulldog-ingles_748076-29.jpg" alt="perro">
 
     </div>
     <div class="col-sm-4 borde">
-      <img src="https://i.pinimg.com/550x/fc/53/c4/fc53c435a4ac26ffabb103d4f85d59d5.jpg" alt="Perro" >
+      <img class="espacio2" src="https://i.pinimg.com/550x/fc/53/c4/fc53c435a4ac26ffabb103d4f85d59d5.jpg" alt="Perro" >
+      
+      <div class="accordion espacio" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Perros grandes
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Los perros grandes necesitan un espacio mínimo de 200 metros cuadrados.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Perros medianos
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Si viven en un departamento pequeño, lo mejor es elegir un perro pequeño o mediano.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Perros pequeños
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Los perros pequeños necesitan un espacio mínimo de 80 metros cuadrados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
