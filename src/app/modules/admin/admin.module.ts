@@ -30,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   exports: [
+    AdminComponent,
     TableComponent,
     MatIconModule,
     FormsModule,
