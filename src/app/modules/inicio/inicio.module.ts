@@ -9,13 +9,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { InicioRoutingModule } from './inicio-routing.module';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { BuscadorComponent } from './components/cardtrasparente/buscador/buscador.component';
 
 
 @NgModule({
   declarations: [
     InicioComponent,
     CardsComponent,
-    CardtrasparenteComponent
+    CardtrasparenteComponent,
+    BuscadorComponent
   ],
   imports: [
     CommonModule,
