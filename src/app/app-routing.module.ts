@@ -9,8 +9,7 @@ const routes: Routes = [
   // lazyloading
   {
     //los path acá van vacios ''
-    path: '',
-    loadChildren: () =>import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    path: '',loadChildren: () =>import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)
