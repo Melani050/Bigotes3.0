@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/inicio/inicio.module').then((m) => m.InicioModule),
   },
+  {
+    path: '',
+    loadChildren: () =>
+    import('./modules/donaciones/donaciones.module').then((m) => m.DonacionesModule),
+  }
 ];
 
 @NgModule({
