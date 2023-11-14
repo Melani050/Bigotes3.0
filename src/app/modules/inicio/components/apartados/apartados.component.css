@@ -2,35 +2,31 @@
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 5%;
-    margin-left:25%;
-    margin-right: 25%;
+    margin-top: 80px;
     border-radius: 10px;
     background-color: #FFC91D;
 }
-
 .container{
-  margin: 5%, 5%, 0, 0;
-  padding: 0;
-  margin-top: 5%;
+  padding-left: 150px;
+  padding-right: 150px;
+
 }
 
-.espacio2{
+.letra{
   margin-top: 50px;
-  padding-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #FFC91D;
 }
 
-.titulo2{
-  margin-top: 50px;
-  padding-top: 50px;
-  margin: 0;
+img{
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #FFC91D;
 }
 
-/*  ACORDION  */
-.espacio{
-  margin: 20px;
-}
-
-.accordion-body p{
+.col-md-8 ul{
   text-align: start;
+  margin-left: 30px;
 }
