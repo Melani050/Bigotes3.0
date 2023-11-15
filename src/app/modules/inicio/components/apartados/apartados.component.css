@@ -7,14 +7,17 @@
     background-color: #FFC91D;
 }
 .container{
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 100px;
+  padding-right: 100px;
 
 }
 .accordion{
   border-radius: 10px;
   border-style: solid;
   border-color: #c3c3c3;
+}
+.accordion li{
+  padding: 8px;
 }
 
 li{
@@ -23,8 +26,8 @@ li{
 }
 
 .letra{
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   border-radius: 10px;
   border-style: solid;
   border-color: #c3c3c3;
@@ -33,7 +36,7 @@ li{
 img{
   border-radius: 25px;
   border-style: solid;
-  border-color: #c3c3c3;
+  border-color: #FFC91D;
 }
 
 .col-md-8 ul{
