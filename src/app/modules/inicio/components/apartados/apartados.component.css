@@ -11,19 +11,29 @@
   padding-right: 150px;
 
 }
+.accordion{
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #c3c3c3;
+}
+
+li{
+  padding: 15px;
+  font-size: 15px;
+}
 
 .letra{
   margin-top: 50px;
   margin-bottom: 50px;
-  border-radius: 15px;
+  border-radius: 10px;
   border-style: solid;
-  border-color: #FFC91D;
+  border-color: #c3c3c3;
 }
 
 img{
   border-radius: 25px;
   border-style: solid;
-  border-color: #FFC91D;
+  border-color: #c3c3c3;
 }
 
 .col-md-8 ul{
