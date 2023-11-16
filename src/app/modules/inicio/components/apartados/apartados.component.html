@@ -1,14 +1,16 @@
 <div class="container">
 
-
+  <!-- para adoptar -->
+  
   <h3 class="titulo" id="tenerEnCuenta">¡A tener en cuenta para adoptar!</h3>
   <div>
-    <!-- ESPACIO ADECUADO -->
+    <!-- espacio adecuado -->
     <h4 class="text-center letra" style="color: #FFC91D;;">ESPACIO ADECUADO</h4>
     <div class=" text-start">
-      <!--  PERRO  -->
+
+    <!--  perro  -->
         <div class="row">
-          <!--  LISTA  -->
+          <!--  lista  -->
           <div class="col-md-8">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">La responsabilidad siempre debe guiarnos en la elección del perro perfecto para nuestro hogar y estilo de vida</li>
@@ -17,17 +19,17 @@
               </li>
             </ul>
           </div>
-          <!-- IMAGEN -->
+          <!-- imagen -->
           <div class="col-md-4">
             <img src="https://i.pinimg.com/550x/fc/53/c4/fc53c435a4ac26ffabb103d4f85d59d5.jpg" alt="Perro" > 
           </div>
           
         </div>
-        <!-- ACORDIÓN  -->
-        <div class="accordion" style="margin-top: 50px;" id="accordionExample">
+        <!-- acordión  -->
+        <div class="accordion acordion" style="margin-top: 50px;" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button class="accordion-button color-letra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Departamento o espacios reducidos
               </button>
             </h2>
@@ -49,7 +51,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed color-letra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Casas medianas
               </button>
             </h2>
@@ -74,7 +76,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed color-letra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Casas grnades con mucho espacio
               </button>
             </h2>
@@ -95,13 +97,14 @@
             </div>
           </div>
         </div>
-      <!--  GATO  -->
+        
+    <!--  gato  -->
         <div class="row" style="margin-top: 50px;">
-          <!-- IMAGEN -->
+          <!-- imagen -->
           <div class="col-md-4" >
             <img  src="https://img.freepik.com/fotos-premium/pequeno-gatito-gris-sobre-fondo-blanco_136670-1716.jpg?w=360" alt="gato">
           </div>
-          <!-- LISTA  -->
+          <!-- lista  -->
           <div class="col-md-8 ">
             <ul class="list-group list-group-flush">
               <li class="list-group-item ">
@@ -128,13 +131,13 @@
         </div>
     </div>
 
-    <!-- REQUISITOS -->
+    <!-- requisitos -->
+
     <h4 class="text-center letra" style="color: #FFC91D;;">REQUISITOS</h4>
     <div class="row">
-      <div class="col-md-4">
-        
-        
-        <ul >
+      <div class="col-md-4 ">
+        <!-- lista -->
+        <ul class="espacio-requisistos" >
           <li class="list-group-item" >
             <mat-icon style="color: #FFC91D;">looks_one</mat-icon>
             Adaptar tu hogar para la llegada de una nueva mascota.
@@ -149,18 +152,85 @@
 
           </li>
         </ul>
+
+        <!-- formulario de adopciíon  -->
+
+        <button class="boton" mat-button data-bs-toggle="modal" data-bs-target="#formulario" type="button">
+           FORMULARIO DE ADOPCIÓN
+        </button>
+
+            <!-- modal -->
+        <div class="modal" id="formulario" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="col-md-8">
-        <img style="margin-left: 55px;" src="https://images.hola.com/imagenes/mascotas/20230110224293/perros-gatos-ciclos-sueno-dn/1-187-677/ciclos-sueno-dormir-perros-gatos-t.jpg?tx=w_680" alt="">
+
+      <!-- imagen -->
+      <div class="col-md-8" style="padding-left: 65px;">
+        <img src="https://images.hola.com/imagenes/mascotas/20230110224293/perros-gatos-ciclos-sueno-dn/1-187-677/ciclos-sueno-dormir-perros-gatos-t.jpg?tx=w_680" alt="">
       </div>
     </div>
   </div>
 
+  <!-- preguntas frecuentes  -->
 
   <h3 class="titulo" id="preguntas">Preguntas Frecuentes</h3>
-  <div>
+  <div style="margin-top: 50px;">
 
+    <!-- acordión -->
+    <div class="accordion color-letra" id="accordionExample">
+      <div class="accordion-item preguntas-acc">
+        <h2 class="accordion-header">
+          <button class="accordion-button color-letra"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item preguntas-acc">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed color-letra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item preguntas-acc">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed color-letra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 
 </div>
