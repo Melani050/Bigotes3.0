@@ -5,15 +5,19 @@
     margin-top: 80px;
     border-radius: 10px;
     background-color: #FFC91D;
+    font-weight: 400;
 }
 
 /* subtitulo */
 .letra{
   margin-top: 50px;
   margin-bottom: 40px;
+  padding: 10px;
   border-radius: 10px;
+  border-width: 2px;
   border-style: solid;
   border-color: #c3c3c3;
+  font-weight: 400;
 }
 
 .container{
@@ -27,6 +31,7 @@
 /* acordion  */
 .accordion{
   border-radius: 10px;
+  border-width: 2px;
   border-style: solid;
   border-color: #c3c3c3;
 }
