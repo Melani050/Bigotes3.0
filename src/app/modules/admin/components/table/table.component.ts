@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
-  coleccionMascotas: Mascota[] = []; // creamos colección basada en interfaz Mascota
+  coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
 
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacios
 
@@ -65,13 +65,9 @@ export class TableComponent {
       .then(mascota => {
         alert("Ha agregado una nueva mascota con éxito");
       })
-      .catch(error => {
-        alert("Hubo un error al cargar la nueva mascota"+error);
+      .catch((error) => {
+        alert("Hubo un error al cargar la nueva mascota \n"+error);
       })
     }
   }
-
-
-
-
 }

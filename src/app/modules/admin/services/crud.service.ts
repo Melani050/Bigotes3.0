@@ -10,12 +10,12 @@ import { map } from 'rxjs/operators'; // mapea valores
 export class CrudService {
   // Creo la colección "mascotasCollection" basandome el la colección "AngularFirestoreCollection"
   // y respetando la interfaz de Mascota.
-  private mascotasCollection: AngularFirestoreCollection<Mascota>
+  private mascotasColeccion: AngularFirestoreCollection<Mascota>
 
   // Defino de forma local "AngularFirestore" como database.
   constructor(private database: AngularFirestore) {
     // Referencio la colección mascotas de la base de datos con mi colección local. 
-    this.mascotasCollection = database.collection('mascotas')
+    this.mascotasColeccion = database.collection('mascotas')
   }
 
   // CRUD
@@ -28,7 +28,7 @@ export class CrudService {
         const id = this.database.createId();
         mascota.idMascota = id;
 
-        const resultado = await this.mascotasCollection.doc(id).set(mascota)
+        const resultado = await this.mascotasColeccion.doc(id).set(mascota)
 
         resolve(resultado);
 
@@ -41,7 +41,7 @@ export class CrudService {
       // snapshoot -> captura los cambios
       // pipe -> tubería por dónde viajan esos nuevos datos
       // map -> mapea los datos los recorre, los lee
-    return this.mascotasCollection.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
+    return this.mascotasColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
   modificarMascota(){}
   eliminarMascota(){}
