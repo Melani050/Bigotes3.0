@@ -25,10 +25,10 @@ export class CrudService {
     return new Promise(async(resolve, reject)=>{
       try{
         // Esta generando un nuevo id en la BD, que se guarda el la constante.
-        const idMascota = this.database.createId();
-        mascota.idMascota = idMascota;
+        const id = this.database.createId();
+        mascota.idMascota = id;
 
-        const resultado = await this.mascotasCollection.doc(idMascota).set(mascota)
+        const resultado = await this.mascotasCollection.doc(id).set(mascota)
 
         resolve(resultado);
 
