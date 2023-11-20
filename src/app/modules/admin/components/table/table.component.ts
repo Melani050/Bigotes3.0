@@ -10,6 +10,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class TableComponent {
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
+
+  mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
+
   
 
   // formulario vinculado al archivo HTML
@@ -70,5 +73,26 @@ export class TableComponent {
     }
   }
 
-  
+  // EDITAR MASCOTA -> vincula al modal editar
+  mostrarEditar(mascotaSeleccionada: Mascota){
+    this.mascotaSeleccionada = mascotaSeleccionada;
+
+    /* retorna y envia los valores de la mascota 
+    seleccionado, el ID no se vuelve a enviar porque 
+    no se modifica */
+    this.mascota.setValue({
+        nombre: mascotaSeleccionada.nombre,
+        imagen: mascotaSeleccionada.imagen,
+        alt: mascotaSeleccionada.alt,
+        sexo: mascotaSeleccionada.sexo,
+        tamanio: mascotaSeleccionada.tamanio,
+        raza: mascotaSeleccionada.raza,
+        personalidad:mascotaSeleccionada.personalidad,
+        edad: mascotaSeleccionada.edad,
+        peso: mascotaSeleccionada.peso,
+        castrado: mascotaSeleccionada.castrado,
+        desparasitado: mascotaSeleccionada.desparasitado,
+    })
+  }
+
 }

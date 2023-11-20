@@ -43,16 +43,12 @@ export class CrudService {
       // map -> mapea los datos los recorre, los lee
     return this.mascotasColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
-
-  // función para EDITAR PRODUCTO
-  // se envia el ID de la mascota seleccionada y su nueva informacion
+  /* función para EDITAR PRODUCTO
+   se envia el ID de la mascota seleccionada y su nueva informacion*/
   modificarMascota(idMascota: string, nuevaData: Mascota){
     return this.database.collection('mascotas').doc(idMascota).update(nuevaData);
   }
   eliminarMascota(){}
-
-// envíamos el ID del producto y la nueva información
-
 
 }
 
