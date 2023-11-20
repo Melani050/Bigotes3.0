@@ -20,6 +20,7 @@ export class CrudService {
 
   // CRUD
 
+  // funcion para CREAR MASCOTA
   crearMascota(mascota: Mascota){
     // retorna una nueva promesa, cerea un nuevo id para una mascota
     return new Promise(async(resolve, reject)=>{
@@ -43,12 +44,24 @@ export class CrudService {
       // map -> mapea los datos los recorre, los lee
     return this.mascotasColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
-  /* función para EDITAR PRODUCTO
+  /* función para EDITAR MASCOTA
    se envia el ID de la mascota seleccionada y su nueva informacion*/
   modificarMascota(idMascota: string, nuevaData: Mascota){
     return this.database.collection('mascotas').doc(idMascota).update(nuevaData);
   }
-  eliminarMascota(){}
+  /*funcion para ELIMINAR MASCOTA
+    se envia el ID de la mascota*/
+  eliminarMascota(idMascota: string){
+    return new Promise((resolve, reject) => {
+      try{
+        const resp = this.mascotasColeccion.doc(idMascota).delete()
+        resolve (resp)
+      }
+      catch(error){
+        reject(error)
+      }
+    })
+  }
 
 }
 

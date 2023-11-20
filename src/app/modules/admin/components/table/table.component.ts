@@ -122,4 +122,5 @@ export class TableComponent {
     })
   }
 
+  
 }
