@@ -12,6 +12,7 @@
       <th scope="col">Peso</th>
       <th scope="col">Castrado</th>
       <th scope="col">Desparasitado</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,7 @@
       <td>{{col.peso}}</td>
       <td>{{col.castrado}}</td>
       <td>{{col.desparasitado}}</td>
+    
 
       <!-- BOTONES PARA EDITAR Y ELIMINAR -->
       <td>
@@ -137,6 +139,98 @@
           <!-- ACCIONES DEL MODAL -->
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PARA EDITAR MASCOTA -->
+<div class="modal fade" *ngFor="let col of coleccionMascotas" id="editarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edite el siguiente producto:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div [formGroup]="mascota" class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Ingrese nombre de la mascota:</label>
+          <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre de la mascota">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese una imagen:</label>
+          <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el vínculo a una imagen">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese texto alternativo de la imagen</label>
+          <input class="form-control" type="text" formControlName="alt" placeholder="Ingrese un texto alternativo">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese el sexo</label>
+          <select class="form-control" formControlName="sexo" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="macho">Macho</option>
+            <option value="hembra">Hembra</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese el peso:</label>
+          <input class="form-control" type="text" formControlName="peso" placeholder="Ingrese el peso">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese el tamaño:</label>
+          <select class="form-control" formControlName="tamanio" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="pequeño">Pequeño</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+            <option value="gigante">Gigante</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese la raza:</label>
+          <input class="form-control" type="text" formControlName="raza" placeholder="Ingrese la raza">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese la edad:</label>
+          <input class="form-control" type="text" formControlName="edad" placeholder="Ingrese la edad">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese la personalidad:</label>
+          <select class="form-control" formControlName="personalidad" class="form-select">
+            <option selected>Ingrese la personalidad</option>
+            <option value="jugueton">Jugueton</option>
+            <option value="curioso">Curioso</option>
+            <option value="sociable">Sociable</option>
+            <option value="independiente">Independiente</option>
+            <option value="timido">Timido</option>
+            <option value="pasivo-agresivo">Pasivo-agresivo</option>
+            <option value="agresivo">Agresivo</option>
+          </select>
+        </div> 
+        <div class="mb-3">
+          <label class="form-label">Fue castrado:</label>
+          <select class="form-control" formControlName="castrado" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="si">Si</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fue desparasitado:</label>
+          <select class="form-control" formControlName="desparasitado" class="form-select">
+            <option selected>Elija una opción</option>
+            <option value="si">Si</option>
+            <option value="no">No</option>
+          </select>
+        </div> 
+
+      </div>
+
+      <!-- ACCIONES DEL MODAL -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar cambios</button>
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>
