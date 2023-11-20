@@ -94,5 +94,32 @@ export class TableComponent {
         desparasitado: mascotaSeleccionada.desparasitado,
     })
   }
+  /* VINCULA A BOTÓN "guardar cambios"
+   recibe los valores nuevos ingresados en el formulario*/
+  editarMascota(){
+    let datos: Mascota = {
+      idMascota: this.mascotaSeleccionada.idMascota,
+      // signo de exclamación "!" -> puede recibir valores vacíos al inicializar
+      nombre: this.mascota.value.nombre!,
+      imagen: this.mascota.value.imagen!,
+      alt: this.mascota.value.alt!,
+      sexo: this.mascota.value.sexo!,
+      tamanio: this.mascota.value.tamanio!,
+      raza: this.mascota.value.raza!,
+      personalidad: this.mascota.value.personalidad!,
+      edad: this.mascota.value.edad!,
+      peso: this.mascota.value.peso!,
+      castrado: this.mascota.value.castrado!,
+      desparasitado: this.mascota.value.desparasitado!
+    }
+
+    this.servicioCrud.modificarMascota(this.mascotaSeleccionada.idMascota, datos)
+    .then(producto => {
+      alert("La mascota fue modificada con éxito.");
+    })
+    .catch(error => {
+      alert("No se pudo modificar la mascota. \n"+error);
+    })
+  }
 
 }
