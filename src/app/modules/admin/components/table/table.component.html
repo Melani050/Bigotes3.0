@@ -34,7 +34,7 @@
 
       <!-- BOTONES PARA EDITAR Y ELIMINAR -->
       <td>
-        <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#" (click)="mostrarEditar(col)" >
+        <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
             <mat-icon>edit</mat-icon>
         </button>
         <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#" >
@@ -146,7 +146,7 @@
 </div>
 
 <!-- MODAL PARA EDITAR MASCOTA -->
-<div class="modal fade" *ngFor="let col of coleccionMascotas" id="editarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" *ngFor="let col of coleccionMascotas" id="editarMascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -230,7 +230,7 @@
 
       <!-- ACCIONES DEL MODAL -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar cambios</button>
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="editarMascota()">Guardar cambios</button>
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>
