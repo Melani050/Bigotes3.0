@@ -3,6 +3,12 @@
     justify-content: center;
 }
 
+th{
+    padding: 20px;
+}
+button{
+    margin: 2px;
+}
 .tamanio{
     padding: 5%;
 }
