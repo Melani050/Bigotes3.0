@@ -13,7 +13,7 @@ export class TableComponent {
 
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
 
-  
+  modalVisibleMascota: boolean = false;  
 
   // formulario vinculado al archivo HTML
   mascota = new FormGroup({
@@ -122,5 +122,20 @@ export class TableComponent {
     })
   }
 
-  
+  /* ELIMINAR mascota
+     botón para el modal*/
+  mostrarBorrar(mascotaSeleccionada: Mascota){ 
+    this.modalVisibleMascota = true; // modal
+    this.mascotaSeleccionada = mascotaSeleccionada;
+  }
+  // función para ELIMINAR MASCOTA
+  borrarMascota(){ 
+    this.servicioCrud.eliminarMascota(this.mascotaSeleccionada.idMascota)
+    .then(respuesta =>{
+      alert("El producto se ha eliminado correctamente.");
+    })
+    .catch(error => {
+      alert("No se ha podido eliminar el producto: \n"+error);
+    })
+  }
 }
