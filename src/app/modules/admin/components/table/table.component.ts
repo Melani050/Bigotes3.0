@@ -10,10 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class TableComponent {
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
-
-  mascotaSeleccionada!: Mascota; // ! -> recibir valores vacios
-
-  modalVisibleMascota: boolean = false;
+  
 
   // formulario vinculado al archivo HTML
   mascota = new FormGroup({
@@ -28,17 +25,19 @@ export class TableComponent {
     peso: new FormControl('', Validators.required),
     castrado: new FormControl('', Validators.required),
     desparasitado: new FormControl('', Validators.required),
-  })
+  });
 
   // patentamos servicio de forma local - llamamos al servicio CRUD
   constructor(public servicioCrud: CrudService){}
+  
 
   ngOnInit(): void{
     /* llamamos función obtenerMascota y le enviamos los nuevos valores
     del formulario mascota (se guardan en la colección) */
-    this.servicioCrud.obtenerMascota().subscribe(mascota => {
+    this.servicioCrud.obtenerMascota().subscribe(
+      mascota => {
       this.coleccionMascotas = mascota;
-    })
+      })
   } 
 
   async agregarMascota(){
@@ -56,11 +55,10 @@ export class TableComponent {
         peso: this.mascota.value.peso!,
         castrado: this.mascota.value.castrado!,
         desparasitado: this.mascota.value.desparasitado!,
-        
       };
-
+      
       // ENVIAMOS NUESTRA NUEVA MASCOTA
-      // llamamos al servicioCrud; función crearProducto; seteamos nuevoProducto
+      // llamamos al servicioCrud; función crearProducto; seteamos nuevaMascota
       await this.servicioCrud.crearMascota(nuevaMascota)
       .then(mascota => {
         alert("Ha agregado una nueva mascota con éxito");
@@ -68,6 +66,7 @@ export class TableComponent {
       .catch((error) => {
         alert("Hubo un error al cargar la nueva mascota \n"+error);
       })
+
     }
   }
 }

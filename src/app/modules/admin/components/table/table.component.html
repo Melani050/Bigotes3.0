@@ -29,29 +29,19 @@
       <td>{{col.peso}}</td>
       <td>{{col.castrado}}</td>
       <td>{{col.desparasitado}}</td>
-      <!-- ACCIONES -->
-      <td>
-          <!-- Botón Editar -->
-          <button id="btn-acs" title="Editar" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editarProducto">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <!-- Botón Eliminar -->
-          <button id="btn-acs" title="Eliminar" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto">
-            <mat-icon>delete</mat-icon>
-          </button>
-      </td>
+     
     </tr>
   </tbody>
 </table>
 
-<!-- BOTÓN PARA AGREGAR PRODUCTOS -->
+<!-- BOTÓN PARA AGREGAR MASCOTA -->
 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
-  Agregar un nuevo producto
+  Agregar una nueva mascota
 </button>
 
-<!-- MODAL PARA AGREGAR PRODUCTO -->
+<!-- MODAL PARA AGREGAR MASCOTA -->
 <div class="modal fade " id="agregarMascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg tamanio">
+  <div class="modal-dialog">
     <div class="modal-content ">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese una nueva mascota:</h1>
@@ -84,16 +74,16 @@
               <label class="form-label">Ingrese el peso:</label>
               <input class="form-control" type="text" formControlName="peso" placeholder="Ingrese el peso">
             </div>
-
             <div class="mb-3">
               <label class="form-label">Ingrese el tamaño:</label>
-              <select class="form-control" formControlName="castrado" class="form-select">
+              <select class="form-control" formControlName="tamanio" class="form-select">
                 <option selected>Elija una opción</option>
                 <option value="pequeño">Pequeño</option>
                 <option value="mediano">Mediano</option>
-                <option value="grnade">Grande</option>
+                <option value="grande">Grande</option>
                 <option value="gigante">Gigante</option>
               </select>
+            </div>
             <div class="mb-3">
               <label class="form-label">Ingrese la raza:</label>
               <input class="form-control" type="text" formControlName="raza" placeholder="Ingrese la raza">
@@ -131,11 +121,11 @@
                 <option value="no">No</option>
               </select>
             </div> 
-        </div>
+        
       </div>
           <!-- ACCIONES DEL MODAL -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"  (click)="agregarMascota()">Guardar</button>
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>
