@@ -1,1 +1,19 @@
-<p>card works!</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let col of coleccionMascota">
+        <div class="card">
+            <img src="{{col.imagen}}" class="card-img-top" alt="{{col.alt}}">
+
+            <div class="card-body">
+                <h5 class="card-title">{{col.nombre}}</h5>
+
+                <p class="card-text">{{col.sexo}}</p>
+                <p class="card-text">{{col.edad}}</p>
+
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#modalCard" >
+                    Ver más
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

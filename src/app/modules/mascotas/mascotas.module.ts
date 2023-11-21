@@ -26,7 +26,10 @@ import { CardGatosComponent } from './components/card-gatos/card-gatos.component
   exports:[
     MascotasComponent,
     PerrosComponent,
-    GatosComponent
+    GatosComponent,
+    CardComponent,
+    CardPerrosComponent,
+    CardGatosComponent
   ]
 })
 export class MascotasModule { }
