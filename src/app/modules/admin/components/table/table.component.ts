@@ -17,6 +17,7 @@ export class TableComponent {
 
   // formulario vinculado al archivo HTML
   mascota = new FormGroup({
+    especie: new FormControl('',Validators.required),
     nombre: new FormControl('', Validators.required),
     imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required),
@@ -47,6 +48,7 @@ export class TableComponent {
     if (this.mascota.valid){
       let nuevaMascota: Mascota = {
         idMascota: '', // único que guardamos vacío; lo creamos en el CRUD
+        especie: this.mascota.value.especie!,
         nombre: this.mascota.value.nombre!,
         imagen: this.mascota.value.imagen!,
         alt: this.mascota.value.alt!,
@@ -81,6 +83,7 @@ export class TableComponent {
     seleccionado, el ID no se vuelve a enviar porque 
     no se modifica */
     this.mascota.setValue({
+        especie: mascotaSeleccionada.especie,
         nombre: mascotaSeleccionada.nombre,
         imagen: mascotaSeleccionada.imagen,
         alt: mascotaSeleccionada.alt,
@@ -100,6 +103,7 @@ export class TableComponent {
     let datos: Mascota = {
       idMascota: this.mascotaSeleccionada.idMascota,
       // signo de exclamación "!" -> puede recibir valores vacíos al inicializar
+      especie: this.mascota.value.especie!,
       nombre: this.mascota.value.nombre!,
       imagen: this.mascota.value.imagen!,
       alt: this.mascota.value.alt!,

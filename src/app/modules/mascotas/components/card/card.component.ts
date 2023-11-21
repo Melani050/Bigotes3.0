@@ -28,5 +28,11 @@ export class CardComponent {
   }
 
 
-  
+   // PARA VISUALIZAR LA INFORMACIÓN DE LA MASCOTA
+   mostrarVer(info: Mascota){
+    this.modalVisible = true;
+
+    // info resguarda la información del producto seleccionado
+    this.mascotaSeleccionada = info;
+  }
 }

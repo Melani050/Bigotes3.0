@@ -21,6 +21,7 @@
       <td>
         <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
       </td>
+      <td>{{col.especie}}</td>
       <td>{{col.nombre}}</td>
       <td>{{col.sexo}}</td>
       <td>{{col.tamanio}}</td>
@@ -61,8 +62,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div [formGroup]="mascota" class="modal-body">
+
         
-          
+            <div class="mb-3">
+              <label class="form-label">Ingrese la especie</label>
+              <select class="form-control" formControlName="especie" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="gato">Gato</option>
+                <option value="perro">Perro</option>
+              </select>
+            </div>  
             <div class="mb-3">
               <label class="form-label">Ingrese nombre de la mascota:</label>
               <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre de la mascota">
