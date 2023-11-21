@@ -23,6 +23,7 @@ import { InicioRoutingModule } from './inicio-routing.module';
   exports: [
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent
   ]

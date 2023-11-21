@@ -15,7 +15,12 @@ import { GatosComponent } from './pages/gatos/gatos.component';
   ],
   imports: [
     CommonModule,
-    MascotasRoutingModule
+    MascotasRoutingModule,
+  ],
+  exports:[
+    MascotasComponent,
+    PerrosComponent,
+    GatosComponent
   ]
 })
 export class MascotasModule { }
