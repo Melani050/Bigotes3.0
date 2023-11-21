@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path:"", loadChildren:()=>import('./modules/mascotas/mascotas.module').then(m=>m.MascotasModule)
-  }
+  } 
+  
 ];
 
 @NgModule({
