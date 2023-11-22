@@ -17,6 +17,7 @@ export class CardsComponent {
     this.info = [
       {
         idMascota: '',
+        especie: 'Gato',
         nombre: 'Julian',
         sexo: 'Macho',
         tamanio: 'Pequeño',
@@ -31,6 +32,7 @@ export class CardsComponent {
       },
       {
         idMascota: '',
+        especie: 'Perro',
         nombre: 'Rabanito',
         sexo: 'Macho',
         tamanio: 'Grande',
@@ -45,6 +47,7 @@ export class CardsComponent {
       },
       {
         idMascota: '',
+        especie: 'Perro',
         nombre: 'Mushi',
         sexo: 'Hembra',
         tamanio: 'Mediano',
