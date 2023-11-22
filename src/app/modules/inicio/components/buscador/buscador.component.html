@@ -1,1 +1,8 @@
-<p>buscador works!</p>
+<h1 class="titulo">>Resultados de la búsqueda de mascotas en adopción</h1>
+
+<!-- Mostrar la lista de mascotas -->
+<div *ngFor="let mascota of mascotas">
+  <!-- Muestra los detalles de la mascota según tu estructura de datos -->
+  {{ mascota | json }}
+</div>
+
