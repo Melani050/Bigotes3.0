@@ -6,5 +6,14 @@
 }
 
 .col{
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
+}
+
+
+h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
 }
