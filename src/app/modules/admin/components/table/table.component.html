@@ -1,8 +1,9 @@
 <table class="table">
   <thead>
-    <tr>
+    <tr class="apartados">
       <th scope="col">#</th>
       <th scope="col">Imagen</th>
+      <th scope="col">Especie</th>
       <th scope="col">Nombre</th>
       <th scope="col">Sexo</th>
       <th scope="col">Tamaño</th>
@@ -15,7 +16,7 @@
       <th scope="col">Acciones</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="">
     <tr *ngFor="let col of coleccionMascotas">
       <th scope="row">1</th>
       <td>
@@ -34,16 +35,15 @@
     
 
       <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-      <td>
-        <button style=" margin: 5px;" type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+      <td class="botones">
+        <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
             <mat-icon>edit</mat-icon>
         </button>
-        <button style=" margin: 5px;" type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
-            <mat-icon>delete</mat-icon>
+        <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+          <mat-icon>delete</mat-icon>
         </button>
-      </td>
-
-     
+      </td>  
+    
     </tr>
   </tbody>
 </table>
@@ -253,11 +253,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro de eliminar el siguiente producto?</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro de eliminar a la siguiente mascota?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          <!-- MOSTRAMOS EL PRODUCTO QUE SE ELIMINARÁ -->
+          <!-- MOSTRAMOS LA MASCOTA QUE SE ELIMINARÁ -->
           {{mascotaSeleccionada.nombre}}
           <img src="{{mascotaSeleccionada.imagen}}" alt="{{mascotaSeleccionada.alt}}">
       </div>

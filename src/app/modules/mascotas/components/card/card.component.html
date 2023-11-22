@@ -6,8 +6,8 @@
             <div class="card-body">
                 <h5 class="card-title">{{col.nombre}}</h5>
 
-                <p class="card-text">{{col.sexo}}</p>
-                <p class="card-text">{{col.edad}}</p>
+                <p class="card-text">Sexo: {{col.sexo}}</p>
+                <p class="card-text">Edad: {{col.edad}}</p>
 
                 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
                     data-bs-target="#modalCard" (click)="mostrarVer(col)">
@@ -32,21 +32,23 @@
                     <img src="{{mascotaSeleccionada.imagen}}" class="card-img-top" alt="{{mascotaSeleccionada.alt}}">
                 </div>
                 <div class="mb-3">
+                    Tamaño:
                     {{mascotaSeleccionada.tamanio}}
                 </div>
                 <div class="mb-3">
+                    Raza:
                     {{mascotaSeleccionada.raza}}
                 </div>
                 <div class="mb-3">
+                    Personalidad:
                     {{mascotaSeleccionada.personalidad}}
                 </div>
                 <div class="mb-3">
-                    {{mascotaSeleccionada.edad}}
-                </div>
-                <div class="mb-3">
+                    Castrado:
                     {{mascotaSeleccionada.castrado}}
                 </div>
                 <div class="mb-3">
+                    Desparasitado:
                     {{mascotaSeleccionada.desparasitado}}
                 </div>
             </div>

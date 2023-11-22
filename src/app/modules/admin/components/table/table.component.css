@@ -2,12 +2,18 @@
     text-align: center;
     justify-content: center;
 }
-
-th{
+.apartados{
     padding: 20px;
 }
-button{
-    margin: 2px;
+.apartados th{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.botones{
+    display: flex;
+}
+.botones button{
+    margin-left: 5px;
 }
 .tamanio{
     padding: 5%;
