@@ -1,5 +1,5 @@
 <table class="table">
-  <thead>
+  <thead >
     <tr class="apartados">
       <th scope="col">#</th>
       <th scope="col">Imagen</th>
@@ -49,9 +49,12 @@
 </table>
 
 <!-- BOTÓN PARA AGREGAR MASCOTA -->
-<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
-  Agregar una nueva mascota
-</button>
+<div class="btn-nuevo">
+  <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
+    Agregar una nueva mascota
+  </button>
+</div>
+
 
 <!-- MODAL PARA AGREGAR MASCOTA -->
 <div class="modal fade " id="agregarMascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -159,7 +162,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Edite el siguiente producto:</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edite la siguiente mascota:</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div [formGroup]="mascota" class="modal-body">

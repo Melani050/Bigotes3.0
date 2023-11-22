@@ -1,20 +1,46 @@
-.modal-footer{
-    text-align: center;
+table{
+    border-radius: 25px ;
     justify-content: center;
+    align-items: center;
 }
-.apartados{
-    padding: 20px;
+.table{
+    box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
+/* el head de la table */
 .apartados th{
     padding-left: 25px;
     padding-right: 25px;
+    font-weight: 600;
 }
+
+/* botones acciones*/
 .botones{
     display: flex;
 }
 .botones button{
     margin-left: 5px;
 }
-.tamanio{
-    padding: 5%;
+
+/* boton agregar mascota */
+.btn-nuevo button{
+    outline: none;
+    border: none;
+    background-color: #ff8b38;
+    color:#fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+.btn-nuevo button:hover{
+    background-color: #dd772e;
+}
+
+/* modals */
+.modal-footer{
+    text-align: center;
+    justify-content: center;
 }
