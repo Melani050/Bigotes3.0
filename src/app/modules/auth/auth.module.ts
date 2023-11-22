@@ -20,7 +20,8 @@ import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+
   ],
   imports: [
     CommonModule,
@@ -32,6 +33,7 @@ import { FormsModule } from "@angular/forms";
     FormsModule,
     MatSelectModule,
     MatCardModule,
+
   ],
   exports:[
     MatIconModule,

@@ -10,6 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { InicioRoutingModule } from './inicio-routing.module';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     MatCardModule,
     InicioRoutingModule,
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
