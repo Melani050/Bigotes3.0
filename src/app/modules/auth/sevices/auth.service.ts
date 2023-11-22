@@ -10,6 +10,10 @@ export class AuthService {
   constructor(public auth: AngularFireAuth) {
    }
 
+  registrar (email: string, contrasena: string){
+    return this.auth.createUserWithEmailAndPassword(email,contrasena)
+  }
+
   //funcion para el inicio de sesion
   iniciarSesion(email:string, contrasena:string){
     return this.auth.signInWithEmailAndPassword(email, contrasena);
@@ -18,5 +22,14 @@ export class AuthService {
   cerrarSesion(){
     //devuelve una promesa vacia
     return this.auth.signOut();
+  }
+
+  async getUd(){
+    const user= await this.auth.currentUser
+    if(user==null){
+      return null;
+    }else{
+      return user.uid;
+    }
   }
 }

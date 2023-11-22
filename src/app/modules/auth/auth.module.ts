@@ -30,6 +30,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule
   ],
   exports:[
+    LoginComponent,
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,

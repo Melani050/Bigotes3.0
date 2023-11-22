@@ -32,7 +32,7 @@ async iniciar() {
   
   const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.contrasena)
   .then(res =>{
-    alert("ha accedid con exito");
+    alert("ha accedido con exito");
     console.log(credenciales.email);
 
     this.router.navigate(['/inicio'])

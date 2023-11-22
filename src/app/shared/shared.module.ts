@@ -31,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule
   ],
   exports:[
+    NavbarComponent,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
