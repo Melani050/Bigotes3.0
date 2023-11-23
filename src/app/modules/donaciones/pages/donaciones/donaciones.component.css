@@ -1,8 +1,13 @@
 .columna1 {
     text-align: center;
     background-color: yellow;
-};
+    width: 1028px;
+    height: 96px;
+    top: 160px;
+    left: 215px;
 
-.columna2 {
-    text-align: center;
+    width: 1302px;
+    height: 263px;
+    top: 309px;
+    left: 69px;
 };
