@@ -17,5 +17,5 @@ export class BuscadorService {
     return this.mascotasCollection.snapshotChanges().
     pipe(map(action => action.map(a => a.payload.doc.data())))
   }
-  
+
 }
