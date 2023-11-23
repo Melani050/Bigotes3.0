@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { BuscadorService } from "../services/buscador.service";
+import { Mascota } from 'src/app/models/mascotas';
 
 
 @Component({
@@ -8,10 +9,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./cardtrasparente.component.css']
 })
 export class CardtrasparenteComponent {
-  constructor(private router: Router) {}
 
-  buscarMascota() {
-    // Redirige a la página de resultados cuando se hace clic en el botón
-    this.router.navigate(['/buscador']);
+  coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
+
+  mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
+
+  constructor(
+    public servicioBuscar: BuscadorService
+  ){}
+
+  ngOnInit(): void{
+    /* llamamos función obtenerMascota y le enviamos los nuevos valores
+    del formulario mascota (se guardan en la colección) */
+    this.servicioBuscar.obtenerMascota().subscribe(
+      mascota => {
+      this.coleccionMascotas = mascota;
+      })
   }
+
 }
