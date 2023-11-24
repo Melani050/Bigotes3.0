@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ApartadosComponent } from './components/apartados/apartados.component';
 
+/** ANGULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+
+
 import { InicioRoutingModule } from './inicio-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
@@ -13,21 +17,23 @@ import { CarouselComponent } from './components/carousel/carousel.component';
   declarations: [
     InicioComponent,
     CardsComponent,
-    CarouselComponent
+    CarouselComponent,
+    ApartadosComponent
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatCardModule,
     InicioRoutingModule,
-    MatIconModule
+    MatIconModule,
   ],
   exports: [
     MatButtonModule,
     MatCardModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
-    CarouselComponent
+    CarouselComponent,
+    ApartadosComponent
   ]
 })
 export class InicioModule { }
