@@ -13,7 +13,8 @@
         <mat-label>E-mail</mat-label>
     </div>
     <div class="letras2">
-      <input [(ngModel)]="usuarios.email" matInput placeholder="ejemplo@gmail.com"><i class ="material-icons" style="font-size: 35px;">person</i></div> 
+      <input [(ngModel)]="usuarios.email" matInput placeholder="ejemplo@gmail.com"><i class ="material-icons" style="font-size: 35px;">person</i>
+    </div> 
     </mat-form-field>
   </p>
 
@@ -34,7 +35,8 @@
   <div class="letras">
     <button class="boton" mat-raised-button color="primary" (click)="iniciar()">Iniciar Sesion</button>
   </div>
-  <p class="letras2">¿no tienes una cuenta? Crea una cuenta</p>
+  <div class="letras2">
+    <p>¿no tienes una cuenta? Registrate!</p>
   </div>
   </div>
 </div>

@@ -24,7 +24,7 @@ export class AuthService {
     return this.auth.signOut();
   }
 
-  async getUd(){
+  async getUid(){
     const user= await this.auth.currentUser
     if(user==null){
       return null;

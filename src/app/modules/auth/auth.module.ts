@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 //MATERIAL
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
@@ -17,7 +18,8 @@ import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
   ],
   exports:[
     LoginComponent,
+    RegisterComponent,
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
