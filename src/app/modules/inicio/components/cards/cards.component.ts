@@ -19,6 +19,7 @@ export class CardsComponent {
         id: '',
         nombre: 'Julian',
         sexo: 'Macho',
+        especie:'Gato',
         tamanio: 'Pequeño',
         raza: 'Siames',
         imagen: 'https://www.purina.es/sites/default/files/styles/ttt_image_510/public/2021-01/Siamese%201.jpg?itok=dS6uQvHe',
@@ -33,6 +34,7 @@ export class CardsComponent {
         id: '',
         nombre: 'Rabanito',
         sexo: 'Macho',
+        especie:'Perro',
         tamanio: 'Grande',
         raza: 'Border collie',
         imagen: 'https://t2.uc.ltmcdn.com/es/posts/9/2/0/cuales_son_los_cuidados_de_un_border_collie_52029_orig.jpg',
@@ -47,6 +49,7 @@ export class CardsComponent {
         id: '',
         nombre: 'Mushi',
         sexo: 'Hembra',
+        especie:'Perro',
         tamanio: 'Mediano',
         raza: 'Pitbull',
         imagen: 'https://t1.ea.ltmcdn.com/es/posts/0/4/1/2_las_mandibulas_del_pitbull_se_bloquean_al_morder_21140_1_600.jpg',
@@ -63,4 +66,4 @@ export class CardsComponent {
   ngOnInit(): void{
   }
 
-} 
+}

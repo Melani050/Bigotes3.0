@@ -13,6 +13,10 @@ export class CardtrasparenteComponent {
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
 
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
+  
+  mascota: any; // declare la propiedad mascota
+
+
 
   constructor(
     public servicioBuscar: BuscadorService
@@ -29,10 +33,10 @@ export class CardtrasparenteComponent {
 
  obtenerMascota(){
     // forEach itera la colección/ arreglo
-    this.coleccionMascotas.forEach(producto =>{
+    this.coleccionMascotas.forEach(mascota =>{
       /* si la categoría del producto es igual a "collares"
         se va a enviar a la colección "collares"*/
-      if(producto.raza === "mascota"){
+      if(mascota.especie === "mascota"){
         this.mascota.push(mascota);
       }
     })
