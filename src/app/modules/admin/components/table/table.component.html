@@ -2,26 +2,16 @@
   <thead >
     <tr class="apartados">
       <th scope="col">#</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Especie</th>
+      <th scope="col">id</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Sexo</th>
-      <th scope="col">Tamaño</th>
-      <th scope="col">Raza</th>
-      <th scope="col">Personalidad</th>
-      <th scope="col">Edad</th>
-      <th scope="col">Peso</th>
-      <th scope="col">Castrado</th>
-      <th scope="col">Desparasitado</th>
-      <th scope="col">Acciones</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contraseña</th>
+      <th scope="col">Confirmar</th>
     </tr>
   </thead>
   <tbody class="">
-    <tr *ngFor="let col of coleccionMascotas">
+    <tr *ngFor="let col of coleccionUsuarios">
       <th scope="row">1</th>
-      <td>
-        <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
-      </td>
       <td>{{col.especie}}</td>
       <td>{{col.nombre}}</td>
       <td>{{col.sexo}}</td>
