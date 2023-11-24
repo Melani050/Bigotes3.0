@@ -9,20 +9,17 @@ import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 //FIREBASE
 //Nos conectamos con la base de datos que trae los modulos necesarios
-import { environment } from "src/app/environments/enviroment";
+import { environment } from "src/environments/enviroment";
 import { AngularFireModule } from "@angular/fire/compat";
 //FIRESTORE
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";//AUTENTIFICACION
 import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +27,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SharedModule,
     BrowserAnimationsModule,
     SharedModule,
+    // configuración de módulos de firabase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule
+  
 
   ],
   exports: [

@@ -30,6 +30,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
   exports: [
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
     CarouselComponent,

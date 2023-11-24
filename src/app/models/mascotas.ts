@@ -1,5 +1,6 @@
 export interface Mascota {
-    id: string;
+    idMascota: string;
+    especie: string;
     nombre: string;
     sexo: string;
     tamanio: string;
@@ -10,5 +11,5 @@ export interface Mascota {
     edad: string;
     peso: string;
     castrado: string;
-    desparacitado: string;
+    desparasitado: string;
 }

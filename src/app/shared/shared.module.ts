@@ -8,6 +8,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
+import { MatMenuModule } from '@angular/material/menu';
 
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -41,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatDividerModule,
     FlexLayoutModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
     
   ],
   exports:[
@@ -51,7 +53,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-   
+    MatMenuModule
   ]
 })
 export class SharedModule { }

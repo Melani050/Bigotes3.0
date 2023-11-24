@@ -16,7 +16,8 @@ export class CardsComponent {
     // INICIALIZA LA PROPIEDAD INFO
     this.info = [
       {
-        id: '',
+        idMascota: '',
+        especie: 'Gato',
         nombre: 'Julian',
         sexo: 'Macho',
         tamanio: 'Pequeño',
@@ -27,10 +28,11 @@ export class CardsComponent {
         edad: '3 meses',
         peso: '500 gr',
         castrado: 'No',
-        desparacitado: 'Si'
+        desparasitado: 'Si'
       },
       {
-        id: '',
+        idMascota: '',
+        especie: 'Perro',
         nombre: 'Rabanito',
         sexo: 'Macho',
         tamanio: 'Grande',
@@ -41,10 +43,11 @@ export class CardsComponent {
         edad: '9 meses',
         peso: '6 kg',
         castrado: 'No',
-        desparacitado: 'Si'
+        desparasitado: 'Si'
       },
       {
-        id: '',
+        idMascota: '',
+        especie: 'Perro',
         nombre: 'Mushi',
         sexo: 'Hembra',
         tamanio: 'Mediano',
@@ -55,7 +58,7 @@ export class CardsComponent {
         edad: '7 meses',
         peso: '5 kg',
         castrado: 'No',
-        desparacitado: 'No'
+        desparasitado: 'No'
       }
     ]
   }
