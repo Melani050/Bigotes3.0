@@ -24,7 +24,7 @@
       <mat-label>Contraseña</mat-label>
     </div>
     <div class="letras2">
-      <input [(ngModel)]="usuarios.contrasena" matInput placeholder="ingresar Contraseña" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+      <input [(ngModel)]="usuarios.contrasena" matInput placeholder="ingrese contraseña" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
