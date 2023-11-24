@@ -27,4 +27,15 @@ export class CardtrasparenteComponent {
       })
   }
 
+ obtenerMascota(){
+    // forEach itera la colección/ arreglo
+    this.coleccionMascotas.forEach(producto =>{
+      /* si la categoría del producto es igual a "collares"
+        se va a enviar a la colección "collares"*/
+      if(producto.raza === "mascota"){
+        this.mascota.push(mascota);
+      }
+    })
+  }
+  /*Cambiar este if */
 }
