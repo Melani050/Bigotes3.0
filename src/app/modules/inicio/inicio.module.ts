@@ -11,12 +11,13 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 import { InicioRoutingModule } from './inicio-routing.module';
-
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     InicioComponent,
     CardsComponent,
+    CarouselComponent,
     ApartadosComponent
   ],
   imports: [
@@ -31,6 +32,7 @@ import { InicioRoutingModule } from './inicio-routing.module';
     MatCardModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
+    CarouselComponent,
     ApartadosComponent
   ]
 })
