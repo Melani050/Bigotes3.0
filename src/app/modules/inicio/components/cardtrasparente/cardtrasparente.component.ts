@@ -12,9 +12,9 @@ export class CardtrasparenteComponent {
 
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
 
-  coleccionGatos: Mascota [] = [];
+  coleccionGatos: Mascota [] = []; // creamos colección basada en interfaz Gato
 
-  coleccionPerros: Mascota [] = [];
+  coleccionPerros: Mascota [] = []; // creamos colección basada en interfaz Perro
 
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
 
@@ -38,8 +38,7 @@ export class CardtrasparenteComponent {
  obtenerMascota(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
-      /* si la categoría del producto es igual a "collares"
-        se va a enviar a la colección "collares"*/
+
       if(mascota.especie === "mascota"){
         this.mascota.push(mascota);
       }
@@ -49,8 +48,7 @@ export class CardtrasparenteComponent {
   obtenerPerros(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
-      /* si la categoría del producto es igual a "collares"
-        se va a enviar a la colección "collares"*/
+
       if(mascota.especie === "Perro"){
         this.mascota.push(mascota);
       }
@@ -60,12 +58,11 @@ export class CardtrasparenteComponent {
   obtenerGatos(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
-      /* si la categoría del producto es igual a "collares"
-        se va a enviar a la colección "collares"*/
+
       if(mascota.especie === "Gatos"){
         this.mascota.push(mascota);
       }
     })
   }
-  /*Cambiar este if */
+
 }
