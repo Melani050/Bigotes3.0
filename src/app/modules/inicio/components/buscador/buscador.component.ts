@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./buscador.component.css']
 })
 export class BuscadorComponent {
+
 }
