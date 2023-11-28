@@ -4,6 +4,7 @@ table{
     align-items: center;
 }
 .table{
+    width: 1464.980px;
     box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
 /* el head de la table */
@@ -16,6 +17,7 @@ table{
 /* botones acciones*/
 .botones{
     display: flex;
+    justify-content: center;
 }
 .botones button{
     margin-left: 5px;
