@@ -23,7 +23,7 @@
           <tr *ngFor="let col of coleccionMascotas">
             <th scope="row">1</th>
             <td>
-              <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+              <img src="{{col.imagen}}"  alt="{{col.alt}}" width="100px">
             </td>
             <td>{{col.especie}}</td>
             <td>{{col.nombre}}</td>
@@ -39,7 +39,7 @@
       
             <!-- BOTONES PARA EDITAR Y ELIMINAR -->
             <td class="botones">
-              <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+              <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
                   <mat-icon>edit</mat-icon>
               </button>
               <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
@@ -81,7 +81,7 @@
     
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="botones">
-            <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#">
                 <mat-icon>edit</mat-icon>
             </button>
             <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
@@ -121,8 +121,8 @@
     
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="botones">
-            <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
-                <mat-icon>edit</mat-icon>
+            <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
+                <mat-icon>report</mat-icon>
             </button>
             <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
               <mat-icon>delete</mat-icon>
@@ -341,7 +341,7 @@
       <div class="modal-body">
           <!-- MOSTRAMOS LA MASCOTA QUE SE ELIMINARÁ -->
           {{mascotaSeleccionada.nombre}}
-          <img src="{{mascotaSeleccionada.imagen}}" alt="{{mascotaSeleccionada.alt}}">
+          <img src="{{mascotaSeleccionada.imagen}}" class="card-img-top" alt="{{mascotaSeleccionada.alt}}">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" (click)="borrarMascota()">Eliminar</button>
