@@ -1,52 +1,161 @@
-<table class="table">
-  <thead >
-    <tr class="apartados">
-      <th scope="col">#</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Especie</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Sexo</th>
-      <th scope="col">Tamaño</th>
-      <th scope="col">Raza</th>
-      <th scope="col">Personalidad</th>
-      <th scope="col">Edad</th>
-      <th scope="col">Peso</th>
-      <th scope="col">Castrado</th>
-      <th scope="col">Desparasitado</th>
-      <th scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody class="">
-    <tr *ngFor="let col of coleccionMascotas">
-      <th scope="row">1</th>
-      <td>
-        <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
-      </td>
-      <td>{{col.especie}}</td>
-      <td>{{col.nombre}}</td>
-      <td>{{col.sexo}}</td>
-      <td>{{col.tamanio}}</td>
-      <td>{{col.raza}}</td>
-      <td>{{col.personalidad}}</td>
-      <td>{{col.edad}}</td>
-      <td>{{col.peso}}</td>
-      <td>{{col.castrado}}</td>
-      <td>{{col.desparasitado}}</td>
+<mat-tab-group>
+  <mat-tab label="Mascotas"> 
+    <!--  mascotas -->
+    <table class="table">
+        <thead >
+          <tr class="apartados">
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Especie</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Tamaño</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Personalidad</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Castrado</th>
+            <th scope="col">Desparasitado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr *ngFor="let col of coleccionMascotas">
+            <th scope="row">1</th>
+            <td>
+              <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+            </td>
+            <td>{{col.especie}}</td>
+            <td>{{col.nombre}}</td>
+            <td>{{col.sexo}}</td>
+            <td>{{col.tamanio}}</td>
+            <td>{{col.raza}}</td>
+            <td>{{col.personalidad}}</td>
+            <td>{{col.edad}}</td>
+            <td>{{col.peso}}</td>
+            <td>{{col.castrado}}</td>
+            <td>{{col.desparasitado}}</td>
+          
+      
+            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+            <td class="botones">
+              <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+                  <mat-icon>edit</mat-icon>
+              </button>
+              <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>  
+          
+          </tr>
+        </tbody>
+    </table>
+  </mat-tab>
+  <mat-tab label="Usuarios"> 
+    <!--  usuarios -->
+    <table class="table">
+      <thead >
+        <tr class="apartados">
+          <th scope="col">#</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Tamaño</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Personalidad</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Castrado</th>
+          <th scope="col">Desparasitado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr *ngFor="let col of coleccionMascotas">
+          <th scope="row">1</th>
+          <td>
+            <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+          </td>
+          <td>{{col.especie}}</td>
+          <td>{{col.nombre}}</td>
+          <td>{{col.sexo}}</td>
+          <td>{{col.tamanio}}</td>
+          <td>{{col.raza}}</td>
+          <td>{{col.personalidad}}</td>
+          <td>{{col.edad}}</td>
+          <td>{{col.peso}}</td>
+          <td>{{col.castrado}}</td>
+          <td>{{col.desparasitado}}</td>
+        
     
-
-      <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-      <td class="botones">
-        <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
-            <mat-icon>edit</mat-icon>
-        </button>
-        <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </td>  
+          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+          <td class="botones">
+            <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>  
+        
+        </tr>
+      </tbody>
+  </table>
+  </mat-tab>
+  <mat-tab label="Reportes"> 
+    <!--  reportes -->
+    <table class="table">
+      <thead >
+        <tr class="apartados">
+          <th scope="col">#</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Tamaño</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Personalidad</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Castrado</th>
+          <th scope="col">Desparasitado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr *ngFor="let col of coleccionMascotas">
+          <th scope="row">1</th>
+          <td>
+            <img src="{{col.imagen}}" alt="{{col.alt}}" width="100px">
+          </td>
+          <td>{{col.especie}}</td>
+          <td>{{col.nombre}}</td>
+          <td>{{col.sexo}}</td>
+          <td>{{col.tamanio}}</td>
+          <td>{{col.raza}}</td>
+          <td>{{col.personalidad}}</td>
+          <td>{{col.edad}}</td>
+          <td>{{col.peso}}</td>
+          <td>{{col.castrado}}</td>
+          <td>{{col.desparasitado}}</td>
+        
     
-    </tr>
-  </tbody>
-</table>
+          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+          <td class="botones">
+            <button type="button" title="Editar" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>  
+        
+        </tr>
+      </tbody>
+  </table>
+  </mat-tab>
+</mat-tab-group>
 
 <!-- BOTÓN PARA AGREGAR MASCOTA -->
 <div class="btn-nuevo">
