@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Mascota } from 'src/app/models/mascotas';
 import { CrudService } from '../../services/crud.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-table',
@@ -9,8 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
+  /** MASCOTAS */
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
-
   mascotaSeleccionada!: Mascota; // ! -> recibir valores vacíos
 
   modalVisibleMascota: boolean = false;  
@@ -142,4 +143,9 @@ export class TableComponent {
       alert("No se ha podido eliminar el producto: \n"+error);
     })
   }
+
+
+
+
+
 }

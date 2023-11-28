@@ -71,7 +71,7 @@
 
         </tr>
       </thead>
-      <tbody class="">
+      <tbody>
         <tr>
           <th scope="row">1</th>
           <td></td>
@@ -81,7 +81,7 @@
     
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="botones">
-            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario">
                 <mat-icon>edit</mat-icon>
             </button>
             <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
@@ -91,11 +91,11 @@
         
         </tr>
       </tbody>
-  </table>
+    </table>
 
       <!-- BOTÓN PARA AGREGAR USUARIO -->
     <div class="btn-nuevo">
-      <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#">
+      <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarUsuario">
         Agregar un nuevo usuario
       </button>
     </div>
@@ -353,6 +353,67 @@
 
 
 <!-- USUARIO -->
+<!-- MODAL PARA AGREGAR USUARIO -->
+<div class="modal fade " id="agregarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese una nueva mascota:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
+      
+          
+            <div class="mb-3">
+            </div>
+            <div class="mb-3">
+            </div>
+            <div class="mb-3">
+            </div>
+            <div class="mb-3">
+            </div>
+        
+      </div>
+          <!-- ACCIONES DEL MODAL -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PARA EDITAR USUARIO -->
+<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edite al siguiente usuario:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Ingrese nombre:</label>
+          <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre del usuario">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese un correo electrónico:</label>
+          <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el correo electrónico">
+        </div>
+    
+
+      </div>
+
+      <!-- ACCIONES DEL MODAL -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar cambios</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
 
 <!-- REPORTES -->
