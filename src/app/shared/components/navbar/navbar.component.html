@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--<div class="navbar">-->
 <p>
     <mat-toolbar color="primary">
@@ -15,3 +16,31 @@
       <button mat-button routerLink="/registro">Registro</button>
       </mat-toolbar>
   </p>
+=======
+<p>
+  <mat-toolbar class="color">
+
+      <a href="#" class="letras">BIGOTES</a>
+      <span class="example-spacer">
+      </span>
+
+
+      <button mat-button routerLink="/admin">Administrador</button>
+
+       <!-- Este botón lleva al menu despegable-->
+      <button mat-button [matMenuTriggerFor]="menu">Mascotas</button>
+      <mat-menu #menu="matMenu">
+        <!-- Mostrará todos las mascotas -->
+        <button mat-menu-item routerLink="/mascotas">Todos</button>
+
+        <!-- especies de mascotas en adopcion -->
+        <button mat-menu-item routerLink="/perros">Perros</button>
+        <button mat-menu-item routerLink="/gatos">Gatos</button>
+      </mat-menu>
+
+      <button mat-button routerLink="/register" >
+        Registrarse
+      </button>
+  </mat-toolbar>
+</p>
+>>>>>>> cf497f73864fd7abfbfee10922af5b72fcc39f51

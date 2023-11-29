@@ -14,6 +14,8 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email,contrasena)
   }
 
+
+  //login
   //funcion para el inicio de sesion
   iniciarSesion(email:string, contrasena:string){
     return this.auth.signInWithEmailAndPassword(email, contrasena);
@@ -32,4 +34,7 @@ export class AuthService {
       return user.uid;
     }
   }
+
+
 }
+  

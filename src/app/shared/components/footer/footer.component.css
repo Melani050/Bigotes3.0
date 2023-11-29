@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap:wrap;
+}
+ul{
+    list-style: none;
+}
+footer{
+    margin-top: 10%;
+    background-color: #FFC91D;
+    color: #fff;
+    padding: 70px 0 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px ;
+}
+
+
+/*   TITULO   */
+.footer-col h4{
+    font-size: 18px;
+    color: #917311;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #917311;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/*   LISTA   */
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #a28113;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 10px;
+}
+
+/*   CONTACTO/ REDES   */
+.social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:#a28113 ;
+    margin: 0 10px 15px 0;
+    padding: 6px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFC91D;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    color: #917311;
+    background-color: #FFC91D;
+}
+
+/*   APARTADO COPYRIGHT   */
+.ft-legal {
+    height: 35px;
+    background-color: #e4b519;
+    color: #917311;
+    margin-top: 5%;
+    padding: 0;
+}
+.ft-legal a{
+    color: #917311;
+    text-decoration: none;
+}
+
+/*  LOGO  */
+.col{
+    display: flex;
+    padding: 0;
+    margin-right: 2px;
+}
+.col h1{
+    font-weight: 800;
+    position: relative;
+    padding-top: 30px;
+}
+.col img{
+    margin-right:  15px;
+    width: 105px;
+    height: 120px;
+    
+}
+
+/* RESPOSIVO */
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+}

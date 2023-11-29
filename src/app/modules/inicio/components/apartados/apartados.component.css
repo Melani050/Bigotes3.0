@@ -1,0 +1,106 @@
+.container{
+  padding-left: 100px;
+  padding-right: 100px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: #FFC91D;
+    font-weight: 400;
+}
+/* subtitulo */
+.letra{
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c3c3c3;
+  font-weight: 500;
+  color: #FFC91D;
+  background-color: #e7e6e6bb;
+}
+
+  /* espacio adecuado */
+/* acordion  */
+.acordion{
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c3c3c3;
+}
+.acordion li{
+  padding: 8px;
+}
+.color-letra:hover{
+  color: #FFC91D;
+}
+
+/* lista */
+li{
+  padding: 15px;
+  font-size: 15px;
+}
+.list-group-numbered{
+  border-radius: 24px;
+  border-style: solid;
+  border-color: #FFC91D;
+  padding: 0;
+}
+
+img{
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #FFC91D;
+}
+
+
+  /* requisitos */
+/* formulario */
+.boton{
+  background-color: #ff8b38;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+.boton:hover{
+  background-color: #e7e6e6bb;
+  color: #ff8b38;
+}
+
+.espacio-requisistos{
+  padding: 0;
+}
+.preguntas-acc{
+  margin-bottom: 25px;
+  border-style: none;
+}
+
+
+
+
+/* RESPOSIVO */
+@media(max-width: 1400px){
+  .col-md-4{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px){
+  .col-md-4{
+      width: 100%;
+  }
+}

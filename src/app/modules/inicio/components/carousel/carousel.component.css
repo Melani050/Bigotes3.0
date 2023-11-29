@@ -1,0 +1,16 @@
+.tamanio-imagen{
+    height: 850px;
+}
+.tamanio-imagen img{
+    height: 950%;
+    padding-top: 8%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.color{
+    color: #525252;
+
+}
+.tamanio{
+  height: 550;
+}

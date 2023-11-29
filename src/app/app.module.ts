@@ -1,33 +1,37 @@
-//FIREBASE
-//Nos conectamos con la base de datos que trae los modulos necesarios
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import { SharedModule } from "./shared/shared.module";
-import { environment } from "src/environments/environment";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+//FIREBASE
+//Nos conectamos con la base de datos que trae los modulos necesarios
+import { environment } from "src/environments/enviroment";
 import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+//FIRESTORE
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";//AUTENTIFICACION
 import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     BrowserAnimationsModule,
     SharedModule,
-    //CONFIGURACION DE modulos FIREBASE
-    AngularFireAuthModule,
+    // configuración de módulos de firabase
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     AngularFireStorageModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

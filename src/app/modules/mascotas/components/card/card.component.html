@@ -1,0 +1,61 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let col of coleccionMascota">
+        <div class="card">
+            <img src="{{col.imagen}}" class="card-img-top" alt="{{col.alt}}">
+
+            <div class="card-body">
+                <h5 class="card-title">{{col.nombre}}</h5>
+
+                <p class="card-text">Sexo: {{col.sexo}}</p>
+                <p class="card-text">Edad: {{col.edad}}</p>
+
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#modalCard" (click)="mostrarVer(col)">
+                    Ver más
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL PARA VISUALIZAR MASCOTA QUE SE SELECCIONA -->
+<div class="modal fade" *ngIf="modalVisible" id="modalCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{mascotaSeleccionada.nombre}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <img src="{{mascotaSeleccionada.imagen}}" class="card-img-top" alt="{{mascotaSeleccionada.alt}}">
+                </div>
+                <div class="mb-3">
+                    Tamaño:
+                    {{mascotaSeleccionada.tamanio}}
+                </div>
+                <div class="mb-3">
+                    Raza:
+                    {{mascotaSeleccionada.raza}}
+                </div>
+                <div class="mb-3">
+                    Personalidad:
+                    {{mascotaSeleccionada.personalidad}}
+                </div>
+                <div class="mb-3">
+                    Castrado:
+                    {{mascotaSeleccionada.castrado}}
+                </div>
+                <div class="mb-3">
+                    Desparasitado:
+                    {{mascotaSeleccionada.desparasitado}}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Adoptar</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
