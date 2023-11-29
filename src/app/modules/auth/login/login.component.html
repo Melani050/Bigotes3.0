@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="formulario">
+<div class="container">
+    <div class="row">  
+    <div class="label">
+    <div class="letras"> 
+        <h1> Iniciar Sesion</h1>
+    </div>
+    </div>
+  <p>
+  
+    <mat-form-field appearance="fill">
+      <div class="letras2">
+        <mat-label>E-mail</mat-label>
+    </div>
+    <div class="letras2">
+      <input [(ngModel)]="usuarios.email" matInput placeholder="ejemplo@gmail.com"><i class ="material-icons" style="font-size: 35px;">person</i>
+    </div> 
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+    <div class="letras2">
+      <mat-label>Contraseña</mat-label>
+    </div>
+    <div class="letras2">
+      <input [(ngModel)]="usuarios.contrasena" matInput placeholder="ingrese contraseña" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </div> 
+    </mat-form-field>
+  </p>  
+
+  <div class="letras">
+    <button class="boton" mat-raised-button color="primary" (click)="iniciar()">Iniciar Sesion</button>
+  </div>
+  <div class="letras2">
+    <p>¿no tienes una cuenta? Registrate!</p>
+  </div>
+  </div>
+</div>

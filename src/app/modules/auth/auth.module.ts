@@ -1,20 +1,21 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { AuthRoutingModule } from "./auth-routing.module";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
 //MATERIAL
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card'
-
 //SERVICIOS
+
 import { AuthService } from './sevices/auth.service';
+//FORMULARIOS
 import { FormsModule } from "@angular/forms";
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -28,17 +29,18 @@ import { FormsModule } from "@angular/forms";
     MatFormFieldModule,
     MatButtonModule,
     FormsModule,
-    MatSelectModule,
-    MatCardModule,
+    MatSelectModule
   ],
   exports:[
+    LoginComponent,
+    RegisterComponent,
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
     MatSelectModule,
-    MatCardModule
+    FormsModule
   ],
-  providers:[AuthService]//proverdor -->servicio
+  providers:[AuthService]//proveedor -->servicio
 })
 export class AuthModule { }
