@@ -13,6 +13,7 @@ import { TableComponent } from './components/table/table.component';
 
 // MATERIAL 
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 
 // ANGULAR
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AdminRoutingModule,
     MatIconModule,
+    MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
     
@@ -33,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [
     TableComponent,
     MatIconModule,
+    MatTabsModule,
     FormsModule,
     ReactiveFormsModule
   ]
