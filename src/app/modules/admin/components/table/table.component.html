@@ -1,8 +1,9 @@
 <mat-tab-group>
   <mat-tab label="Mascotas"> 
     <!--  mascotas -->
-    <table class="table">
-        <thead >
+    <div class="">
+      <table class="table table-responsive">
+        <thead>
           <tr class="apartados">
             <th scope="col">#</th>
             <th scope="col">Imagen</th>
@@ -19,9 +20,9 @@
             <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody class="">
+        <tbody>
           <tr *ngFor="let col of coleccionMascotas">
-            <th scope="row">1</th>
+            <td scope="row">1</td>
             <td>
               <img src="{{col.imagen}}"  alt="{{col.alt}}" width="100px">
             </td>
@@ -38,19 +39,20 @@
           
       
             <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-            <td class="botones">
+            <td class="d-flex justify-content-center" >
               <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
                   <mat-icon>edit</mat-icon>
               </button>
-              <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>  
           
           </tr>
         </tbody>
-    </table>
-
+      </table>
+    </div>
+    
     <!-- BOTÓN PARA AGREGAR MASCOTA -->
     <div class="btn-nuevo">
       <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
@@ -60,39 +62,40 @@
   </mat-tab>
   <mat-tab label="Usuarios"> 
     <!--  usuarios -->
-    <table class="table">
-      <thead>
-        <tr class="apartados">
-          <th scope="col">#</th>
-          <th scope="col">Id</th>
-          <th scope="col">Nombre / Apellido</th>
-          <th scope="col">Correo Electrónico</th>
-          <th scope="col">Acciones</th>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="apartados">
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre / Apellido</th>
+            <th scope="col">Correo Electrónico</th>
+            <th scope="col">Acciones</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        
-    
-          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-          <td class="botones">
-            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>  
-        
-        </tr>
-      </tbody>
-    </table>
-
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          
+      
+            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+            <td class="d-flex justify-content-center">
+              <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario">
+                  <mat-icon>edit</mat-icon>
+              </button>
+              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>  
+          
+          </tr>
+        </tbody>
+      </table>
+    </div>
       <!-- BOTÓN PARA AGREGAR USUARIO -->
     <div class="btn-nuevo">
       <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarUsuario">
@@ -102,36 +105,38 @@
   </mat-tab>
   <mat-tab label="Reportes"> 
     <!--  reportes -->
-    <table class="table">
-      <thead >
-        <tr class="apartados">
-          <th scope="col">#</th>
-          <th scope="col">Id</th>
-          <th scope="col">Nombre / Apellido</th>
-          <th scope="col">Correo Electrónico</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody class="">
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-    
-          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-          <td class="botones">
-            <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
-                <mat-icon>report</mat-icon>
-            </button>
-            <button type="button" title="Eliminar" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>  
-        
-        </tr>
-      </tbody>
-  </table>
+    <div class="table-responsive">
+      <table class="table">
+        <thead >
+          <tr class="apartados">
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre / Apellido</th>
+            <th scope="col">Correo Electrónico</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+      
+            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+            <td class="d-flex justify-content-center">
+              <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
+                  <mat-icon>report</mat-icon>
+              </button>
+              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>  
+          
+          </tr>
+        </tbody>
+      </table> 
+    </div>
   </mat-tab>
 </mat-tab-group>
 
@@ -363,21 +368,11 @@
       </div>
       <div class="modal-body">
 
-      
-          
-            <div class="mb-3">
-            </div>
-            <div class="mb-3">
-            </div>
-            <div class="mb-3">
-            </div>
-            <div class="mb-3">
-            </div>
         
       </div>
           <!-- ACCIONES DEL MODAL -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="agregarMascota()">Guardar</button>
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar</button>
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>

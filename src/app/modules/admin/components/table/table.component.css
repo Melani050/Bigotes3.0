@@ -1,7 +1,5 @@
 table{
     border-radius: 25px ;
-    justify-content: center;
-    align-items: center;
     margin-top: 30px;
 }
 .table{
@@ -13,15 +11,7 @@ table{
     padding-left: 25px;
     padding-right: 25px;
     font-weight: 600;
-}
-
-/* botones acciones*/
-.botones{
-    display: flex;
-    justify-content: center;
-}
-.botones button{
-    margin-left: 5px;
+    color: #907005;
 }
 
 /* boton agregar mascota */
