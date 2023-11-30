@@ -58,7 +58,6 @@ li{
   border-color: #FFC91D;
   padding: 0;
 }
-
 img{
   border-radius: 15px;
   box-shadow: 8px 8px 5px 0px #bdbdbdbf;
@@ -67,15 +66,20 @@ img{
   /* requisitos */
 /* formulario */
 .boton{
+  width: 250px;
   background-color: #ff8b38;
   color: #ffffff;
+  text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 18px;
   padding: 25px;
   border-radius: 10px;
-  margin: 0 auto;
   transition: all 0.5s ease;
+  /* los centra */
+  margin-left: 50%;
+  transform: translateX(-50%);
+
 }
 .boton:hover{
   background-color: #e7e6e6bb;
@@ -84,24 +88,10 @@ img{
 
 .espacio-requisistos{
   padding: 0;
+  text-align: start;
+  justify-content: center;
 }
 .preguntas-acc{
   margin-bottom: 25px;
   border-style: none;
-}
-
-
-
-
-/* RESPOSIVO */
-@media(max-width: 1400px){
-  .col-md-4{
-      width: 50%;
-      margin-bottom: 30px;
-  }
-}
-@media(max-width: 574px){
-  .col-md-4{
-      width: 100%;
-  }
 }

@@ -11,7 +11,7 @@
     <!--  perro  -->
         <div class="row">
           <!--  lista  -->
-          <div class="col-md-8">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-8">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">La responsabilidad siempre debe guiarnos en la elección del perro perfecto para nuestro hogar y estilo de vida</li>
               <li class="list-group-item">Es aconsejable tener perros de tamaño medianos o grandes con mucha energía en espacios más amplios.</li>
@@ -20,8 +20,8 @@
             </ul>
           </div>
           <!-- imagen -->
-          <div class="col-md-4">
-            <img src="https://i.pinimg.com/550x/fc/53/c4/fc53c435a4ac26ffabb103d4f85d59d5.jpg" alt="Perro" > 
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+            <img class="img-fluid" src="https://i.pinimg.com/550x/fc/53/c4/fc53c435a4ac26ffabb103d4f85d59d5.jpg" alt="Perro" > 
           </div>
           
         </div>
@@ -101,11 +101,11 @@
     <!--  gato  -->
         <div class="row" style="margin-top: 50px;">
           <!-- imagen -->
-          <div class="col-md-4" >
-            <img  src="https://img.freepik.com/fotos-premium/pequeno-gatito-gris-sobre-fondo-blanco_136670-1716.jpg?w=360" alt="gato">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4" >
+            <img class="img-fluid" src="https://img.freepik.com/fotos-premium/pequeno-gatito-gris-sobre-fondo-blanco_136670-1716.jpg?w=360" alt="gato">
           </div>
           <!-- lista  -->
-          <div class="col-md-8 ">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-8">
             <ul class="list-group list-group-flush">
               <li class="list-group-item ">
                 Es el tipo de espacio, más que la cantidad de espacio, lo que es importante para un gato.  
@@ -135,9 +135,9 @@
 
     <h4 class="text-center letra">REQUISITOS</h4>
     <div class="row">
-      <div class="col-md-4 ">
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5 espacio-requisistos">
         <!-- lista -->
-        <ul class="espacio-requisistos" >
+        <ul>
           <li class="list-group-item" >
             <mat-icon style="color: #FFC91D;">looks_one</mat-icon>
             Adaptar tu hogar para la llegada de una nueva mascota.
@@ -154,35 +154,35 @@
         </ul>
 
         <!-- formulario de adopciíon  -->
+          <button class="boton" mat-button data-bs-toggle="modal" data-bs-target="#formulario" type="button">
+            formulario de adopción
+          </button>
 
-        <button class="boton" mat-button data-bs-toggle="modal" data-bs-target="#formulario" type="button">
-           FORMULARIO DE ADOPCIÓN
-        </button>
-
-            <!-- modal -->
-        <div class="modal" id="formulario" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Formulario de Adopción</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p>Modal body text goes here.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
 
       <!-- imagen -->
-      <div class="col-md-8" style="padding-left: 65px;">
-        <img src="https://images.hola.com/imagenes/mascotas/20230110224293/perros-gatos-ciclos-sueno-dn/1-187-677/ciclos-sueno-dormir-perros-gatos-t.jpg?tx=w_680" alt="">
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7 ">
+        <img class="img-fluid" src="https://images.hola.com/imagenes/mascotas/20230110224293/perros-gatos-ciclos-sueno-dn/1-187-677/ciclos-sueno-dormir-perros-gatos-t.jpg?tx=w_680" alt="perro y gato">
+      </div>
+    </div>
+  </div>
+
+   <!-- modal de adopción-->
+   <div class="modal" id="formulario" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Formulario de Adopción</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
       </div>
     </div>
   </div>
