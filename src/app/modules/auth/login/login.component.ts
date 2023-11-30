@@ -11,37 +11,51 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   hide = true;
 
-  usuarios:Usuario ={
+  usuarios: Usuario ={
     uid:'',
     nombre:'',
     rol:'',
     email:'',
-    contrasena:''
+    contrasena:'',
   }
 
   constructor(
     public servicioAuth: AuthService,
     public servicioFirestore: FirestoreService,
     public router: Router
-  ){  }
-async iniciar() {
+  ){}
+
+  // función para iniciar sesión
+  async iniciar() {
     const credenciales = {
       email: this.usuarios.email,
       contrasena: this.usuarios.contrasena
     }
   
-  const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.contrasena)
-  .then(res =>{
-    alert("ha accedido con exito");
-    console.log(credenciales.email);
+    const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.contrasena)
+    .then(res =>{
+      alert("ha accedido con éxito");
+      console.log(credenciales.email);
 
-    this.router.navigate(['/inicio'])
-  })
-  .catch ((error: string) => {
-    alert("Hubo un error al iniciar sesion :(  \n" + error);
-    console.log(credenciales.email);
-   } )
+      this.router.navigate(['/inicio'])
+    })
+    .catch ((error: string) => {
+      alert("Hubo un error al iniciar sesión :(  \n" + error);
+      console.log(credenciales.email);
+    } )
   }
 
+  // función para cerrar sesión
+  async salir(){
+    const res = await this.servicioAuth.cerrarSesion()
+    .then(res => {
+      alert("Ha cerrado sesión con éxito.");
+      console.log(res);
+
+      this.router.navigate(['/inicio']);
+    })
+  }
 }
+
+
 

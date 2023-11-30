@@ -4,17 +4,19 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-//MATERIAL
+
+// MATERIAL
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-//SERVICIOS
-
-import { AuthService } from './sevices/auth.service';
-//FORMULARIOS
-import { FormsModule } from "@angular/forms";
 import {MatSelectModule} from '@angular/material/select';
+
+// SERVICIOS
+import { AuthService } from './sevices/auth.service';
+
+// FORMULARIOS
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    // material
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatSelectModule,
+    // angular
     FormsModule,
-    MatSelectModule
   ],
   exports:[
     LoginComponent,

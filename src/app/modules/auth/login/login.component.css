@@ -1,10 +1,61 @@
 .container{
     display: flex;
-    padding: 10px;
     text-align: center;
     justify-content: center;
 }
+.boton{
+    width: 180px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #d09e00;
+    color: #775c04;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+}
 
+.formulario{
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d4d4d4;
+    box-shadow: 8px 8px 5px 0px #bdbdbdbf;
+  }
+  
+.letras{
+    color: #907005;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 200;
+    text-transform:uppercase;
+    margin-bottom: 35px;
+}
+
+.letras2{
+    color: #907005;
+    text-align: left;
+    font-size: 100%;
+
+}
+
+.pregunta{
+    display: flex;
+    justify-content: center;
+    color: #775c04;
+}
+
+ 
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #775c04;
+    margin-left: 5px;
+}
+/*
 .boton{
     width: 120px;
     background-color: rgba(208, 158, 0 , 1);
@@ -32,18 +83,4 @@
     color: rgb(0, 0, 0);
     margin-left: 1px;
 }
-
-.letras{
-    color: rgba(119, 92, 4, 1);
-    text-align: center;
-    font-size: 160%;
-
-}
-
-.letras2{
-    color: rgba(119, 92, 4, 1);
-    text-align: left;
-    font-size: 100%;
-
-}
-
+*/

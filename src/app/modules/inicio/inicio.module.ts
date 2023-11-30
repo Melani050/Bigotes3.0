@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { InicioRoutingModule } from './inicio-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MatFormField } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatCardModule,
     InicioRoutingModule,
     MatIconModule,
+   
   ],
   exports: [
     MatButtonModule,

@@ -14,6 +14,7 @@
     border-radius: 10px;
     background-color: #FFC91D;
     font-weight: 400;
+    box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
 /* subtitulo */
 .letra{
@@ -21,25 +22,27 @@
   margin-bottom: 40px;
   padding: 10px;
   border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c3c3c3;
   font-weight: 500;
   color: #FFC91D;
-  background-color: #e7e6e6bb;
+  background-color: #d4d4d46d;
+  box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
 
   /* espacio adecuado */
 /* acordion  */
 .acordion{
   border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c3c3c3;
+  box-shadow: 8px 8px 5px 0px #bdbdbdbf;
+  border-style: none;
 }
 .acordion li{
   padding: 8px;
 }
+.accordion{
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px 0px #bdbdbdbf;
+}
+
 .color-letra:hover{
   color: #FFC91D;
 }
@@ -58,10 +61,8 @@ li{
 
 img{
   border-radius: 15px;
-  border-style: solid;
-  border-color: #FFC91D;
+  box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
-
 
   /* requisitos */
 /* formulario */

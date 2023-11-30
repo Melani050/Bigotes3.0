@@ -1,51 +1,62 @@
-<<<<<<< HEAD
-<div class="container">
-    <div class="row">
-        <h1>Registrate</h1>
-
-        <i class="material-icons" style="font-size: 200px;">person</i>
-         
-       
+<div class="container " >
+    <div class="row formulario pt-4 pb-4 ps-5 pe-5 mt-4">
+    
+      <h1 class="letras" id="register">registrate</h1>
         <!--NOMBRE-->
+        <p class="letras2" >Nombre</p>
         <mat-form-field appearance="fill">
-            <mat-label>Ingrese un nombre de usuario:</mat-label>
-            <input [(ngModel)]="usuarios.nombre" matInput required="">
+          <mat-label>Ingrese un nombre de usuario:</mat-label>
+          <input [(ngModel)]="usuarios.nombre" matInput required="">
+          <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
-          
-       <!--USUARIO-->
+            
+        <!--EMAIL-->
+        <p class="letras2" >Email</p>
         <mat-form-field appearance="fill">
-            <mat-label>Ingrese un email de usuario:</mat-label>
-            <input [(ngModel)]="usuarios.email" matInput required="">
+          <mat-label>Ingrese un email de usuario:</mat-label>
+          <input [(ngModel)]="usuarios.email" matInput required="">
+          <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
-         <!--ROL-->
+        <!--ROL-->
+        <p class="letras2" >Rol</p>
         <mat-form-field>
-            <mat-label>Seleccione un rol:</mat-label>
-            <mat-select [(ngModel)]="usuarios.rol" required>
-              <mat-option value="vis">Visitante </mat-option>
-              <mat-option value="adm">Administrador</mat-option>
-            </mat-select>
-          </mat-form-field>
+          <mat-label>Seleccione un rol:</mat-label>
+          <mat-select [(ngModel)]="usuarios.rol" required>
+            <mat-option value="vis">Visitante </mat-option>
+            <mat-option value="adm">Administrador</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-         <!--CONTRASEÑA-->
+        <!--CONTRASEÑA-->
+        <p class="letras2" >Contraseña</p>
         <mat-form-field>
-            <mat-label>Ingrese una contraseña:</mat-label>
+          <mat-label>Ingrese una contraseña:</mat-label>
 
-            <input [(ngModel)]="usuarios.contrasena" matInput [type]="hide ? 'password' : 'text'"  #input minlength="6" required>
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
+          <input [(ngModel)]="usuarios.contrasena" matInput [type]="hide ? 'password' : 'text'"  #input minlength="6" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
 
-         <mat-hint align="start">Minimo:6/{{input.value.length}}</mat-hint>
-         </mat-form-field> 
-        
+        <mat-hint align="start">Minimo:6/{{input.value.length}}</mat-hint>
+        </mat-form-field> 
+      
+            
+            
 
-        <button class="boton" mat-raised-button color="primary" (click)="registrarse()">Registrar</button>
-        
+      <button mat-button class="boton" mat-button mat-raised-button color="primary" (click)="registrarse()">Registrar</button>
+      
+     
+      <div class="pregunta">
+        <span class="letras3">¿Ya tenes una cuenta?</span> 
+        <a routerLink="/login">Inicia sesión</a>
+      </div>
+    
     </div>
 </div>
-=======
+
+<!--
 <div class="container" class="formulario">
   <div class="row">
     <p class="letras">Registro</p>
@@ -60,12 +71,12 @@
         required
 
       />
-      <mat-icon matSuffix>person</mat-icon>
+      
     </mat-form-field>
     <p class="letras2">E-mail</p>
     <mat-form-field class="label">
       <input matInput [(ngModel)]= "usuarios.email"placeholder="ejemplo@gmail.com" required />
-      <mat-icon matSuffix>person</mat-icon>
+      
     </mat-form-field>
 
     <p class="letras2">Contraseña</p>
@@ -91,11 +102,7 @@
 
     <p class="letras2">Confirmar la contraseña </p>
     <mat-form-field class="label">
-      <input
-        matInput [(ngModel)]= "usuarios.confirmar"
-        placeholder="Reingresar la contraseña"
-        [type]="hide ? 'password' : 'text'"
-      />
+      
       <button
         mat-icon-button
         matSuffix
@@ -119,7 +126,7 @@
 </button>
  </div >
 
-    <p class="letras3">¿Ya tenes una cuenta? Inicia sesion</p>
+    
   </div>
 </div>
->>>>>>> cf497f73864fd7abfbfee10922af5b72fcc39f51
+-->

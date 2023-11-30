@@ -8,14 +8,14 @@ const routes: Routes = [
 
   // lazyloading
   {
+    path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
+  },
+  {
     //los path acá van vacios ''
     path: '',loadChildren: () =>import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)
-  },
-  {
-    path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
   },
   {
     path:"", loadChildren:()=>import('./modules/mascotas/mascotas.module').then(m=>m.MascotasModule)

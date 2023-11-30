@@ -6,26 +6,18 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
 })
 export class AuthService {
   //referencia Autentificacion
-
-  constructor(public auth: AngularFireAuth) {
-   }
-
+  constructor(public auth: AngularFireAuth) {}
+  
+  //  LOGIN   -   funcion para el inicio de sesion
+  iniciarSesion(email:string, contrasena:string){
+    return this.auth.signInWithEmailAndPassword(email, contrasena);
+}
+  //  REGISTER 
   registrar (email: string, contrasena: string){
     return this.auth.createUserWithEmailAndPassword(email,contrasena)
   }
 
-
-  //login
-  //funcion para el inicio de sesion
-  iniciarSesion(email:string, contrasena:string){
-    return this.auth.signInWithEmailAndPassword(email, contrasena);
-}
-
-  cerrarSesion(){
-    //devuelve una promesa vacia
-    return this.auth.signOut();
-  }
-
+  // FUNCION PARA TOMAR UN UID
   async getUid(){
     const user= await this.auth.currentUser
     if(user==null){
@@ -33,6 +25,11 @@ export class AuthService {
     }else{
       return user.uid;
     }
+  }
+
+  cerrarSesion(){
+    //devuelve una promesa vacia
+    return this.auth.signOut();
   }
 
 
