@@ -1,1 +1,32 @@
-<p>table-reportes works!</p>
+<div class="table-responsive">
+    <table class="table">
+      <thead >
+        <tr class="apartados">
+          <th scope="col">#</th>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre / Apellido</th>
+          <th scope="col">Correo Electrónico</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+    
+          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+          <td class="d-flex justify-content-center">
+            <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
+                <mat-icon>report</mat-icon>
+            </button>
+            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>  
+        
+        </tr>
+      </tbody>
+    </table> 
+</div>

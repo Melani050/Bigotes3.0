@@ -10,6 +10,8 @@ import { AdminComponent } from './pages/admin/admin.component';
 
 // COMPONENTE 
 import { TableComponent } from './components/table/table.component';
+import { TableReportesComponent } from './components/table-reportes/table-reportes.component';
+import { TableUsuarioComponent } from './components/table-usuario/table-usuario.component';
 
 // MATERIAL 
 import { MatIconModule } from '@angular/material/icon';
@@ -21,7 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AdminComponent,
-    TableComponent
+    TableComponent,
+    TableReportesComponent,
+    TableUsuarioComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     TableComponent,
+    TableReportesComponent,
+    TableUsuarioComponent,
     MatIconModule,
     MatTabsModule,
     FormsModule,

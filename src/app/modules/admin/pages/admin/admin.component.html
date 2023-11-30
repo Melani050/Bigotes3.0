@@ -2,7 +2,17 @@
     <div class="row-12">
         <h1 class="letras">administrador</h1>
         <div class="col">
-            <app-table></app-table>
+            <mat-tab-group>
+                <mat-tab label="Mascotas"> 
+                    <app-table class="table-responsive"></app-table>
+                </mat-tab>
+                <mat-tab label="Usuarios"> 
+                    <app-table-usuario></app-table-usuario>
+                </mat-tab>
+                <mat-tab label="Reportes"> 
+                    <app-table-reportes></app-table-reportes>
+                </mat-tab>
+            </mat-tab-group>
         </div>
     </div>
 </div>

@@ -1,146 +1,62 @@
-<mat-tab-group>
-  <mat-tab label="Mascotas"> 
-    <!--  mascotas -->
-    <div class="">
-      <table class="table table-responsive">
-        <thead>
-          <tr class="apartados">
-            <th scope="col">#</th>
-            <th scope="col">Imagen</th>
-            <th scope="col">Especie</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Sexo</th>
-            <th scope="col">Tamaño</th>
-            <th scope="col">Raza</th>
-            <th scope="col">Personalidad</th>
-            <th scope="col">Edad</th>
-            <th scope="col">Peso</th>
-            <th scope="col">Castrado</th>
-            <th scope="col">Desparasitado</th>
-            <th scope="col">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let col of coleccionMascotas">
-            <td scope="row">1</td>
-            <td>
-              <img src="{{col.imagen}}"  alt="{{col.alt}}" width="100px">
-            </td>
-            <td>{{col.especie}}</td>
-            <td>{{col.nombre}}</td>
-            <td>{{col.sexo}}</td>
-            <td>{{col.tamanio}}</td>
-            <td>{{col.raza}}</td>
-            <td>{{col.personalidad}}</td>
-            <td>{{col.edad}}</td>
-            <td>{{col.peso}}</td>
-            <td>{{col.castrado}}</td>
-            <td>{{col.desparasitado}}</td>
-          
+<!--  mascotas -->
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr class="apartados">
+        <th scope="col">#</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Especie</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Tamaño</th>
+        <th scope="col">Raza</th>
+        <th scope="col">Personalidad</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Castrado</th>
+        <th scope="col">Desparasitado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let col of coleccionMascotas">
+        <td scope="row">1</td>
+        <td>
+          <img src="{{col.imagen}}"  alt="{{col.alt}}" width="100px">
+        </td>
+        <td>{{col.especie}}</td>
+        <td>{{col.nombre}}</td>
+        <td>{{col.sexo}}</td>
+        <td>{{col.tamanio}}</td>
+        <td>{{col.raza}}</td>
+        <td>{{col.personalidad}}</td>
+        <td>{{col.edad}}</td>
+        <td>{{col.peso}}</td>
+        <td>{{col.castrado}}</td>
+        <td>{{col.desparasitado}}</td>
       
-            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-            <td class="d-flex justify-content-center" >
-              <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
-                  <mat-icon>edit</mat-icon>
-              </button>
-              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </td>  
-          
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <!-- BOTÓN PARA AGREGAR MASCOTA -->
-    <div class="btn-nuevo">
-      <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
-        Agregar una nueva mascota
-      </button>
-    </div>
-  </mat-tab>
-  <mat-tab label="Usuarios"> 
-    <!--  usuarios -->
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr class="apartados">
-            <th scope="col">#</th>
-            <th scope="col">Id</th>
-            <th scope="col">Nombre / Apellido</th>
-            <th scope="col">Correo Electrónico</th>
-            <th scope="col">Acciones</th>
+  
+        <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+        <td class="d-flex justify-content-center" >
+          <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+              <mat-icon>edit</mat-icon>
+          </button>
+          <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>  
+      
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          
-      
-            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-            <td class="d-flex justify-content-center">
-              <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario">
-                  <mat-icon>edit</mat-icon>
-              </button>
-              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </td>  
-          
-          </tr>
-        </tbody>
-      </table>
-    </div>
-      <!-- BOTÓN PARA AGREGAR USUARIO -->
-    <div class="btn-nuevo">
-      <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarUsuario">
-        Agregar un nuevo usuario
-      </button>
-    </div>
-  </mat-tab>
-  <mat-tab label="Reportes"> 
-    <!--  reportes -->
-    <div class="table-responsive">
-      <table class="table">
-        <thead >
-          <tr class="apartados">
-            <th scope="col">#</th>
-            <th scope="col">Id</th>
-            <th scope="col">Nombre / Apellido</th>
-            <th scope="col">Correo Electrónico</th>
-            <th scope="col">Acciones</th>
-          </tr>
-        </thead>
-        <tbody class="">
-          <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-      
-            <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-            <td class="d-flex justify-content-center">
-              <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
-                  <mat-icon>report</mat-icon>
-              </button>
-              <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </td>  
-          
-          </tr>
-        </tbody>
-      </table> 
-    </div>
-  </mat-tab>
-</mat-tab-group>
-
-<!-- MASCOTA -->
+<!-- BOTÓN PARA AGREGAR MASCOTA -->
+<div class="btn-nuevo">
+  <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarMascota">
+    Agregar una nueva mascota
+  </button>
+</div>
 
 <!-- MODAL PARA AGREGAR MASCOTA -->
 <div class="modal fade " id="agregarMascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -355,60 +271,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- USUARIO -->
-<!-- MODAL PARA AGREGAR USUARIO -->
-<div class="modal fade " id="agregarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content ">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese una nueva mascota:</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-        
-      </div>
-          <!-- ACCIONES DEL MODAL -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL PARA EDITAR USUARIO -->
-<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Edite al siguiente usuario:</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label class="form-label">Ingrese nombre:</label>
-          <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre del usuario">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Ingrese un correo electrónico:</label>
-          <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el correo electrónico">
-        </div>
-    
-
-      </div>
-
-      <!-- ACCIONES DEL MODAL -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar cambios</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-<!-- REPORTES -->
