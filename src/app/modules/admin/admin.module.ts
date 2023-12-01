@@ -43,7 +43,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatTabsModule,
     FormsModule,
-    ReactiveFormsModule,
   ]
 })
 export class AdminModule { }

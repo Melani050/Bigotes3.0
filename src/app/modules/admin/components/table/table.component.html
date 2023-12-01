@@ -1,55 +1,56 @@
 <!--  mascotas -->
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr class="apartados">
-        <th scope="col">#</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Especie</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Sexo</th>
-        <th scope="col">Tamaño</th>
-        <th scope="col">Raza</th>
-        <th scope="col">Personalidad</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Peso</th>
-        <th scope="col">Castrado</th>
-        <th scope="col">Desparasitado</th>
-        <th scope="col">Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let col of coleccionMascotas">
-        <td scope="row">1</td>
-        <td>
-          <img src="{{col.imagen}}"  alt="{{col.alt}}" width="100px">
-        </td>
-        <td>{{col.especie}}</td>
-        <td>{{col.nombre}}</td>
-        <td>{{col.sexo}}</td>
-        <td>{{col.tamanio}}</td>
-        <td>{{col.raza}}</td>
-        <td>{{col.personalidad}}</td>
-        <td>{{col.edad}}</td>
-        <td>{{col.peso}}</td>
-        <td>{{col.castrado}}</td>
-        <td>{{col.desparasitado}}</td>
-      
-  
-        <!-- BOTONES PARA EDITAR Y ELIMINAR -->
-        <td class="d-flex justify-content-center" >
-          <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
-              <mat-icon>edit</mat-icon>
-          </button>
-          <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </td>  
-      
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <div class="table-responsive ">
+    <table class="table rounded-4 mt-4">
+      <thead>
+        <tr class="apartados ps-2 pe-2">
+          <th scope="col">#</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Tamaño</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Personalidad</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Castrado</th>
+          <th scope="col">Desparasitado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let col of coleccionMascotas">
+          <td scope="row">1</td>
+          <td>
+            <img src="{{col.imagen}}"  alt="{{col.alt}}" class="img-fluid" width="50px" height="50px">
+          </td>
+          <td>{{col.especie}}</td>
+          <td>{{col.nombre}}</td>
+          <td>{{col.sexo}}</td>
+          <td>{{col.tamanio}}</td>
+          <td>{{col.raza}}</td>
+          <td>{{col.personalidad}}</td>
+          <td>{{col.edad}}</td>
+          <td>{{col.peso}}</td>
+          <td>{{col.castrado}}</td>
+          <td>{{col.desparasitado}}</td>
+        
+    
+          <!-- BOTONES PARA EDITAR Y ELIMINAR -->
+          <td class="d-flex justify-content-center" >
+            <button type="button" title="Editar" class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#editarMascota" (click)="mostrarEditar(col)" >
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2 " data-bs-toggle="modal" data-bs-target="#eliminarMascota" (click)="mostrarBorrar(col)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>  
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
 <!-- BOTÓN PARA AGREGAR MASCOTA -->
 <div class="btn-nuevo">
