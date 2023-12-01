@@ -11,7 +11,7 @@ import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 //FIREBASE
 //Nos conectamos con la base de datos que trae los modulos necesarios
-import { environment } from "src/app/environments/enviroment";
+import { environment } from "src/environments/enviroment";
 import { AngularFireModule } from "@angular/fire/compat";
 //FIRESTORE
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";//AUTENTIFICACION
@@ -42,8 +42,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 
   ],
-  exports: [
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
