@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InicioComponent } from './inicio/inicio.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardtrasparenteComponent} from "./components/cardtrasparente/cardtrasparente.component";
 

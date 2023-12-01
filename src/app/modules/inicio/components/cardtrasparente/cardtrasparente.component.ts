@@ -32,10 +32,10 @@ export class CardtrasparenteComponent {
     this.servicioBuscar.obtenerMascota().subscribe(
       mascota => {
       this.coleccionMascotas = mascota;
-      })
+    })
   }
 
- obtenerMascota(){
+  obtenerMascota(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
 
@@ -49,7 +49,7 @@ export class CardtrasparenteComponent {
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
 
-      if(mascota.especie === "Perro"){
+      if(mascota.especie === "perro"){
         this.mascota.push(mascota);
       }
     })
@@ -59,10 +59,13 @@ export class CardtrasparenteComponent {
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
 
-      if(mascota.especie === "Gatos"){
+      if(mascota.especie === "gatos"){
         this.mascota.push(mascota);
       }
     })
   }
 
+  mostrarMascotas(){
+    
+  }
 }
