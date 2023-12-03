@@ -21,6 +21,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 //COMPONENTES
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -41,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatDividerModule,
     MatGridListModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    FlexLayoutModule
     
     
   ],
@@ -52,7 +54,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    FlexLayoutModule
   ]
 })
 export class SharedModule { }

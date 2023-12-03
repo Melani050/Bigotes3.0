@@ -1,15 +1,12 @@
 table{
-    border-radius: 25px ;
-    margin-top: 30px;
-}
-.table{
-    width: 1464.980;
     box-shadow: 8px 8px 5px 0px #bdbdbdbf;
+}
+.container{
+    width: 1464px;
+   
 }
 /* el head de la table */
 .apartados th{
-    padding-left: 25px;
-    padding-right: 25px;
     font-weight: 600;
     color: #907005;
 }

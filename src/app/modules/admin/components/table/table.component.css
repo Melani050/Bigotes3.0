@@ -1,10 +1,13 @@
 table{
     box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
+.container{
+    width: 1464PX;
+}
 /* el head de la table */
 .apartados th{
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
     font-weight: 600;
     color: #907005;
 }
@@ -32,3 +35,16 @@ table{
     text-align: center;
     justify-content: center;
 }
+
+/* responsive 
+
+@media (min-width: 1500px){
+    .container {
+        max-width: 1400px;
+    }
+}
+@media (max-width: 580px){
+    .container {
+        max-width: auto;
+    }
+}*/

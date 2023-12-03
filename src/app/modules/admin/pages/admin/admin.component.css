@@ -6,7 +6,7 @@
 }
 
 .col{
-    padding-bottom: 15rem;
+    padding: 30px;
 }
 .letras{
     color: #907005;
@@ -15,8 +15,4 @@
     font-weight: 200;
     text-transform:uppercase;
     margin-bottom: 35px;
-}
-
-mat-tab{
-    box-shadow: 8px 8px 5px 0px #bdbdbdbf;
 }
