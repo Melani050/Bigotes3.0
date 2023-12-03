@@ -17,11 +17,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 // ANGULAR
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableUsuarioComponent } from './components/table-usuario/table-usuario.component';
+import { TableReportesComponent } from './components/table-reportes/table-reportes.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
-    TableComponent
+    TableComponent,
+    TableUsuarioComponent,
+    TableReportesComponent
   ],
   imports: [
     CommonModule,
