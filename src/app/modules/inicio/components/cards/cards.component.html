@@ -1,10 +1,6 @@
-<h3 class="titulo">Mascotas en adopción</h3>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+    <div class="col contenido" *ngFor="let i of info">
+        <mat-card class="example-card rounded-4 m-4">
             <!-- IMAGEN -->
             <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
             <mat-card-header> 
@@ -19,73 +15,18 @@
             </mat-card-content>
             <mat-card-actions>
               <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
-                <mat-icon>info</mat-icon> Más información
+                <mat-icon>info</mat-icon> más información
               </button>
               <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
-                <mat-icon >email</mat-icon> Contacto
+                <mat-icon >email</mat-icon> contacto
               </button>
             </mat-card-actions>
         </mat-card>
-      </div>
     </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon> <mat-icon style="padding-top: 3px;">female</mat-icon></p>
-              <p>Tamaño: {{i.tamanio}}</p>
-              <p>Raza: {{i.raza}}</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
-                <mat-icon >email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-      </div>
-    </div>
-    <div class="col">
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="example-card">
-            <!-- IMAGEN -->
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" width="100%">
-            <mat-card-header> 
-              <!-- TÍTULO -->
-              <mat-card-title>{{i.nombre}}</mat-card-title>
-            </mat-card-header>           
-            <mat-card-content>
-                <!-- DESCRIPCIÓN -->
-              <p>Sexo: {{i.sexo}}<mat-icon style="padding-top: 4px;">male</mat-icon> <mat-icon style="padding-top: 3px;">female</mat-icon></p>
-              <p>Tamaño: {{i.tamanio}}</p>
-              <p>Raza: {{i.raza}}</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button data-bs-toggle="modal" data-bs-target="#masInformacion">
-                <mat-icon>info</mat-icon> Más información
-              </button>
-              <button mat-button data-bs-toggle="modal" data-bs-target="#contactarse">
-                <mat-icon >email</mat-icon> Contacto
-              </button>
-            </mat-card-actions>
-        </mat-card>
-      </div>
-    </div>  
   </div>
-</div>
 
-<div *ngFor="let i of info" >
   <!-- MODAL INFORMACIÓN -->
-  <div class="modal fade"  id="masInformacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" *ngFor="let i of info" id="masInformacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -108,7 +49,7 @@
   </div>
 
   <!-- MODAL CONTACTO -->
-  <div class="modal fade" id="contactarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" *ngFor="let i of info" id="contactarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -125,5 +66,4 @@
       </div>
     </div>
   </div>
-</div>
 
