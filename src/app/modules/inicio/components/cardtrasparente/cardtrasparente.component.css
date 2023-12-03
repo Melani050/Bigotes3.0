@@ -1,26 +1,39 @@
 .card{
-display: flex;
-width: 500px;
-height: 300px;
-padding: 45px 35px;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-flex-shrink: 0;
-margin: auto;
-margin-bottom: 20px;
-margin-top: 20px;
+  display: flex;
+  width: 500px;
+  height: 300px;
+  padding: 45px 35px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  
 
-border-radius: 20px;
-background-color: rgba(255, 255, 255, 0.7);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: #ffffff9c;
+  box-shadow: 0px 4px 4px 0px #00000040, 0px 4px 4px 0px #00000040;
 }
 .botones{
-  background-color: rgba(255, 201, 29, 0.79);
+  background-color: #ffca1dbe;
+  text-transform:capitalize;
+  font-family: 'Poppins', sans-serif;
 }
 .boton2{
-  background-color: rgba(255, 201, 29, 0.79);
+  background-color: #ffca1d00;
   padding: 0px 30px;
-  margin-bottom: auto
+  margin-bottom: auto;
+  
 
+}
+.boton2 img{
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+}
+.modal-footer button{
+  background-color: #FFC91D; 
+  color: white;
 }

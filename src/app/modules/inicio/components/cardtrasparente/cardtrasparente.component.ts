@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BuscadorService } from "../services/buscador.service";
+/*import { CrudService } from "";*/
 import { Mascota } from 'src/app/models/mascotas';
 
 
@@ -10,6 +10,7 @@ import { Mascota } from 'src/app/models/mascotas';
 })
 export class CardtrasparenteComponent {
 
+  
   coleccionMascotas: Mascota [] = []; // creamos colección basada en interfaz Mascota
 
   coleccionGatos: Mascota [] = []; // creamos colección basada en interfaz Gato
@@ -20,22 +21,24 @@ export class CardtrasparenteComponent {
 
   mascota: any; // declare la propiedad mascota
 
-
-
+/*
   constructor(
-    public servicioBuscar: BuscadorService
+    public servicioCrud: CrudService
   ){}
 
   ngOnInit(): void{
     /* llamamos función obtenerMascota y le enviamos los nuevos valores
-    del formulario mascota (se guardan en la colección) */
+    del formulario mascota (se guardan en la colección) 
     this.servicioBuscar.obtenerMascota().subscribe(
       mascota => {
       this.coleccionMascotas = mascota;
-    })
-  }
+    })*/
+ 
 
-  obtenerMascota(){
+
+
+  /*
+  mostrarMascotas(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
 
@@ -44,7 +47,7 @@ export class CardtrasparenteComponent {
       }
     })
   }
-
+*/
   obtenerPerros(){
     // forEach itera la colección/ arreglo
     this.coleccionMascotas.forEach(mascota =>{
@@ -65,7 +68,4 @@ export class CardtrasparenteComponent {
     })
   }
 
-  mostrarMascotas(){
-    
-  }
 }

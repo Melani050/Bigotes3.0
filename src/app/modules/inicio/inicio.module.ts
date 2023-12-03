@@ -19,8 +19,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   declarations: [
     InicioComponent,
     CardsComponent,
-    CardtrasparenteComponent,
     BuscadorComponent,
+    CardtrasparenteComponent
 
   ],
   imports: [
@@ -38,8 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatCardModule,
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
-    CardtrasparenteComponent,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    CardtrasparenteComponent
   ]
 })
 export class InicioModule { }
