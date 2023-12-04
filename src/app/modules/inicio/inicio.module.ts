@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ApartadosComponent } from './components/apartados/apartados.component';
+import { CardtransparenteComponent } from './components/cardtransparente/cardtransparente.component';
 
 /** ANGULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { InicioRoutingModule } from './inicio-routing.module';
@@ -19,7 +23,8 @@ import { MatFormField } from '@angular/material/form-field';
     InicioComponent,
     CardsComponent,
     CarouselComponent,
-    ApartadosComponent
+    ApartadosComponent,
+    CardtransparenteComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +32,9 @@ import { MatFormField } from '@angular/material/form-field';
     MatCardModule,
     InicioRoutingModule,
     MatIconModule,
+    MatButtonToggleModule,
+    MatSelectModule,
+    MatFormFieldModule
    
   ],
   exports: [
@@ -36,7 +44,8 @@ import { MatFormField } from '@angular/material/form-field';
     // Hay que exportar el componente para que el inicio pueda utilizarlo
     CardsComponent,
     CarouselComponent,
-    ApartadosComponent
+    ApartadosComponent,
+    CardtransparenteComponent
   ]
 })
 export class InicioModule { }
