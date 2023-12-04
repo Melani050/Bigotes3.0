@@ -9,19 +9,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatMenuModule } from '@angular/material/menu';
-
 import { MatDividerModule } from '@angular/material/divider';
-
 import {MatGridListModule} from '@angular/material/grid-list';
-
 import {MatExpansionModule} from '@angular/material/expansion';
-
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //COMPONENTES
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -43,7 +38,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatGridListModule,
     MatExpansionModule,
     MatMenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
     
     
   ],
