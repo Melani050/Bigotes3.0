@@ -11,7 +11,18 @@
 
     <!-- Botones derechos -->
     <div class="espacio mat-toolbar-row align-items-center" fxHide.sm fxHide.xs fxShow.gt-sm fxLayoutAlign="end">
-      <button mat-button routerLink="/adopta">Adopta</button>
+      
+      <!-- Este botón lleva al menu despegable-->
+      <button mat-button [matMenuTriggerFor]="menuu">Adopta</button>
+      <mat-menu #menuu="matMenu">
+        <!-- Mostrará todos las mascotas -->
+        <button mat-menu-item routerLink="/mascotas">Todos</button>
+
+        <!-- especies de mascotas en adopcion -->
+        <button mat-menu-item routerLink="/perros">Perros</button>
+        <button mat-menu-item routerLink="/gatos">Gatos</button>
+      </mat-menu>
+      
       <button mat-button routerLink="/donaciones">Donaciones</button>
       <button mat-button routerLink="/salud">Salud</button>
       <button mat-button>Nosotros</button>
@@ -25,7 +36,7 @@
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu" >
-        <button mat-menu-item routerLink="/adopta">Adopta</button>
+        <button mat-menu-item routerLink="/mascotas">Adopta</button>
         <button mat-menu-item routerLink="/donaciones">Donaciones</button>
         <button mat-menu-item routerLink="/salud">Salud</button>
         <button mat-menu-item>Nosotros</button>
