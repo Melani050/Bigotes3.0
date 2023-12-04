@@ -1,29 +1,65 @@
-<p>
-  <mat-toolbar class="color">
+<div class="rounded-bottom-3">
+  <mat-toolbar class="fondo p-5" fxLayout fxLayoutAlign="center center">
 
-      <a href="#" class="letras">BIGOTES</a>
-      <span class="example-spacer">
-      </span>
+    <!-- Resto de la barra de navegación -->
+    <div class="letras">
+      <a routerLink="/inicio">
+        bigotes
+        <img src="https://clipground.com/images/yellow-paw-print-clip-art-7.png" class="img-fluid" alt="pata de mascota">
+      </a>
+    </div>
 
+    <!-- Botones derechos -->
+    <div class="espacio mat-toolbar-row align-items-center" fxHide.sm fxHide.xs fxShow.gt-sm fxLayoutAlign="end">
+      <button mat-button routerLink="/adopta">Adopta</button>
+      <button mat-button routerLink="/donaciones">Donaciones</button>
+      <button mat-button routerLink="/salud">Salud</button>
+      <button mat-button>Nosotros</button>
+      <button mat-button routerLink="/register">Registrate</button>
+      <button mat-button routerLink="/login" style="background-color: #cfaf47; color: #fff;">Iniciar Sesión</button>
+    </div>
 
-      <button mat-button routerLink="/admin">Administrador</button>
-
-       <!-- Este botón lleva al menu despegable-->
-      <button mat-button [matMenuTriggerFor]="menu">Mascotas</button>
-      <mat-menu #menu="matMenu">
-        <!-- Mostrará todos las mascotas -->
-        <button mat-menu-item routerLink="/mascotas">Todos</button>
-
-        <!-- especies de mascotas en adopcion -->
-        <button mat-menu-item routerLink="/perros">Perros</button>
-        <button mat-menu-item routerLink="/gatos">Gatos</button>
+    <!-- Menú hamburguesa solo en pantallas pequeñas -->
+    <div fxHide.gt-sm >
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="ms-3">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" >
+        <button mat-menu-item routerLink="/adopta">Adopta</button>
+        <button mat-menu-item routerLink="/donaciones">Donaciones</button>
+        <button mat-menu-item routerLink="/salud">Salud</button>
+        <button mat-menu-item>Nosotros</button>
+        <button mat-menu-item routerLink="/register">Registrate</button>
+        <button mat-menu-item routerLink="/login" style="color: #daac18;">Iniciar Sesión</button>
       </mat-menu>
+    </div>
 
-      <button mat-button routerLink="/login">
-        Login
-      </button>
-      <button mat-button routerLink="/register" >
-        Registrarse
-      </button>
   </mat-toolbar>
-</p>
+</div>
+
+
+<!--
+<mat-toolbar class="fondo container">
+  
+  <div class="espacio">
+    <button mat-button routerLink="/adopta">Adopta</button>
+    <button mat-button routerLink="/donaciones">Donaciones</button>
+    <button mat-button routerLink="/salud">Salud</button>
+  </div>
+
+  <div class="letras">
+    <a routerLink="/inicio">
+      <span>BIGOTES</span>
+      <img src="https://raw.githubusercontent.com/Melani050/Bigotes3.0/Lagos-navbar/fotos/patita.png" alt="pata de mascota">
+    </a>
+  </div>
+
+  <div class="espacio">
+    <button mat-button>Nosotros</button>
+    <button mat-button routerLink="/register">Registrate</button>
+    <button mat-button routerLink="/login">Login</button>
+  </div>
+
+
+</mat-toolbar>
+-->
