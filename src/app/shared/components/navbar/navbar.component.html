@@ -1,3 +1,44 @@
+<div class="rounded-bottom-3">
+  <mat-toolbar class="fondo p-5" fxLayout fxLayoutAlign="center center">
+
+    <!-- Resto de la barra de navegación -->
+    <div class="letras">
+      <a routerLink="/inicio">
+        BIGOTES
+        <img src="https://clipground.com/images/yellow-paw-print-clip-art-7.png" class="img-fluid" alt="pata de mascota">
+      </a>
+    </div>
+
+    <!-- Botones derechos -->
+    <div class="espacio mat-toolbar-row align-items-center" fxHide.sm fxHide.xs fxShow.gt-sm fxLayoutAlign="end">
+      <button mat-button routerLink="/adopta">Adopta</button>
+      <button mat-button routerLink="/donaciones">Donaciones</button>
+      <button mat-button routerLink="/salud">Salud</button>
+      <button mat-button>Nosotros</button>
+      <button mat-button routerLink="/register">Registrate</button>
+      <button mat-button routerLink="/login" style="background-color: #cfaf47;">Iniciar Sesión</button>
+    </div>
+
+    <!-- Menú hamburguesa solo en pantallas pequeñas -->
+    <div fxHide.gt-sm >
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" >
+        <button mat-menu-item routerLink="/adopta">Adopta</button>
+        <button mat-menu-item routerLink="/donaciones">Donaciones</button>
+        <button mat-menu-item routerLink="/salud">Salud</button>
+        <button mat-menu-item>Nosotros</button>
+        <button mat-menu-item routerLink="/register">Registrate</button>
+        <button mat-menu-item routerLink="/login" style="color: #daac18;">Iniciar Sesión</button>
+      </mat-menu>
+    </div>
+
+  </mat-toolbar>
+</div>
+
+
+<!--
 <mat-toolbar class="fondo container">
   
   <div class="espacio">
@@ -21,4 +62,4 @@
 
 
 </mat-toolbar>
-
+-->

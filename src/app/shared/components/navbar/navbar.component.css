@@ -1,47 +1,53 @@
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.container{
-  margin: auto;
-  max-width: 1380px;
-  
+
+.rounded-bottom-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
+
 .fondo{
   background-color:#ffc91d;
-  height: 11%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  border-radius: 0 0 20px 20px ;
-
+  justify-content: center;
+  align-items: center;
+  box-shadow: #bdbdbd;
 }
 
 /* LOGO */
-.letras{
-  margin: 0 auto;
-}
 .letras a{
   text-align: center;
   color: #fff;
-  font-size: 35px;
+  font-size: 2em;
   font-weight: 800;
   text-decoration: none;
   padding: 0 40px;
+  text-transform: uppercase;
+  text-align: center;
 
 }
 .letras img{
-  width: 70px;
-  height: 70px;
-  margin-left: 5px;
-}
-
-
-.espacio{
-  margin: 0 5%;
-  color: #fff;
+  width: 75px;
+  height: 85px;
 }
 .espacio button{
-  font-size: 18px;
+  color: #fff;
+  font-size: 15px;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  justify-content: flex-end;
+}
+
+
+
+mat-menu-item {
+  width: 100%;
+  text-align: center;
+}
+[mat-icon-button] {
+  color: #b99727; /* Color de icono en el botón hamburger */
 }

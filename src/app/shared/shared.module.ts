@@ -15,7 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { MatMenuModule } from '@angular/material/menu'
 
 
 //COMPONENTES
@@ -41,7 +41,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatDividerModule,
     FlexLayoutModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
     
   ],
   exports:[
@@ -51,6 +52,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatMenuModule,
    
   ]
 })
