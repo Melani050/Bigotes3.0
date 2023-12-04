@@ -48,8 +48,7 @@
     background-color: #FFC91D; 
     color: white;
 }
-  
-  
+ 
   
 @media only screen and (max-width: 600px) {
     .card {
@@ -58,6 +57,7 @@
         width: auto;
         height: auto;
         left: 8%;
+        top: 12%;
   
         justify-content: space-between;
         align-items: center;
@@ -75,6 +75,7 @@
         width: auto;
         height: auto;
         left: 16%;
+        top: 25%;
   
         justify-content: space-between;
         align-items: center;
