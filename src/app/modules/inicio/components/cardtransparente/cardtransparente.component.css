@@ -8,49 +8,56 @@
   
     justify-content: space-between;
     align-items: center;
+
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    margin: -50px 0 0 -50px;
   
-    margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 45px 35px;
     
     border-radius: 20px;
-    background-color: #ffffff9c;
+    background-color: #ffffff5d;
     box-shadow: 0px 4px 4px 0px #00000040, 0px 4px 4px 0px #00000040;
   }
-  .botones{
+.botones{
     background-color: #ffca1dbe;
     text-transform:capitalize;
     font-family: 'Poppins', sans-serif;
+    border: none;
   
     display: flex;
     justify-content: space-around;
-  }
-  .boton2{
+}
+.boton2{
     background-color: #ffca1d00;
     padding: 0px 30px;
     margin-bottom: auto;
     
     flex-grow: 1;
   
-  }
-  .boton2 img{
+}
+.boton2 img{
     margin: 5px;
     height: 60px;
     width: 60px;
-  }
-  .modal-footer button{
+}
+.modal-footer button{
     background-color: #FFC91D; 
     color: white;
-  }
+}
   
   
   
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .card {
         /* Estilos para pantallas pequeñas */
+        margin: 0 auto;
         width: auto;
         height: auto;
+        left: 8%;
   
         justify-content: space-between;
         align-items: center;
@@ -60,4 +67,21 @@
         /* Estilos específicos para botones en pantallas pequeñas */
         display: inline-flex;
     }
-  }
+}
+@media only screen and (max-width: 750px) {
+    .card {
+        /* Estilos para pantallas pequeñas */
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        left: 16%;
+  
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    .boton2 {
+        /* Estilos específicos para botones en pantallas pequeñas */
+        display: inline-flex;
+    }
+}
