@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 /*import { CrudService } from "";*/
 import { Mascota } from 'src/app/models/mascotas';
 
 @Component({
   selector: 'app-cardtransparente',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './cardtransparente.component.html',
   styleUrls: ['./cardtransparente.component.css']
 })
