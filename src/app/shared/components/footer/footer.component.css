@@ -103,10 +103,13 @@ footer{
     padding: 0;
     margin-right: 2px;
 }
-.col h1{
+.col a{
     font-weight: 800;
     position: relative;
     padding-top: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
 }
 .col img{
     margin-right:  15px;

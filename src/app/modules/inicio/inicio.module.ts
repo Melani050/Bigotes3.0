@@ -17,35 +17,36 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { InicioRoutingModule } from './inicio-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { MatFormField } from '@angular/material/form-field';
+import { MascotasModule } from "../mascotas/mascotas.module";
 
 @NgModule({
-  declarations: [
-    InicioComponent,
-    CardsComponent,
-    CarouselComponent,
-    ApartadosComponent,
-    CardtransparenteComponent
-  ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatCardModule,
-    InicioRoutingModule,
-    MatIconModule,
-    MatButtonToggleModule,
-    MatSelectModule,
-    MatFormFieldModule
-   
-  ],
-  exports: [
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
-    // Hay que exportar el componente para que el inicio pueda utilizarlo
-    CardsComponent,
-    CarouselComponent,
-    ApartadosComponent,
-    CardtransparenteComponent
-  ]
+    declarations: [
+        InicioComponent,
+        CardsComponent,
+        CarouselComponent,
+        ApartadosComponent,
+        CardtransparenteComponent
+    ],
+    exports: [
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        // Hay que exportar el componente para que el inicio pueda utilizarlo
+        CardsComponent,
+        CarouselComponent,
+        ApartadosComponent,
+        CardtransparenteComponent
+    ],
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatCardModule,
+        InicioRoutingModule,
+        MatIconModule,
+        MatButtonToggleModule,
+        MatSelectModule,
+        MatFormFieldModule,
+        MascotasModule
+    ]
 })
 export class InicioModule { }

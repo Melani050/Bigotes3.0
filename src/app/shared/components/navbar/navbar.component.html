@@ -11,7 +11,8 @@
 
     <!-- Botones derechos -->
     <div class="espacio mat-toolbar-row align-items-center" fxHide.sm fxHide.xs fxShow.gt-sm fxLayoutAlign="end">
-      
+
+      <button mat-button routerLink="/admin">Administrador</button>
       <!-- Este botón lleva al menu despegable-->
       <button mat-button [matMenuTriggerFor]="menuu">Adopta</button>
       <mat-menu #menuu="matMenu">
