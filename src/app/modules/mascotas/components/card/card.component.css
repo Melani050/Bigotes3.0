@@ -1,3 +1,7 @@
+.contenido{
+  width: 400px;
+  display: inline-block;
+}
 p{
     margin: 10px;
     font-size: 14px;
