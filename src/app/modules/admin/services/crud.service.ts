@@ -11,9 +11,6 @@ import { Usuario } from 'src/app/models/usuario';
 export class CrudService {
   // pipe -> tubería por dónde viajan esos nuevos datos
   // map -> mapea los datos los recorre, los lee
-  crearUsuario(nuevoUsuario: Usuario) {
-    throw new Error('Method not implemented.');
-  }
   // Creo la colección "mascotasCollection" basandome el la colección "AngularFirestoreCollection"
   // y respetando la interfaz de Mascota.
   private mascotasColeccion: AngularFirestoreCollection<Mascota>

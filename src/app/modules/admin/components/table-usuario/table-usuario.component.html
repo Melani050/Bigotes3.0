@@ -7,6 +7,7 @@
           <th scope="col">Id</th>
           <th scope="col">Nombre / Apellido</th>
           <th scope="col">Correo Electrónico</th>
+          <th scope="col">Contraseña</th>
           <th scope="col">Rol</th>
           <th scope="col">Acciones</th>
         </tr>
@@ -17,11 +18,12 @@
           <td> {{col.uid}} </td>
           <td> {{col.nombre}} </td>
           <td> {{col.email}} </td>
+          <td> {{col.contrasena}} </td>
           <td> {{col.rol}} </td>
         
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="d-flex justify-content-center">
-            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario">
+            <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario" (click)="mostrarEditar(col)">
                 <mat-icon>edit</mat-icon>
             </button>
             <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
@@ -84,14 +86,14 @@
   </div>
 
 <!-- MODAL PARA EDITAR USUARIO -->
-<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" *ngFor="let col of coleccionUsuario" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Editar al siguiente usuario:</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div [formGroup]="usuario" class="modal-body">
           <div class="mb-3">
             <label class="form-label">Ingrese nombre:</label>
             <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre del usuario">
@@ -118,12 +120,12 @@
   
         <!-- ACCIONES DEL MODAL -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" >Guardar cambios</button>
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="editarUsuario()">Guardar cambios</button>
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
   
   
-  </div>
+</div>
   

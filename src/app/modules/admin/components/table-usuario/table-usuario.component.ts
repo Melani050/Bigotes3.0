@@ -14,6 +14,8 @@ import { CrudService } from '../../services/crud.service';
 export class TableUsuarioComponent {
   coleccionUsuario: Usuario[] = [];// coleccion basada en interfaz Usuario
   usuarioSeleccionado!: Usuario; // ! -> recibir valores vacíos
+
+
   // se vincula con el archivo html(formulario)
   usuario = new FormGroup({
     nombre: new FormControl('',Validators.required),
@@ -53,20 +55,20 @@ export class TableUsuarioComponent {
   recibe los valores nuevos ingresados en el formulario*/
   editarUsuario(){
     let datos: Usuario = {
-      uid: this.usuarioSeleccionado!.uid,
+      uid: this.usuarioSeleccionado.uid,
       // signo de exclamación "!" -> puede recibir valores vacíos al inicializar
       nombre: this.usuario.value.nombre!,
       email: this.usuario.value.email!,
+      contrasena: this.usuario.value.contrasena!,
       rol: this.usuario.value.rol!,
-      contrasena: this.usuario.value.contrasena!
     }
 
     this.servicioCrud.modificarUsuario(this.usuarioSeleccionado.uid, datos)
     .then(usuario => {
-      alert("La mascota fue modificada con éxito.");
+      alert("El usuario fue modificada con éxito.");
     })
     .catch(error => {
-      alert("No se pudo modificar la mascota. \n"+error);
+      alert("No se pudo modificar el usuario. \n"+error);
     })
   }
 
