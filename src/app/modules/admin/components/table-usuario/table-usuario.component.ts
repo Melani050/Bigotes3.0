@@ -36,6 +36,34 @@ export class TableUsuarioComponent {
     )
   }
 
+  async agregarUsuario(){
+    if (this.usuario.valid){
+      let nuevoUsuario: Usuario = {
+        uid: '', // único que guardamos vacío; lo creamos en el CRUD
+        nombre: this.usuario.value.nombre!,
+        email: this.usuario.value.email!,
+        contrasena: this.usuario.value.contrasena!,
+        rol: this.usuario.value.rol!,
+       
+      };
+      
+      // ENVIAMOS NUESTRO NUEVO USUARIO
+      // llamamos al servicioCrud; función crearUsuario; seteamos nuevoUsuario
+      await this.servicioCrud.crearUsuario(nuevoUsuario)
+      .then(mascota => {
+        alert("Ha agregado un nuevo usuario con éxito.");
+      })
+      .catch((error) => {
+        alert("Hubo un error al cargar al nuevo usuario. \n"+error);
+      })
+
+    }
+  }
+
+
+
+  //ACCIONES
+
 
   // editar usuario -> vincula al modal editar
   mostrarEditar(usuarioSeleccionado: Usuario){

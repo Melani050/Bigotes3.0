@@ -73,8 +73,9 @@ export class CrudService {
     return this.usuariosColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
 
+  //para crear un nuevo usuario
   crearUsuario(usuario: Usuario){
-    // retorna una nueva promesa, cerea un nuevo id para una mascota
+    // retorna una nueva promesa, cerea un nuevo id para un usuario
     return new Promise(async(resolve, reject)=>{
       try{
         // Esta generando un nuevo id en la BD, que se guarda el la constante.
