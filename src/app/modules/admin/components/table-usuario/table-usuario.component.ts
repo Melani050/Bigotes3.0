@@ -52,7 +52,7 @@ export class TableUsuarioComponent {
     });
   }
   /* VINCULA A BOTÓN "guardar cambios"
-  recibe los valores nuevos ingresados en el formulario*/
+    recibe los valores nuevos ingresados en el formulario*/
   editarUsuario(){
     let datos: Usuario = {
       uid: this.usuarioSeleccionado.uid,
@@ -76,6 +76,17 @@ export class TableUsuarioComponent {
   mostrarBorrar(usuarioSeleccionado: Usuario){ 
     this.modalVisibleUsuario = true; // modal
     this.usuarioSeleccionado = usuarioSeleccionado;
+  }
+
+  // para eliminar usuario
+  borrarUsuario(){ 
+    this.servicioCrud.eliminarUsuario(this.usuarioSeleccionado.uid)
+    .then(respuesta =>{
+      alert("El usuario se ha eliminado correctamente.");
+    })
+    .catch(error => {
+      alert("No se ha podido eliminar el usuario: \n"+error);
+    })
   }
 
   
