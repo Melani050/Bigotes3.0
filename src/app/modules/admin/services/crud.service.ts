@@ -75,6 +75,18 @@ export class CrudService {
   //para editar usuario
   modificarUsuario(uid: string, nuevaData: Usuario){
     return this.database.collection('usuarios').doc(uid).update(nuevaData);
+  } 
+  //para eliminar usuario -> envia su uid
+  eliminarUsuario(uid: string){
+    return new Promise((resolve, reject) => {
+      try{
+        const resp = this.usuariosColeccion.doc(uid).delete()
+        resolve (resp)
+      }
+      catch(error){
+        reject(error)
+      }
+    })
   }
 }
 
