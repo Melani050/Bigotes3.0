@@ -26,7 +26,7 @@
             <button type="button" title="Editar" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editarUsuario" (click)="mostrarEditar(col)">
                 <mat-icon>edit</mat-icon>
             </button>
-            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarUsuario" (click)="mostrarBorrar(col)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>  
@@ -128,4 +128,27 @@
   
   
 </div>
-  
+
+<!-- MODAL PARA ELIMINAR USUARIO -->
+<div class="modal fade" *ngIf="modalVisibleUsuario" id="eliminarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro de eliminar al siguiente usuario?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <!-- MOSTRAMOS LA MASCOTA QUE SE ELIMINARÁ -->
+          <p>
+            Nombre: {{usuarioSeleccionado.nombre}} <br>
+            Email: {{usuarioSeleccionado.email}}
+          </p> 
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Eliminar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

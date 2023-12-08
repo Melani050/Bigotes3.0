@@ -14,7 +14,7 @@ import { CrudService } from '../../services/crud.service';
 export class TableUsuarioComponent {
   coleccionUsuario: Usuario[] = [];// coleccion basada en interfaz Usuario
   usuarioSeleccionado!: Usuario; // ! -> recibir valores vacíos
-
+  modalVisibleUsuario: boolean = false;
 
   // se vincula con el archivo html(formulario)
   usuario = new FormGroup({
@@ -37,7 +37,7 @@ export class TableUsuarioComponent {
   }
 
 
-  // EDITAR MASCOTA -> vincula al modal editar
+  // editar usuario -> vincula al modal editar
   mostrarEditar(usuarioSeleccionado: Usuario){
     this.usuarioSeleccionado = usuarioSeleccionado;
 
@@ -71,5 +71,14 @@ export class TableUsuarioComponent {
       alert("No se pudo modificar el usuario. \n"+error);
     })
   }
+
+  // eliminar usuario -> se vincula con el modal
+  mostrarBorrar(usuarioSeleccionado: Usuario){ 
+    this.modalVisibleUsuario = true; // modal
+    this.usuarioSeleccionado = usuarioSeleccionado;
+  }
+
+  
+
 
 }
