@@ -72,6 +72,25 @@ export class CrudService {
   obtenerUsuario(){
     return this.usuariosColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
   }
+
+  crearUsuario(usuario: Usuario){
+    // retorna una nueva promesa, cerea un nuevo id para una mascota
+    return new Promise(async(resolve, reject)=>{
+      try{
+        // Esta generando un nuevo id en la BD, que se guarda el la constante.
+        const id =  this.database.createId();
+        usuario.uid = id;
+
+        const resultado = await this.usuariosColeccion.doc(id).set(usuario)
+
+        resolve(resultado);
+
+      }catch(error){
+        reject(error);
+      }
+    })
+  }
+
   //para editar usuario
   modificarUsuario(uid: string, nuevaData: Usuario){
     return this.database.collection('usuarios').doc(uid).update(nuevaData);
