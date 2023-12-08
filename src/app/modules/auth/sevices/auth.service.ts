@@ -12,7 +12,7 @@ export class AuthService {
   iniciarSesion(email:string, contrasena:string){
     return this.auth.signInWithEmailAndPassword(email, contrasena);
 }
-  //  REGISTER 
+  //  REGISTER- 
   registrar (email: string, contrasena: string){
     return this.auth.createUserWithEmailAndPassword(email,contrasena)
   }

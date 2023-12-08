@@ -7,15 +7,17 @@
           <th scope="col">Id</th>
           <th scope="col">Nombre / Apellido</th>
           <th scope="col">Correo Electrónico</th>
+          <th scope="col">Rol</th>
           <th scope="col">Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let col of coleccionUsuario" >
           <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td> {{col.uid}} </td>
+          <td> {{col.nombre}} </td>
+          <td> {{col.email}} </td>
+          <td> {{col.rol}} </td>
         
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="d-flex justify-content-center">
@@ -47,11 +49,29 @@
     <div class="modal-dialog">
       <div class="modal-content ">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese una nueva mascota:</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo usuario:</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-  
+          <div class="mb-3">
+            <label class="form-label">Ingrese nombre del usuario:</label>
+            <input class="form-control" type="text" formControlName="nombre" placeholder="Igrese nombre del usuario">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ingrese el email del usuario:</label>
+            <input class="form-control" type="text" formControlName="email" placeholder="Igrese el email del usuario">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ingrese la contraseña:</label>
+            <input class="form-control" type="text" formControlName="contrasena" placeholder="Igrese contraseña">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ingrese rol:</label>
+            <input class="form-control" type="text" formControlName="rol" placeholder="Igrese el rol">
+          </div>
           
         </div>
             <!-- ACCIONES DEL MODAL -->
@@ -68,7 +88,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Edite al siguiente usuario:</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar al siguiente usuario:</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -78,7 +98,19 @@
           </div>
           <div class="mb-3">
             <label class="form-label">Ingrese un correo electrónico:</label>
-            <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese el correo electrónico">
+            <input class="form-control" type="text" formControlName="email" placeholder="Ingrese el correo electrónico">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Ingrese nueva contraseña</label>
+            <input class="form-control" type="text" formControlName="contrasena" placeholder="Ingrese nueva contraseña">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Ingrese el nuevo rol:</label>
+            <select class="form-control" formControlName="rol" class="form-select">
+              <option selected>Elija una opción</option>
+              <option value="visitante">Visitante</option>
+              <option value="administrador">Administrador</option>
+            </select>
           </div>
       
   
@@ -86,7 +118,7 @@
   
         <!-- ACCIONES DEL MODAL -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar cambios</button>
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" >Guardar cambios</button>
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>

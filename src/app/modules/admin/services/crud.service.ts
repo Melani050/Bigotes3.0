@@ -2,20 +2,28 @@ import { Injectable } from '@angular/core';
 import { Mascota } from 'src/app/models/mascotas';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators'; // mapea valores
+import { Usuario } from 'src/app/models/usuario';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
+  // pipe -> tubería por dónde viajan esos nuevos datos
+  // map -> mapea los datos los recorre, los lee
+  crearUsuario(nuevoUsuario: Usuario) {
+    throw new Error('Method not implemented.');
+  }
   // Creo la colección "mascotasCollection" basandome el la colección "AngularFirestoreCollection"
   // y respetando la interfaz de Mascota.
   private mascotasColeccion: AngularFirestoreCollection<Mascota>
+  private usuariosColeccion: AngularFirestoreCollection<Usuario>
 
   // Defino de forma local "AngularFirestore" como database.
   constructor(private database: AngularFirestore) {
     // Referencio la colección mascotas de la base de datos con mi colección local. 
     this.mascotasColeccion = database.collection('mascotas')
+    this.usuariosColeccion = database.collection('usuarios')
   }
 
   // CRUD
@@ -63,5 +71,13 @@ export class CrudService {
     })
   }
 
+  // USUARIO 
+  obtenerUsuario(){
+    return this.usuariosColeccion.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
+  }
+  //para editar usuario
+  modificarUsuario(uid: string, nuevaData: Usuario){
+    return this.database.collection('usuarios').doc(uid).update(nuevaData);
+  }
 }
 
