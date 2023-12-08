@@ -35,4 +35,39 @@ export class TableUsuarioComponent {
   }
 
 
+  // EDITAR MASCOTA -> vincula al modal editar
+  mostrarEditar(usuarioSeleccionado: Usuario){
+    this.usuarioSeleccionado = usuarioSeleccionado;
+
+    /* retorna y envia los valores del usuario 
+    seleccionado, el ID no se vuelve a enviar porque 
+    no se modifica */
+    this.usuario.setValue({
+        nombre: usuarioSeleccionado.nombre,
+        email: usuarioSeleccionado.email,
+        contrasena: usuarioSeleccionado.contrasena,
+        rol: usuarioSeleccionado.rol,
+    });
+  }
+  /* VINCULA A BOTÓN "guardar cambios"
+  recibe los valores nuevos ingresados en el formulario*/
+  editarUsuario(){
+    let datos: Usuario = {
+      uid: this.usuarioSeleccionado!.uid,
+      // signo de exclamación "!" -> puede recibir valores vacíos al inicializar
+      nombre: this.usuario.value.nombre!,
+      email: this.usuario.value.email!,
+      rol: this.usuario.value.rol!,
+      contrasena: this.usuario.value.contrasena!
+    }
+
+    this.servicioCrud.modificarUsuario(this.usuarioSeleccionado.uid, datos)
+    .then(usuario => {
+      alert("La mascota fue modificada con éxito.");
+    })
+    .catch(error => {
+      alert("No se pudo modificar la mascota. \n"+error);
+    })
+  }
+
 }
