@@ -1,1 +1,90 @@
-<p>card-gatos works!</p>
+<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+    <div class="col contenido" *ngFor="let col of gatos">
+        <mat-card class="example-card rounded-4 m-4">
+            <!-- IMAGEN -->
+            <img mat-card-image src="{{col.imagen}}" alt="{{col.alt}}" width="100%">
+            <mat-card-header> 
+              <!-- TÍTULO -->
+              <mat-card-title>{{col.nombre}}</mat-card-title>
+            </mat-card-header>           
+            <mat-card-content>
+                <!-- DESCRIPCIÓN -->
+              <p>Sexo: {{col.sexo}}
+                <mat-icon *ngIf="(col.sexo) === 'macho'" style="padding-top: 4px;">male</mat-icon> 
+                <mat-icon *ngIf="(col.sexo) === 'hembra'" style="padding-top: 4px;">female</mat-icon>
+              </p>
+              <p>Tamaño: {{col.tamanio}}</p>
+              <p>Raza: {{col.raza}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#modalCard" (click)="mostrarVer(col)">
+                <mat-icon>info</mat-icon> más información
+              </button>
+              <button mat-button data-bs-toggle="modal" data-bs-target="#enProceso">
+                <mat-icon >email</mat-icon> contacto
+              </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+
+<!-- MODAL PARA VISUALIZAR MASCOTA QUE SE SELECCIONA -->
+<div class="modal fade" *ngIf="modalVisible" id="modalCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{mascotaSeleccionada.nombre}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <img src="{{mascotaSeleccionada.imagen}}" class="card-img-top" alt="{{mascotaSeleccionada.alt}}">
+                </div>
+                <div class="mb-3">
+                    Tamaño:
+                    {{mascotaSeleccionada.tamanio}}
+                </div>
+                <div class="mb-3">
+                    Raza:
+                    {{mascotaSeleccionada.raza}}
+                </div>
+                <div class="mb-3">
+                    Personalidad:
+                    {{mascotaSeleccionada.personalidad}}
+                </div>
+                <div class="mb-3">
+                    Castrado:
+                    {{mascotaSeleccionada.castrado}}
+                </div>
+                <div class="mb-3">
+                    Desparasitado:
+                    {{mascotaSeleccionada.desparasitado}}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Adoptar</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+aa
+<!-- modal funcion en proceso -->
+<div class="modal fade" id="enProceso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Función en proceso</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Estamos trabajando en el funcionamiento de esta función</p>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+</div>
