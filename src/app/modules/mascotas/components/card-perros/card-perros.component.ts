@@ -10,7 +10,7 @@ import { CrudService } from 'src/app/modules/admin/services/crud.service';
 export class CardPerrosComponent {
   coleccionMascotas: Mascota[] = []; // todas las mascotas
 
-  perros: Mascota[] = []; // mascotas especie = collares
+  perros: Mascota[] = []; // mascotas especie = perro
 
   mascotaSeleccionada!: Mascota;
 
