@@ -7,22 +7,24 @@
           <th scope="col">Id</th>
           <th scope="col">Nombre / Apellido</th>
           <th scope="col">Correo Electrónico</th>
+          <th scope="col">Motivo</th>
           <th scope="col">Acciones</th>
         </tr>
       </thead>
       <tbody class="">
         <tr>
           <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>id</td>
+          <td>usuario</td>
+          <td>ejemplo@gmail.com</td>
+          <td>contenido inapropiado</td>
     
           <!-- BOTONES PARA EDITAR Y ELIMINAR -->
           <td class="d-flex justify-content-center">
-            <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" title="Reportar" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#reporteUsuario">
                 <mat-icon>report</mat-icon>
             </button>
-            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" title="Eliminar" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#eliminarReporte">
               <mat-icon>delete</mat-icon>
             </button>
           </td>  
@@ -32,3 +34,46 @@
     </table> 
 </div>
 </div>
+
+<!-- MODAL PARA ENVIAR REPORTE -->
+<div class="modal fade"  id="reporteUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Reporte a usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <p>Función en mantenimiento</p>
+          
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Enviar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PARA ELIMINAR REPORTE -->
+<div class="modal fade"  id="eliminarReporte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar reporte</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <p>Función en mantenimiento</p>
+          
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Eliminar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
